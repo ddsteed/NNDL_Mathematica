@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     29139,        575]
-NotebookOptionsPosition[     25106,        492]
-NotebookOutlinePosition[     25571,        509]
-CellTagsIndexPosition[     25528,        506]
+NotebookDataLength[     33003,        644]
+NotebookOptionsPosition[     28471,        551]
+NotebookOutlinePosition[     28936,        568]
+CellTagsIndexPosition[     28893,        565]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -488,6 +488,65 @@ Cell["Egypt 2024 M. M. Hammad", "Text",
  CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, 
    3.943567728500908*^9},
  CellID->1443446675,ExpressionUUID->"cfa8da4d-6e55-4df2-8533-7d883b3b06ae"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Bridging Theory and Practice: The Dual Approach of This Book", "Section",
+ CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
+  3.9435678367517633`*^9},
+ CellID->2001686121,ExpressionUUID->"17faf0aa-a893-4ec8-a283-6dfd39b506a7"],
+
+Cell["\<\
+Many books on neural networks and deep learning tend to lean either heavily \
+on theoretical aspects, with dense mathematical formulations, or focus \
+predominantly on computational algorithms, often at the expense of a solid \
+mathematical foundation. This book adopts a balanced approach that bridges \
+the gap between these extremes. By seamlessly integrating theoretical \
+principles with practical implementation, it empowers learners to fully \
+harness the power of neural networks and deep learning in their pursuit of \
+excellence across various domains. \
+\>", "Text",
+ CellChangeTimes->{{3.943567844516358*^9, 3.943567854557646*^9}},
+ CellID->2007305392,ExpressionUUID->"c689dce9-d6ef-47ee-afb9-063630908698"],
+
+Cell["\<\
+However, attempting to cover both the theoretical concepts and computational \
+algorithms exhaustively within a single volume would be impractical. To \
+ensure a thorough exploration of both aspects, this book is divided into two \
+complementary parts. The first part is titled \
+\[OpenCurlyDoubleQuote]Artificial Neural Network and Deep Learning: \
+Fundamentals and Theory.\[CloseCurlyDoubleQuote] The second part is titled \
+\[OpenCurlyDoubleQuote] Neural Network and Deep Learning with Mathematica\
+\[CloseCurlyDoubleQuote] For each theoretical chapter in the first part, \
+there is a corresponding chapter in the second part. We strongly recommend \
+that after completing each theoretical chapter, you explore the corresponding \
+practical implementation chapter in the complementary volume. This dual \
+approach will provide you with a well-rounded understanding and the skills \
+necessary to excel in this field. \
+\>", "Text",
+ CellChangeTimes->{{3.943567844516358*^9, 3.943567861678993*^9}},
+ CellID->433903130,ExpressionUUID->"f6700c16-c920-431d-87b0-6538b7364cdb"],
+
+Cell["\<\
+The book \[OpenCurlyDoubleQuote]Neural Network and Deep Learning with \
+Mathematica\[CloseCurlyDoubleQuote] adopts a refreshingly code-centric \
+approach, enabling you to solidify your understanding through hands-on \
+practice. Nearly all the concepts introduced are accompanied by illustrative \
+code examples, making the learning experience both practical and tangible. \
+Even the figures in the first part are generated using these code examples, \
+emphasizing the code-first methodology. To ensure accessibility and ease of \
+understanding, the code examples are deliberately crafted in a simple format, \
+prioritizing readability over efficiency and generality. In line with our \
+instructional philosophy, each code example serves a dual purpose: not only \
+does it demonstrate a specific deep learning concept, but it also \
+simultaneously introduces and reinforces Mathematica programming techniques. \
+Readers will learn how to leverage Mathematica to perform complex neural \
+network and deep learning calculations, simulate data, and create visual \
+representations of their findings.\
+\>", "Text",
+ CellChangeTimes->{{3.943567844516358*^9, 3.943567848742261*^9}},
+ CellID->741060932,ExpressionUUID->"95e6bdc2-e5c7-4466-9c1e-d4d8689e0ca3"]
 }, Open  ]]
 },
 WindowSize->{960, 1027},
@@ -576,6 +635,16 @@ Cell[24575, 480, 305, 4, 45, "Text",ExpressionUUID->"d985b295-5961-4fdf-8c8e-5f6
  CellID->2126199977],
 Cell[24883, 486, 207, 3, 45, "Text",ExpressionUUID->"cfa8da4d-6e55-4df2-8533-7d883b3b06ae",
  CellID->1443446675]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25127, 494, 246, 3, 174, "Section",ExpressionUUID->"17faf0aa-a893-4ec8-a283-6dfd39b506a7",
+ CellID->2001686121],
+Cell[25376, 499, 729, 11, 222, "Text",ExpressionUUID->"c689dce9-d6ef-47ee-afb9-063630908698",
+ CellID->2007305392],
+Cell[26108, 512, 1084, 16, 340, "Text",ExpressionUUID->"f6700c16-c920-431d-87b0-6538b7364cdb",
+ CellID->433903130],
+Cell[27195, 530, 1260, 18, 399, "Text",ExpressionUUID->"95e6bdc2-e5c7-4466-9c1e-d4d8689e0ca3",
+ CellID->741060932]
 }, Open  ]]
 }
 ]
