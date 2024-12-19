@@ -1,0 +1,583 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     29139,        575]
+NotebookOptionsPosition[     25106,        492]
+NotebookOutlinePosition[     25571,        509]
+CellTagsIndexPosition[     25528,        506]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ StyleBox["Mohamed M. Hammad",
+  FontFamily->"FZLanTingHei-DB-GBK",
+  FontSize->12,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.8488288700694285, 0.3848325322346838, 0.1479972533760586]],
+ StyleBox["\[LineSeparator]",
+  FontSize->12,
+  FontColor->RGBColor[1, 0.5, 0]],
+ StyleBox["\n",
+  FontSize->12,
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0.5, 0]],
+ StyleBox["Neural Network and Deep Learning with Mathematica                  \
+             ",
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox[ButtonBox[">",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
+      "EDITED", "MPAAI"}, "MPAAI-1-Introduction.nb", CharacterEncoding -> 
+     "UTF-8"], None},
+  ButtonNote->
+   "/Users/fengh/Documents/RDS/EDITED/MPAAI/MPAAI-1-Introduction.nb"],
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox["    ",
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox[ButtonBox["\[CapitalXi]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
+      "EDITED", "Neural_NetWork_and_Deep_Learning"}, "contents.nb", 
+     CharacterEncoding -> "UTF-8"], None},
+  ButtonNote->
+   "/Users/fengh/Documents/RDS/EDITED/Neural_NetWork_and_Deep_Learning/\
+contents.nb"],
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox["\[LineSeparator]\[LineSeparator]",
+  FontSize->12,
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0.5, 0]],
+ StyleBox["Edited by Hao Feng",
+  FontFamily->"Futura",
+  FontSize->12,
+  FontWeight->"Medium",
+  FontSlant->"Italic",
+  FontColor->RGBColor[
+   0.8488288700694285, 0.3848325322346838, 0.1479972533760586]]
+}], "Text",
+ CellMargins->{{66, -45}, {4, 12}},
+ CellChangeTimes->{{3.9397640484222183`*^9, 3.939764052679113*^9}, 
+   3.9397641564677134`*^9, 3.939764214184162*^9, {3.939774845841297*^9, 
+   3.9397748486786137`*^9}, 3.9397769383984737`*^9, 3.939777524212697*^9, {
+   3.939777679887363*^9, 3.9397776986053457`*^9}, 3.939777748637487*^9, {
+   3.939777854556375*^9, 3.939777878635145*^9}, {3.9397779299447737`*^9, 
+   3.9397779337440853`*^9}, {3.9397779656956463`*^9, 
+   3.9397779872993917`*^9}, {3.939783995957651*^9, 3.9397839959644203`*^9}, 
+   3.93994857128743*^9, {3.9403030753694696`*^9, 3.9403030753782463`*^9}, {
+   3.940303217729404*^9, 3.940303217737211*^9}, {3.940741024123201*^9, 
+   3.940741027365489*^9}, {3.940741081934002*^9, 3.940741081942062*^9}, {
+   3.943567220607367*^9, 3.9435672414910088`*^9}, {3.94356735516547*^9, 
+   3.943567355169693*^9}},
+ LineSpacing->{0.6999999999999997, 3},
+ Background->RGBColor[
+  0.13066300450141147`, 0.12460517280842298`, 0.4353551537346456],
+ CellID->912160115,ExpressionUUID->"67aab6c7-b186-4fbc-a04a-683b7453f682"],
+
+Cell[CellGroupData[{
+
+Cell["Abstract", "Section",
+ CellChangeTimes->{
+  3.652728456208679*^9, 3.652728527108994*^9, {3.943567532627124*^9, 
+   3.94356753418813*^9}},
+ CellID->267521681,ExpressionUUID->"2e5765d9-8252-4cea-bdf4-0aa61e6cae3c"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Neural Network and Deep Learning with Mathematica\
+\[CloseCurlyDoubleQuote] provides a comprehensive examination of the core \
+challenges in neural network research and development, utilizing Mathematica\
+\[CloseCurlyQuote]s advanced computational capabilities. Mathematica\
+\[CloseCurlyQuote]s integration of symbolic and numeric computation allows \
+for the precise formulation and analysis of neural network models, making it \
+an invaluable tool for researchers and practitioners alike. Readers will \
+benefit from Mathematica\[CloseCurlyQuote]s extensive library of built-in \
+functions, which simplifies the construction and training of neural networks, \
+as well as its seamless integration with data visualization, statistical \
+analysis, and image processing tools. The book addresses critical aspects of \
+neural network methodologies, including model generalization, regularization, \
+and optimization. It offers in-depth coverage of multilayer feed-forward \
+neural networks, training processes, and optimization issues such as \
+activation function saturation, vanishing and exploding gradients, and weight \
+initialization. Advanced topics include complex-valued neural networks and \
+sophisticated activation functions, with detailed exploration of their \
+properties and applications. Key methodologies discussed include various \
+learning rate schedules, adaptive algorithms, and techniques for \
+hyperparameter tuning, such as Bayesian optimization and Gaussian processes. \
+With detailed code examples, step-by-step explanations, and illustrative \
+figures, this book is not only a resource for beginners but also a valuable \
+reference for seasoned professionals in fields such as data science, machine \
+learning, and engineering. We have created more than 200 manipulates cover \
+different scenarios in neural networks, more than 500 light Mathematica codes \
+(examples). The code will run as-is with no code from prior algorithms or \
+third parties required beyond the installation of Mathematica. Whether you \
+are a student, researcher, or practitioner, \[OpenCurlyDoubleQuote]Neural \
+Network and Deep Learning with Mathematica\[CloseCurlyDoubleQuote] equips you \
+with the knowledge and tools to overcome the complexities of modern \
+artificial intelligence and contribute to the ongoing advancements in this \
+exciting field.\
+\>", "Text",
+ CellChangeTimes->{{3.943567541767359*^9, 3.943567546317319*^9}},
+ CellID->938621000,ExpressionUUID->"63cc618f-6750-4202-8205-f55e7eea3810"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Preface", "Section",
+ CellChangeTimes->{
+  3.652728456208679*^9, 3.652728527108994*^9, {3.93977430409951*^9, 
+   3.939774306756702*^9}, {3.939774503882483*^9, 3.939774505098134*^9}},
+ CounterAssignments->{{"Section", 0}},
+ CellID->1815624021,ExpressionUUID->"779ac440-64b9-421f-a613-32e9713c20c1"],
+
+Cell["\<\
+In the rapidly evolving landscape of artificial intelligence and machine \
+learning, neural networks and deep learning have emerged as pivotal \
+technologies, revolutionizing fields ranging from image recognition to \
+natural language processing. As these techniques continue to advance, the \
+challenges associated with their implementation, optimization, and \
+understanding have become increasingly complex. Addressing these challenges \
+requires not only a deep theoretical understanding but also practical tools \
+that can bridge the gap between abstract concepts and real- world \
+applications. This book, Neural Network and Deep Learning with Mathematica, \
+is designed to provide a comprehensive exploration of the key challenges \
+faced in neural network and deep learning research and development, alongside \
+practical solutions implemented using Mathematica. \
+\>", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.94356759102402*^9}},
+ CellID->1537291592,ExpressionUUID->"5ecdcb08-1836-440f-8aca-0a1274e4cc75"],
+
+Cell["\<\
+There are several reasons why one might choose Mathematica for neural \
+networks and deep learning: \
+\>", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567594832234*^9}},
+ CellID->286333972,ExpressionUUID->"ac61aca5-b55d-48a2-a6d1-f0c1c3068353"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+\[Bullet] Unified Symbolic and Numeric Computation: Mathematica\
+\[CloseCurlyQuote]s strength lies in its ability to seamlessly integrate \
+symbolic and numeric computations. This allows users to define neural network \
+models using symbolic expressions and directly analyze their properties or \
+gradients before moving to numerical implementation. This unique feature is \
+particularly valuable for researchers who need to explore mathematical \
+formulations or derive analytical results. The symbolic computation \
+capabilities of Mathematica are indeed a significant advantage when working \
+with neural networks and deep learning. This feature allows users to handle \
+mathematical expressions symbolically, enabling them to perform tasks such as \
+analytical derivations, evaluating complex integrals, and solving \
+differential equations that involve their models. By integrating symbolic \
+computation with neural network modeling, Mathematica provides a platform \
+where users can conduct theoretical work with enhanced precision and rigor. \
+This integration not only streamlines the workflow but also ensures that the \
+analyses are more thorough and accurate, making Mathematica an excellent \
+choice for those who require both computational power and mathematical \
+insight in their neural network and deep learning projects. \
+\>", "Item",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567600800521*^9}},
+ CellID->361729925,ExpressionUUID->"e7e7da51-3ec4-45ef-b433-1321633fc0f3"],
+
+Cell["\<\
+\[Bullet] Comprehensive Built-in Functions: Mathematica provides a vast \
+library of built-in functions for neural networks and deep learning, \
+including functions for defining layers, loss functions, optimizers, and \
+regularization techniques. These functions are highly optimized, ensuring \
+efficient computation without the need for extensive manual coding. \
+Additionally, Mathematica\[CloseCurlyQuote]s high-level abstractions simplify \
+the construction and training of neural networks, making it accessible even \
+to those with limited programming experience. \
+\>", "Item",
+ CellChangeTimes->{{3.943567570061882*^9, 3.9435676078761797`*^9}},
+ CellID->1132175293,ExpressionUUID->"18ebdc29-7b2d-4b62-afe3-48701d332e85"],
+
+Cell["\<\
+\[Bullet] Integration with Other Mathematica Features: Neural networks in \
+Mathematica can be easily integrated with its extensive suite of tools for \
+data visualization, symbolic computation, image processing, and statistical \
+analysis. This integration allows users to preprocess data, visualize model \
+performance, and analyze results within a single environment, streamlining \
+the workflow and enhancing productivity. \
+\>", "Item",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.9435676165102158`*^9, 3.943567616530389*^9}},
+ CellID->104198370,ExpressionUUID->"64624007-f4d5-4a7f-be18-d7875cc3de36"],
+
+Cell["\<\
+\[Bullet] Automatic Differentiation and Optimization: Mathematica supports \
+automatic differentiation, which is crucial for training neural networks, as \
+it simplifies the computation of gradients required for optimization. \
+Combined with its powerful optimization algorithms, Mathematica enables \
+efficient training of complex models, even when the underlying mathematical \
+expressions are highly sophisticated. \
+\>", "Item",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.943567626653871*^9, 3.94356762667409*^9}},
+ CellID->2010146236,ExpressionUUID->"a4ccab39-351e-41c0-8552-2aafa9780a29"],
+
+Cell["\<\
+\[Bullet] Flexibility and Extensibility: Mathematica offers a high degree of \
+flexibility in model construction, allowing users to define custom layers, \
+activation functions, and loss functions. This is particularly advantageous \
+for researchers experimenting with novel architectures or those working on \
+specialized applications. Furthermore, Mathematica\[CloseCurlyQuote]s \
+programming language, Wolfram Language, is highly extensible, allowing users \
+to incorporate external libraries or frameworks if needed. \
+\>", "Item",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.943567631136985*^9, 3.943567631157498*^9}},
+ CellID->669828710,ExpressionUUID->"55468d08-26ea-4c26-9ffb-9db934dda770"],
+
+Cell["\<\
+\[Bullet] Interactive Notebooks: Mathematica\[CloseCurlyQuote]s notebook \
+interface provides an interactive environment where users can write code, run \
+simulations, visualize results, and document their work all in one place. \
+This is especially useful for educational purposes, presentations, and \
+collaborative research, as it allows for a clear and coherent presentation of \
+ideas, code, and results.  \
+\>", "Item",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.9435676402451077`*^9, 3.9435676477339077`*^9}},
+ CellID->504730544,ExpressionUUID->"7fde118f-d869-4888-8d44-c407150408ec"],
+
+Cell["\<\
+\[Bullet] Mathematica\[CloseCurlyQuote]s AI Integration: Mathematica \
+leverages Wolfram\[CloseCurlyQuote]s AI and machine learning capabilities, \
+enabling users to perform tasks like data classification, clustering, and \
+predictive modeling with minimal effort. This integration allows users to \
+complement their neural network models with other machine learning \
+techniques, providing a more comprehensive approach to solving complex \
+problems. \
+\>", "Item",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.9435676543718348`*^9, 3.9435676543950443`*^9}},
+ CellID->688900717,ExpressionUUID->"7de23c31-ce76-4518-8f07-12c29da5e7fa"],
+
+Cell["\<\
+\[Bullet] Cross-platform Deployment: Mathematica supports deployment across \
+multiple platforms, including desktop, cloud, and mobile. This flexibility \
+allows users to develop and train models locally and then deploy them on a \
+cloud platform for scalability or share them as interactive applications \
+accessible from any device. \
+\>", "Item",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.943567659802884*^9, 3.943567659823804*^9}},
+ CellID->1819675853,ExpressionUUID->"1fcebc1b-b061-432a-9f98-3e7bc9a28dd2"],
+
+Cell["\<\
+\[Bullet] For those already familiar with the Mathematica language, \
+conducting neural network and deep learning analyses can be both \
+straightforward and highly efficient. Mathematica\[CloseCurlyQuote]s design \
+emphasizes expressiveness and readability, enabling users to perform even the \
+most complex tasks with concise, elegant code. This streamlined approach not \
+only accelerates the development process but also makes it easier to explore, \
+modify, and refine models. Whether you\[CloseCurlyQuote]re defining custom \
+layers, experimenting with new architectures, or optimizing hyperparameters, \
+Mathematica\[CloseCurlyQuote]s intuitive syntax and powerful built-in \
+functions simplify the entire workflow, making it an ideal tool for both \
+beginners and experienced practitioners in the field of deep learning. \
+\>", "Item",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.943567664420236*^9, 3.9435676644428797`*^9}},
+ CellID->422167196,ExpressionUUID->"afad8ae8-2799-4843-a7ac-ad59294dc599"],
+
+Cell["\<\
+\[Bullet] Educational and Research Support: Mathematica has extensive \
+documentation, tutorials, and a strong user community, which can be \
+invaluable for learning and troubleshooting. Additionally, the Wolfram \
+Demonstrations Project offers a wealth of interactive examples that can serve \
+as inspiration or starting points for new projects. \
+\>", "Item",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.943567672458664*^9, 3.943567672481189*^9}},
+ CellID->330183648,ExpressionUUID->"8f558131-46a2-46a2-ab64-a185577faff5"]
+}, Open  ]],
+
+Cell["\<\
+By choosing Mathematica for neural networks and deep learning, users gain \
+access to a powerful, flexible, and integrated environment that supports the \
+entire lifecycle of model development\[LongDash]from theory and \
+experimentation to deployment and analysis. This makes Mathematica an \
+excellent choice for researchers, educators, and practitioners alike. \
+\>", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.943567689106388*^9, 3.943567689129712*^9}},
+ CellID->1568890217,ExpressionUUID->"06a1adec-29e4-4b68-ade9-427fd82c7178"],
+
+Cell["\<\
+Throughout this book, we delve into a wide range of topics, from fundamental \
+principles to advanced techniques, always with an emphasis on overcoming the \
+specific hurdles that practitioners encounter. We explore essential concepts \
+such as model generalization, regularization, and optimization, while also \
+addressing cutting-edge topics like complex-valued neural networks, advanced \
+activation functions, and automated hyperparameter tuning. \
+\>", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.943567691952668*^9, 3.94356769197722*^9}},
+ CellID->1943302182,ExpressionUUID->"eecf9017-d05f-4bff-ae30-98699c52195f"],
+
+Cell["\<\
+This book is designed not only to cater to beginners in the field but also to \
+serve as a valuable reference for seasoned data scientists, machine learning \
+practitioners, biostatisticians, finance professionals, and engineers. \
+Whether they possess prior knowledge of deep learning or seek to fill gaps in \
+their understanding, this book aims to address their needs. We assume that \
+the reader has no prior experience in neural networks and optimization. \
+\>", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.943567701420672*^9, 3.9435677014434643`*^9}},
+ CellID->756818549,ExpressionUUID->"383a7f49-a973-4e0e-97b9-df60eb26a61a"],
+
+Cell["\<\
+Each chapter is designed to build on the previous ones, creating a cohesive \
+and comprehensive guide to artificial neural networks and deep learning. \
+Whether you are a student, researcher, or practitioner, this book will equip \
+you with the knowledge and skills to tackle the challenges of modern \
+artificial intelligence and contribute to the ongoing advancements in this \
+exciting field. \
+\>", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.943567716359173*^9, 3.94356771638199*^9}},
+ CellID->1203283496,ExpressionUUID->"ae1f2ed4-eb15-4390-b433-d5382816b8ed"],
+
+Cell["\<\
+In the first chapter, we begin by laying the foundation. This chapter is an \
+essential primer that introduces the basic concepts, functions, and tools of \
+Mathematica. From arithmetic operations and algebraic manipulations to \
+advanced graphing and functional programming, you will gain a solid \
+understanding of how to utilize Mathematica\[CloseCurlyQuote]s capabilities \
+to perform a wide range of computations and visualizations. The chapter also \
+covers the construction of modular and reusable code, which is crucial for \
+developing efficient and scalable neural network models. \
+\>", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.943567721637754*^9, 3.9435677216624403`*^9}},
+ CellID->1475419997,ExpressionUUID->"8f5e3d78-45b9-4758-b5ea-570b20c07fd8"],
+
+Cell["\<\
+As you progress through the book, you will encounter increasingly \
+sophisticated topics, each building on the knowledge gained in the previous \
+chapters. You will explore descriptive statistics and probability theory, \
+which are foundational to understanding data distribution and preparing data \
+for machine learning tasks. The book will guide you through matrix calculus \
+and gradient optimization, providing the mathematical tools needed for model \
+training and fine-tuning.  \
+\>", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.943567728500908*^9, 3.943567730729143*^9}},
+ CellID->442768087,ExpressionUUID->"4887e031-8f65-4fa7-a401-627b13336046"],
+
+Cell["\<\
+One of the key strengths of Mathematica is its ability to seamlessly \
+integrate symbolic computation with practical implementation. This is \
+particularly evident in the chapters dedicated to constructing and optimizing \
+multilayer feed- forward neural networks, where you will learn not only the \
+theoretical aspects of neural networks but also how to implement them \
+efficiently using Mathematica\[CloseCurlyQuote]s powerful functions like \
+NetChain, NetGraph, and NetTrain. \
+\>", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.943567728500908*^9, 3.943567741316421*^9}},
+ CellID->1556790790,ExpressionUUID->"7e3f7301-f164-43bd-99b1-53d22d08885a"],
+
+Cell["\<\
+As neural networks grow in complexity, so do the challenges associated with \
+their optimization. This book dedicates an entire chapter to addressing these \
+challenges, offering strategies for monitoring training progress, mitigating \
+issues such as vanishing gradients, and improving model generalization \
+through advanced regularization techniques. You will also explore adaptive \
+learning rate schedules and gradient descent variants, which are critical for \
+fine-tuning your models and achieving optimal performance. \
+\>", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.943567728500908*^9, 3.943567746801056*^9}},
+ CellID->1005473988,ExpressionUUID->"429975f5-116d-41e2-8301-8cfe24400636"],
+
+Cell["\<\
+The book concludes with a deep dive into advanced activation functions and \
+complex-valued neural networks, topics that are at the forefront of current \
+research in deep learning. Here, Mathematica\[CloseCurlyQuote]s symbolic and \
+visualization capabilities truly shine, allowing you to explore and \
+understand the behavior of these advanced functions in both two- dimensional \
+and three-dimensional spaces. \
+\>", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, {
+  3.943567728500908*^9, 3.943567752569268*^9}},
+ CellID->1420485212,ExpressionUUID->"a85a4ca7-e09e-44e5-bb54-b3b49b6ccc63"],
+
+Cell["\<\
+Throughout \[OpenCurlyDoubleQuote]Neural Network and Deep Learning with \
+Mathematica\[CloseCurlyDoubleQuote], you will find detailed explanations, \
+practical examples, and Mathematica code snippets that ensure a hands-on \
+learning experience. By the end of this book, you will be equipped with both \
+the theoretical knowledge and practical skills to tackle complex neural \
+network challenges, making full use of Mathematica\[CloseCurlyQuote]s unique \
+computational capabilities. \
+\>", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, 
+   3.943567728500908*^9, {3.9435677624365063`*^9, 3.943567762462007*^9}},
+ CellID->615340134,ExpressionUUID->"2aaeab14-b493-4aa6-9bf3-e6c96bbcf5fd"],
+
+Cell["\<\
+Finally, we extend our heartfelt thanks to Professor Mohamed Abdalla Darwish, \
+Head of the Department of Mathematics and Computer Science, Faculty of \
+Science, Damanhour University, Egypt, for his unwavering support. We are \
+profoundly grateful to Professor Amr R. El Dhaba for his invaluable \
+discussions and continued encouragement. \
+\>", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, 
+   3.943567728500908*^9, {3.943567766712666*^9, 3.943567766738616*^9}},
+ CellID->452270622,ExpressionUUID->"45918758-5ccf-4a6f-8d58-2bef83f9177d"],
+
+Cell["\<\
+We also wish to express our sincere appreciation to our colleagues and \
+friends for their invaluable feedback, thoughtful comments, and constructive \
+suggestions. In particular, we would like to acknowledge Professor Hamed \
+Awad, Dr. Fatma El-Safty, Dr. Hamdy El Shamy, Dr. Mohamed Elhaddad, Mohamed \
+Yahia, Ayman A. Abdelaziz, Eman Farag, Hassan M. Shetawy, Walaa Mansour, Moaz \
+El-Essawey, Aziza Salah, and Eman R. Hendawy for their contributions. \
+\>", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, 
+   3.943567728500908*^9, {3.9435677705103617`*^9, 3.943567770535571*^9}},
+ CellID->119524823,ExpressionUUID->"fc2d3d7f-b659-4d9d-a222-165f5eb08bc6"],
+
+Cell["\<\
+We hope that you find this book informative and inspiring, and that it serves \
+as a valuable resource in your journey through the world of artificial neural \
+networks and deep learning. \
+\>", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, 
+   3.943567728500908*^9, {3.943567776677761*^9, 3.943567776702632*^9}},
+ CellID->844432055,ExpressionUUID->"495788b9-436b-4682-99c9-cf708a353b22"],
+
+Cell["knowledge itself is power - Sir Francis Bacon 1597 ", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, 
+   3.943567728500908*^9, {3.9435677800777597`*^9, 3.943567780102065*^9}},
+ FontSlant->"Italic",
+ CellID->2126199977,ExpressionUUID->"d985b295-5961-4fdf-8c8e-5f6aed9db582"],
+
+Cell["Egypt 2024 M. M. Hammad", "Text",
+ CellChangeTimes->{{3.943567570061882*^9, 3.943567579071979*^9}, 
+   3.943567728500908*^9},
+ CellID->1443446675,ExpressionUUID->"cfa8da4d-6e55-4df2-8533-7d883b3b06ae"]
+}, Open  ]]
+},
+WindowSize->{960, 1027},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "BookToolsStyles.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"8861bace-5584-420b-8e0c-c51fd7c6d3a1"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 3252, 82, 130, "Text",ExpressionUUID->"67aab6c7-b186-4fbc-a04a-683b7453f682",
+ CellID->912160115],
+Cell[CellGroupData[{
+Cell[3831, 106, 218, 4, 133, "Section",ExpressionUUID->"2e5765d9-8252-4cea-bdf4-0aa61e6cae3c",
+ CellID->267521681],
+Cell[4052, 112, 2541, 35, 812, "Text",ExpressionUUID->"63cc618f-6750-4202-8205-f55e7eea3810",
+ CellID->938621000]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6630, 152, 303, 5, 133, "Section",ExpressionUUID->"779ac440-64b9-421f-a613-32e9713c20c1",
+ CounterAssignments->{{"Section", 0}},
+ CellID->1815624021],
+Cell[6936, 159, 1036, 15, 340, "Text",ExpressionUUID->"5ecdcb08-1836-440f-8aca-0a1274e4cc75",
+ CellID->1537291592],
+Cell[7975, 176, 265, 5, 75, "Text",ExpressionUUID->"ac61aca5-b55d-48a2-a6d1-f0c1c3068353",
+ CellID->286333972],
+Cell[CellGroupData[{
+Cell[8265, 185, 1504, 21, 386, "Item",ExpressionUUID->"e7e7da51-3ec4-45ef-b433-1321633fc0f3",
+ CellID->361729925],
+Cell[9772, 208, 738, 11, 162, "Item",ExpressionUUID->"18ebdc29-7b2d-4b62-afe3-48701d332e85",
+ CellID->1132175293],
+Cell[10513, 221, 643, 10, 137, "Item",ExpressionUUID->"64624007-f4d5-4a7f-be18-d7875cc3de36",
+ CellID->104198370],
+Cell[11159, 233, 632, 10, 137, "Item",ExpressionUUID->"a4ccab39-351e-41c0-8552-2aafa9780a29",
+ CellID->2010146236],
+Cell[11794, 245, 735, 11, 162, "Item",ExpressionUUID->"55468d08-26ea-4c26-9ffb-9db934dda770",
+ CellID->669828710],
+Cell[12532, 258, 629, 10, 113, "Item",ExpressionUUID->"7fde118f-d869-4888-8d44-c407150408ec",
+ CellID->504730544],
+Cell[13164, 270, 670, 11, 137, "Item",ExpressionUUID->"7de23c31-ce76-4518-8f07-12c29da5e7fa",
+ CellID->688900717],
+Cell[13837, 283, 550, 9, 113, "Item",ExpressionUUID->"1fcebc1b-b061-432a-9f98-3e7bc9a28dd2",
+ CellID->1819675853],
+Cell[14390, 294, 1044, 15, 237, "Item",ExpressionUUID->"afad8ae8-2799-4843-a7ac-ad59294dc599",
+ CellID->422167196],
+Cell[15437, 311, 561, 9, 113, "Item",ExpressionUUID->"8f558131-46a2-46a2-ab64-a185577faff5",
+ CellID->330183648]
+}, Open  ]],
+Cell[16013, 323, 578, 9, 163, "Text",ExpressionUUID->"06a1adec-29e4-4b68-ade9-427fd82c7178",
+ CellID->1568890217],
+Cell[16594, 334, 666, 10, 193, "Text",ExpressionUUID->"eecf9017-d05f-4bff-ae30-98699c52195f",
+ CellID->1943302182],
+Cell[17263, 346, 677, 10, 193, "Text",ExpressionUUID->"383a7f49-a973-4e0e-97b9-df60eb26a61a",
+ CellID->756818549],
+Cell[17943, 358, 610, 10, 163, "Text",ExpressionUUID->"ae1f2ed4-eb15-4390-b433-d5382816b8ed",
+ CellID->1203283496],
+Cell[18556, 370, 808, 12, 222, "Text",ExpressionUUID->"8f5e3d78-45b9-4758-b5ea-570b20c07fd8",
+ CellID->1475419997],
+Cell[19367, 384, 699, 11, 193, "Text",ExpressionUUID->"4887e031-8f65-4fa7-a401-627b13336046",
+ CellID->442768087],
+Cell[20069, 397, 697, 11, 193, "Text",ExpressionUUID->"7e3f7301-f164-43bd-99b1-53d22d08885a",
+ CellID->1556790790],
+Cell[20769, 410, 741, 11, 222, "Text",ExpressionUUID->"429975f5-116d-41e2-8301-8cfe24400636",
+ CellID->1005473988],
+Cell[21513, 423, 628, 10, 163, "Text",ExpressionUUID->"a85a4ca7-e09e-44e5-bb54-b3b49b6ccc63",
+ CellID->1420485212],
+Cell[22144, 435, 724, 11, 163, "Text",ExpressionUUID->"2aaeab14-b493-4aa6-9bf3-e6c96bbcf5fd",
+ CellID->615340134],
+Cell[22871, 448, 576, 9, 163, "Text",ExpressionUUID->"45918758-5ccf-4a6f-8d58-2bef83f9177d",
+ CellID->452270622],
+Cell[23450, 459, 694, 10, 193, "Text",ExpressionUUID->"fc2d3d7f-b659-4d9d-a222-165f5eb08bc6",
+ CellID->119524823],
+Cell[24147, 471, 425, 7, 104, "Text",ExpressionUUID->"495788b9-436b-4682-99c9-cf708a353b22",
+ CellID->844432055],
+Cell[24575, 480, 305, 4, 45, "Text",ExpressionUUID->"d985b295-5961-4fdf-8c8e-5f6aed9db582",
+ CellID->2126199977],
+Cell[24883, 486, 207, 3, 45, "Text",ExpressionUUID->"cfa8da4d-6e55-4df2-8533-7d883b3b06ae",
+ CellID->1443446675]
+}, Open  ]]
+}
+]
+*)
+
