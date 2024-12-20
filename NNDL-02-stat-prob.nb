@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      5961,        162]
-NotebookOptionsPosition[      5255,        140]
-NotebookOutlinePosition[      5720,        157]
-CellTagsIndexPosition[      5677,        154]
+NotebookDataLength[     28931,        616]
+NotebookOptionsPosition[     24230,        524]
+NotebookOutlinePosition[     24695,        541]
+CellTagsIndexPosition[     24652,        538]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -126,12 +126,396 @@ contents.nb"],
 
 Cell[CellGroupData[{
 
-Cell["Descriptive Statistics and Probability Theory", "Chapter",
+Cell["2 Descriptive Statistics and Probability Theory", "Section",
  CellChangeTimes->{{3.943567936366756*^9, 3.9435679403338757`*^9}, {
-  3.943567985731557*^9, 3.9435679945794897`*^9}},
+   3.943567985731557*^9, 3.9435679945794897`*^9}, {3.943667578407549*^9, 
+   3.943667578670498*^9}, 3.943669760304214*^9},
  CellID->622795188,ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49"],
 
-Cell["Descriptive Statistics", "Section",
+Cell[TextData[{
+ StyleBox["Remark:",
+  FontWeight->"Bold"],
+ "\[LineSeparator]This chapter provides a Mathematica implementation of the \
+concepts and ideas presented in Chapter 1 of the book [1] titled ",
+ ButtonBox["Artificial Neural Network and Deep Learning: Fundamentals and \
+Theory",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
+      "EDITED", "Artifical_Neural_Network_and_Deep_Learning"}, "contents.nb", 
+     CharacterEncoding -> "UTF-8"], None},
+  ButtonNote->
+   "/Users/fengh/Documents/RDS/EDITED/Artifical_Neural_Network_and_Deep_\
+Learning/contents.nb"],
+ ". We strongly recommend that you begin with the theoretical chapter to \
+build a solid foundation before exploring the corresponding practical \
+implementation. This chapter also serves as a summary of the book titled ",
+ ButtonBox["Statistics for Machine Learning with Mathematica Applications",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
+      "EDITED", "Statistics_for_Machine_Learning_with_Mathematica"}, 
+     "contents.nb", CharacterEncoding -> "UTF-8"], None},
+  ButtonNote->
+   "/Users/fengh/Documents/RDS/EDITED/Statistics_for_Machine_Learning_with_\
+Mathematica/contents.nb"],
+ ". For detailed proofs of theorems, additional examples, and comprehensive \
+explanations, including Mathematica applications, please refer to Ref [2].\
+\[CloseCurlyDoubleQuote]"
+}], "Note",
+ CellChangeTimes->{{3.943667598172469*^9, 3.94366765470826*^9}},
+ CellID->1236726918,ExpressionUUID->"ded706bc-8381-4a02-88e8-79684a8dd7a1"],
+
+Cell["\<\
+Descriptive statistics form the foundational toolset for summarizing and \
+interpreting data, offering insights into central tendencies and variability \
+within datasets [3-10]. It serves as the initial lens through which raw data \
+is scrutinized, paving the way for more advanced analyses. On the other hand, \
+probability theory plays a crucial role in quantifying uncertainty and \
+randomness inherent in data. It underpins the probabilistic nature of \
+real-world phenomena, intertwining with statistical measures to create a \
+comprehensive framework for data analysis.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667671530426*^9}, {
+  3.943667705121936*^9, 3.9436677051456413`*^9}, {3.943667787828588*^9, 
+  3.943667787869742*^9}},
+ CellID->617285863,ExpressionUUID->"1e4d1b25-a883-4c7f-a79d-a5d1f7b59dd4"],
+
+Cell["\<\
+In artificial intelligence (AI) applications, probability theory serves two \
+fundamental purposes:\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667671530426*^9}, {
+  3.943667708512525*^9, 3.943667708534813*^9}},
+ CellID->235474553,ExpressionUUID->"4e96dc56-99e5-4f93-998e-28ef8fbf1ddf"],
+
+Cell["\<\
+1. Guiding the rationale behind AI reasoning processes, shaping algorithmic \
+design to compute or approximate expressions derived from probability.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667671530426*^9}, {
+   3.943667710431408*^9, 3.943667710455822*^9}, 3.943667787881227*^9},
+ CellID->1048608594,ExpressionUUID->"82080496-3f3b-4d54-bd71-abb8b2c04f4e"],
+
+Cell["\<\
+2. Providing an analytical framework to dissect and evaluate AI system \
+behavior, assessing performance under diverse conditions and the implications \
+of algorithmic choices.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667671530426*^9}, {
+   3.9436677124864397`*^9, 3.9436677125018997`*^9}, 3.943667787891906*^9},
+ CellID->72119559,ExpressionUUID->"708c385f-ff4c-43aa-9d4d-e51e1c9653dc"],
+
+Cell["\<\
+By integrating probability and statistics in AI development, researchers gain \
+insights into theoretical foundations, contributing to the refinement and \
+optimization of intelligent systems.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667671530426*^9}, {
+   3.943667714223568*^9, 3.943667714240198*^9}, 3.943667787902624*^9},
+ CellID->470774578,ExpressionUUID->"19466161-7d2c-4cc4-8b61-9d15b1198e8a"],
+
+Cell["\<\
+Mathematica provides powerful tools for analyzing and visualizing data, \
+including built-in functions for random sampling, order and count statistics, \
+frequency distributions, and distribution shapes. By using these functions, \
+you can gain insights into your data, identify patterns and outliers, and \
+make informed decisions based on statistical analysis. Additionally, \
+Mathematica offers various functions to compute central tendency, dispersion \
+and shape measures. These functions provide quick and accurate calculations \
+for determining the typical or central value of a dataset and for visualizing \
+location statistics.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667671530426*^9}, {
+  3.943667719432088*^9, 3.9436677194490957`*^9}, {3.943667787912672*^9, 
+  3.943667787952343*^9}},
+ CellID->1706493228,ExpressionUUID->"63cc1325-0aaf-447e-b0dc-e329229ddd9c"],
+
+Cell["\<\
+\[Bullet] Random sampling is a method of selecting a subset of individuals or \
+data points from a larger population in a way that each member of the \
+population has an equal chance of being selected. In Mathematica, you can use \
+built-in functions such as RandomSample and RandomChoice to generate random \
+samples from a dataset or population. These functions can be useful for \
+testing hypotheses, simulating experiments, and exploring datasets.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667671530426*^9}, {
+  3.9436677238547897`*^9, 3.9436677238781147`*^9}, {3.943667787962137*^9, 
+  3.943667787991458*^9}},
+ CellID->881965684,ExpressionUUID->"a864b190-49f9-4ab0-bfc7-161ffaf3a320"],
+
+Cell["\<\
+\[Bullet] Also, you can use the built-in function Histogram to generate a \
+histogram of the frequency distribution of a dataset.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667671530426*^9}, {
+   3.943667726314767*^9, 3.943667726331769*^9}, 3.943667788001299*^9},
+ CellID->49577211,ExpressionUUID->"56e61867-337c-4f71-ba32-f5c6ee6a882f"],
+
+Cell["\<\
+\[Bullet] Moreover, you can use the built-in functions PDF, and CDF, to \
+visualize the shape of a distribution.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667671530426*^9}, {
+  3.943667727424768*^9, 3.943667727441305*^9}},
+ CellID->639737044,ExpressionUUID->"6a828821-71e4-40d8-b22b-4512d15433cb"],
+
+Cell["\<\
+\[Bullet] The Mean function in Mathematica calculates the arithmetic mean of \
+a list of numbers. It is a commonly used measure of central tendency and \
+provides the average value of the dataset.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667671530426*^9}, {
+   3.943667729834556*^9, 3.943667729855196*^9}, 3.943667788011615*^9},
+ CellID->1531520535,ExpressionUUID->"fb8d5c87-fdc2-408d-88c8-37504492ddbb"],
+
+Cell["\<\
+\[Bullet] The Median function computes the middle value of a sorted dataset. \
+It is useful for finding a representative value that is not influenced by \
+extreme values or outliers.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667671530426*^9}, 
+   3.943667788022109*^9},
+ CellID->1912259887,ExpressionUUID->"d3d65b3a-cdd4-4dea-aee6-9a3257cd8055"],
+
+Cell["\<\
+\[Bullet] The Commonest function determines the mode(s) of a dataset, which \
+represents the most frequently occurring value(s). This can be useful when \
+dealing with categorical or discrete data.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+   3.943667733968606*^9, 3.943667733990744*^9}, 3.943667788032559*^9},
+ CellID->855888498,ExpressionUUID->"701cdef3-6567-4e9a-bb79-b41482c23061"],
+
+Cell["\<\
+\[Bullet] Mathematica provides functions like Quartiles and Quantile to \
+calculate specific quantiles of a dataset. These functions allow you to find \
+values that divide the dataset into equal proportions, such as the first \
+quartile (25th percentile) or the median (50th percentile).\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+  3.943667737250144*^9, 3.943667737267395*^9}, {3.943667788042605*^9, 
+  3.943667788052593*^9}},
+ CellID->763788934,ExpressionUUID->"3ecc9abe-06ca-486f-86e1-19f40d5fc971"],
+
+Cell["\<\
+\[Bullet] The TrimmedMean function in Mathematica calculates the mean of a \
+dataset after excluding a specified percentage of extreme values from both \
+ends. It can be useful in situations where outliers may significantly affect \
+the overall mean.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+  3.943667740506475*^9, 3.943667740530692*^9}, {3.943667788062703*^9, 
+  3.943667788072672*^9}},
+ CellID->1928665183,ExpressionUUID->"01268d8d-265d-4bcb-a922-b63201f45f32"],
+
+Cell["\<\
+\[Bullet] The WinsorizedMean function provides a robust measure of central \
+tendency by reducing the impact of outliers or extreme values on the \
+calculated mean. It achieves this by replacing extreme values with values \
+from a specified percentile.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+  3.943667743538938*^9, 3.943667743553952*^9}, {3.94366778808259*^9, 
+  3.943667788092568*^9}},
+ CellID->701075679,ExpressionUUID->"e81fe4f0-8c5f-4a5d-9aa6-45c9ae44e361"],
+
+Cell["\<\
+\[Bullet] Both the HarmonicMean and GeometricMean functions provide \
+alternative measures of central tendency that are suitable for specific types \
+of data. While the HarmonicMean is useful for rates and ratios, the \
+GeometricMean is applicable for multiplicative relationships and positive \
+values.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+  3.943667745514545*^9, 3.9436677455303593`*^9}, {3.943667788102585*^9, 
+  3.943667788112548*^9}},
+ CellID->539440750,ExpressionUUID->"14cd00a7-d6ab-4bfd-b4b7-aaa2e8228528"],
+
+Cell["\<\
+\[Bullet] Mathematica offers built-in functions for visualizing location \
+statistics. For example, you can create box plots using BoxWhiskerChart to \
+display the median, quartiles, and potential outliers in a dataset.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+   3.943667747232071*^9, 3.943667747245433*^9}, 3.9436677881225758`*^9},
+ CellID->1140021857,ExpressionUUID->"ef33c80c-7915-4478-aee0-69ef87a35c54"],
+
+Cell["\<\
+\[Bullet] The InterquartileRange function calculates the range between the \
+upper quartile and the lower quartile in a dataset. It is useful for \
+identifying the spread or dispersion of the middle 50% of the data.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+   3.943667748710909*^9, 3.943667748726356*^9}, 3.943667788132533*^9},
+ CellID->1166829830,ExpressionUUID->"1a941c03-c5c5-4bb1-8370-0842b04c8474"],
+
+Cell["\<\
+\[Bullet] The QuartileDeviation function calculates the semi-interquartile \
+range, which is half of the Interquartile Range. It provides a measure of \
+dispersion around the median and is less affected by extreme values.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+   3.9436677504499273`*^9, 3.943667750475172*^9}, 3.9436677881433907`*^9},
+ CellID->1894380239,ExpressionUUID->"bf165ea2-452c-47c3-ae7a-45cc8454a109"],
+
+Cell["\<\
+\[Bullet] The MeanDeviation function computes the average absolute deviation \
+of each data point from the mean. It gives an indication of the average \
+distance between individual data points and the mean. MeanDeviation is less \
+influenced by extreme values and provides a robust measure of dispersion.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+  3.943667752443823*^9, 3.943667752459097*^9}, {3.943667788153387*^9, 
+  3.943667788163327*^9}},
+ CellID->455774381,ExpressionUUID->"ba26b75b-da4c-4c11-9d82-87e76528627e"],
+
+Cell["\<\
+\[Bullet] The StandardDeviation function calculates the standard deviation, \
+which is a widely used measure of dispersion. It quantifies the amount of \
+variation or spread in a dataset by measuring the average distance between \
+each data point and the mean. A higher standard deviation indicates greater \
+variability.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+  3.943667754453348*^9, 3.9436677544685087`*^9}, {3.9436677881731653`*^9, 
+  3.943667788183004*^9}},
+ CellID->551504200,ExpressionUUID->"120675c3-6fa8-42f8-adaa-d256af0536e4"],
+
+Cell["\<\
+\[Bullet] The Variance function computes the average squared deviation of \
+each data point from the mean. It provides a measure of the overall \
+variability in a dataset.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+   3.943667755776142*^9, 3.943667755792863*^9}, 3.943667788192956*^9},
+ CellID->571064948,ExpressionUUID->"8ff1c7e0-bb36-4a71-a137-893384bd61b1"],
+
+Cell["\<\
+\[Bullet] The TrimmedVariance function calculates the variance after trimming \
+a certain percentage of extreme values from both ends of the dataset. \
+Trimming reduces the impact of outliers and extreme values on the variance \
+calculation, providing a more robust measure of dispersion.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+  3.943667757572878*^9, 3.943667757588752*^9}, {3.94366778820293*^9, 
+  3.943667788212722*^9}},
+ CellID->1450994202,ExpressionUUID->"a89cd8ed-c27e-4804-a69f-f89d6ea04a97"],
+
+Cell["\<\
+\[Bullet] The WinsorizedVariance function is similar to TrimmedVariance, but \
+instead of removing extreme values, it replaces them with values closer to \
+the mean.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+  3.943667758878392*^9, 3.9436677882225523`*^9}},
+ CellID->584041731,ExpressionUUID->"e47ea635-996c-4b96-8ac2-32c1e821b265"],
+
+Cell["\[Bullet] The Moment function computes the nth moment of a dataset.", \
+"Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+  3.9436677603048964`*^9, 3.94366776032036*^9}},
+ CellID->1560991857,ExpressionUUID->"74c8ee7d-c2be-4b8e-84b3-2cdddb130085"],
+
+Cell["\<\
+\[Bullet] The CentralMoment function calculates the nth central moment of a \
+dataset. It measures the dispersion of data around the mean.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+  3.943667761639145*^9, 3.943667788232397*^9}},
+ CellID->684785,ExpressionUUID->"4f63f5e6-bbc7-4a6c-9f76-0eeab7e08d0d"],
+
+Cell["\<\
+\[Bullet] FactorialMoment function computes the nth factorial moment of a \
+dataset.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+  3.943667762539036*^9, 3.943667762559762*^9}},
+ CellID->2124442918,ExpressionUUID->"6adb1877-9479-4261-999f-4912e3c422f6"],
+
+Cell["\<\
+\[Bullet] The Skewness function measures the asymmetry of a dataset\
+\[CloseCurlyQuote]s distribution. It indicates whether the dataset is skewed \
+to the left (negative skewness) or to the right (positive skewness) relative \
+to the mean.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+  3.943667764249628*^9, 3.943667788242241*^9}},
+ CellID->993656892,ExpressionUUID->"0145f585-cbaf-455a-8d3d-d353d5134119"],
+
+Cell["\<\
+\[Bullet] The QuartileSkewness function is a measure of skewness based on \
+quartiles.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+  3.943667765214294*^9, 3.943667765236562*^9}},
+ CellID->846359626,ExpressionUUID->"6978fd1f-c105-4045-919e-53ee3a70739a"],
+
+Cell["\<\
+\[Bullet] The Kurtosis function measures the peakedness or flatness of a \
+dataset\[CloseCurlyQuote]s distribution. It provides insights into the tail \
+behavior and presence of outliers. The chapter will include practical \
+examples and exercises to reinforce the concepts learned. By the end of this \
+chapter, you will be equipped with the knowledge and skills to perform \
+descriptive statistical analysis using Mathematica, making it easier to \
+summarize and interpret data effectively. Moreover, we will delve into the \
+world of discrete random variables, which play a crucial role in modeling \
+various phenomena with countable outcomes. We explore their Probability Mass \
+Functions (PMFs), Cumulative Density Functions (CDFs), and Moment Generating \
+Functions (MGFs), while leveraging the power of Mathematica to perform \
+computations and gain insights.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667683992971*^9}, {
+  3.943667788252776*^9, 3.943667788323195*^9}},
+ CellID->1720599867,ExpressionUUID->"8faded03-1b1a-474c-a993-2ce11086eb60"],
+
+Cell["\<\
+\[Bullet] PDF and CDF assist in determining the probability density and \
+cumulative probability of discrete random variables, respectively.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667691908444*^9}, {
+  3.943667772836837*^9, 3.94366778833317*^9}},
+ CellID->632032466,ExpressionUUID->"d106633e-0452-4b98-99c3-cd4f5c3a6b76"],
+
+Cell["\<\
+\[Bullet] Expectation and NExpectation functions calculate the expected value \
+or mean of a discrete random variable, providing insights into its central \
+tendency.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667691908444*^9}, {
+  3.943667774209342*^9, 3.9436677883431883`*^9}},
+ CellID->1520217158,ExpressionUUID->"85e6f603-a8e8-4cfa-b674-92e2da5d9334"],
+
+Cell["\<\
+\[Bullet] MomentGeneratingFunction and CentralMomentGeneratingFunction allow \
+for the calculation of higher- order moments and central moments, offering a \
+more comprehensive understanding of the distribution of the random variable.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667691908444*^9}, {
+  3.943667776175804*^9, 3.943667788363762*^9}},
+ CellID->1117870837,ExpressionUUID->"ddd93ed8-01db-4e78-b898-3dcb21278371"],
+
+Cell["\<\
+\[Bullet] Mathematica offers a comprehensive set of built-in functions to \
+handle various probability distributions effortlessly. In this chapter, we \
+also explore two essential probability distributions: Binomial distribution, \
+and discrete uniform distribution. Additionally, we explore the world of \
+continuous random variables, which are essential for modeling phenomena with \
+uncountable outcomes. We study the continuous probability distributions, \
+exploring their Probability Density Functions (PDFs), CDFs, and MGFs. We will \
+demonstrate how to define, manipulate, and analyze continuous random \
+variables and probability distributions using Mathematica\[CloseCurlyQuote]s \
+syntax and functionality. We will study two fundamental probability \
+distributions: Normal distribution, and uniform distribution. By engaging in \
+hands-on exercises and experimenting with different scenarios, readers will \
+enhance their understanding of the concepts and develop proficiency in \
+utilizing Mathematica for probability analysis.\
+\>", "Text",
+ CellChangeTimes->{{3.943667669013122*^9, 3.943667691908444*^9}, {
+  3.9436677883737*^9, 3.943667788452606*^9}},
+ CellID->2097285682,ExpressionUUID->"1777415e-81d5-4c3c-af60-66de1eb77c88"],
+
+Cell["Descriptive Statistics", "Subsection",
  CellChangeTimes->{
   3.652728456208679*^9, 3.652728527108994*^9, {3.943567947734291*^9, 
    3.943567950913409*^9}, {3.943567999744588*^9, 3.943568004695662*^9}},
@@ -139,7 +523,7 @@ Cell["Descriptive Statistics", "Section",
 }, Open  ]]
 },
 WindowSize->{960, 1027},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "BookToolsStyles.nb", 
   CharacterEncoding -> "UTF-8"],
@@ -159,9 +543,79 @@ Notebook[{
 Cell[554, 20, 4120, 104, 130, "Text",ExpressionUUID->"67aab6c7-b186-4fbc-a04a-683b7453f682",
  CellID->912160115],
 Cell[CellGroupData[{
-Cell[4699, 128, 258, 3, 84, "Chapter",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
+Cell[4699, 128, 333, 4, 133, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
  CellID->622795188],
-Cell[4960, 133, 279, 4, 133, "Section",ExpressionUUID->"aeff30c4-b325-4952-97d6-9ea1165e9238",
+Cell[5035, 134, 1644, 32, 279, "Note",ExpressionUUID->"ded706bc-8381-4a02-88e8-79684a8dd7a1",
+ CellID->1236726918],
+Cell[6682, 168, 840, 13, 222, "Text",ExpressionUUID->"1e4d1b25-a883-4c7f-a79d-a5d1f7b59dd4",
+ CellID->617285863],
+Cell[7525, 183, 313, 6, 75, "Text",ExpressionUUID->"4e96dc56-99e5-4f93-998e-28ef8fbf1ddf",
+ CellID->235474553],
+Cell[7841, 191, 386, 6, 75, "Text",ExpressionUUID->"82080496-3f3b-4d54-bd71-abb8b2c04f4e",
+ CellID->1048608594],
+Cell[8230, 199, 416, 7, 104, "Text",ExpressionUUID->"708c385f-ff4c-43aa-9d4d-e51e1c9653dc",
+ CellID->72119559],
+Cell[8649, 208, 429, 7, 104, "Text",ExpressionUUID->"19466161-7d2c-4cc4-8b61-9d15b1198e8a",
+ CellID->470774578],
+Cell[9081, 217, 902, 14, 252, "Text",ExpressionUUID->"63cc1325-0aaf-447e-b0dc-e329229ddd9c",
+ CellID->1706493228],
+Cell[9986, 233, 718, 11, 193, "Text",ExpressionUUID->"a864b190-49f9-4ab0-bfc7-161ffaf3a320",
+ CellID->881965684],
+Cell[10707, 246, 365, 6, 75, "Text",ExpressionUUID->"56e61867-337c-4f71-ba32-f5c6ee6a882f",
+ CellID->49577211],
+Cell[11075, 254, 326, 6, 75, "Text",ExpressionUUID->"6a828821-71e4-40d8-b22b-4512d15433cb",
+ CellID->639737044],
+Cell[11404, 262, 434, 7, 104, "Text",ExpressionUUID->"fb8d5c87-fdc2-408d-88c8-37504492ddbb",
+ CellID->1531520535],
+Cell[11841, 271, 374, 7, 75, "Text",ExpressionUUID->"d3d65b3a-cdd4-4dea-aee6-9a3257cd8055",
+ CellID->1912259887],
+Cell[12218, 280, 434, 7, 104, "Text",ExpressionUUID->"701cdef3-6567-4e9a-bb79-b41482c23061",
+ CellID->855888498],
+Cell[12655, 289, 550, 9, 134, "Text",ExpressionUUID->"3ecc9abe-06ca-486f-86e1-19f40d5fc971",
+ CellID->763788934],
+Cell[13208, 300, 514, 9, 104, "Text",ExpressionUUID->"01268d8d-265d-4bcb-a922-b63201f45f32",
+ CellID->1928665183],
+Cell[13725, 311, 514, 9, 104, "Text",ExpressionUUID->"e81fe4f0-8c5f-4a5d-9aa6-45c9ae44e361",
+ CellID->701075679],
+Cell[14242, 322, 568, 10, 134, "Text",ExpressionUUID->"14cd00a7-d6ab-4bfd-b4b7-aaa2e8228528",
+ CellID->539440750],
+Cell[14813, 334, 459, 7, 104, "Text",ExpressionUUID->"ef33c80c-7915-4478-aee0-69ef87a35c54",
+ CellID->1140021857],
+Cell[15275, 343, 453, 7, 104, "Text",ExpressionUUID->"1a941c03-c5c5-4bb1-8370-0842b04c8474",
+ CellID->1166829830],
+Cell[15731, 352, 463, 7, 104, "Text",ExpressionUUID->"bf165ea2-452c-47c3-ae7a-45cc8454a109",
+ CellID->1894380239],
+Cell[16197, 361, 567, 9, 134, "Text",ExpressionUUID->"ba26b75b-da4c-4c11-9d82-87e76528627e",
+ CellID->455774381],
+Cell[16767, 372, 588, 10, 134, "Text",ExpressionUUID->"120675c3-6fa8-42f8-adaa-d256af0536e4",
+ CellID->551504200],
+Cell[17358, 384, 408, 7, 75, "Text",ExpressionUUID->"8ff1c7e0-bb36-4a71-a137-893384bd61b1",
+ CellID->571064948],
+Cell[17769, 393, 551, 9, 134, "Text",ExpressionUUID->"a89cd8ed-c27e-4804-a69f-f89d6ea04a97",
+ CellID->1450994202],
+Cell[18323, 404, 381, 7, 75, "Text",ExpressionUUID->"e47ea635-996c-4b96-8ac2-32c1e821b265",
+ CellID->584041731],
+Cell[18707, 413, 277, 4, 45, "Text",ExpressionUUID->"74c8ee7d-c2be-4b8e-84b3-2cdddb130085",
+ CellID->1560991857],
+Cell[18987, 419, 349, 6, 75, "Text",ExpressionUUID->"4f63f5e6-bbc7-4a6c-9f76-0eeab7e08d0d",
+ CellID->684785],
+Cell[19339, 427, 299, 6, 45, "Text",ExpressionUUID->"6adb1877-9479-4261-999f-4912e3c422f6",
+ CellID->2124442918],
+Cell[19641, 435, 453, 8, 104, "Text",ExpressionUUID->"0145f585-cbaf-455a-8d3d-d353d5134119",
+ CellID->993656892],
+Cell[20097, 445, 300, 6, 45, "Text",ExpressionUUID->"6978fd1f-c105-4045-919e-53ee3a70739a",
+ CellID->846359626],
+Cell[20400, 453, 1081, 16, 311, "Text",ExpressionUUID->"8faded03-1b1a-474c-a993-2ce11086eb60",
+ CellID->1720599867],
+Cell[21484, 471, 353, 6, 75, "Text",ExpressionUUID->"d106633e-0452-4b98-99c3-cd4f5c3a6b76",
+ CellID->632032466],
+Cell[21840, 479, 383, 7, 75, "Text",ExpressionUUID->"85e6f603-a8e8-4cfa-b674-92e2da5d9334",
+ CellID->1520217158],
+Cell[22226, 488, 449, 7, 104, "Text",ExpressionUUID->"ddd93ed8-01db-4e78-b898-3dcb21278371",
+ CellID->1117870837],
+Cell[22678, 497, 1251, 18, 399, "Text",ExpressionUUID->"1777415e-81d5-4c3c-af60-66de1eb77c88",
+ CellID->2097285682],
+Cell[23932, 517, 282, 4, 68, "Subsection",ExpressionUUID->"aeff30c4-b325-4952-97d6-9ea1165e9238",
  CellID->195335164]
 }, Open  ]]
 }

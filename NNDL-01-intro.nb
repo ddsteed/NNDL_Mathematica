@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      5785,        160]
-NotebookOptionsPosition[      5078,        138]
-NotebookOutlinePosition[      5544,        155]
-CellTagsIndexPosition[      5501,        152]
+NotebookDataLength[      8013,        209]
+NotebookOptionsPosition[      6590,        175]
+NotebookOutlinePosition[      7056,        192]
+CellTagsIndexPosition[      7013,        189]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -125,15 +125,52 @@ contents.nb"],
 
 Cell[CellGroupData[{
 
-Cell["Introduction to Mathematica", "Chapter",
- CellChangeTimes->{{3.943567936366756*^9, 3.9435679403338757`*^9}},
+Cell["1 Introduction to Mathematica", "Section",
+ CellChangeTimes->{{3.943567936366756*^9, 3.9435679403338757`*^9}, {
+   3.94366755414697*^9, 3.9436675546107197`*^9}, 3.943669753958825*^9},
  CellID->622795188,ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49"],
 
-Cell["Basic Concepts", "Section",
+Cell["Basic Concepts", "Subsection",
  CellChangeTimes->{
   3.652728456208679*^9, 3.652728527108994*^9, {3.943567947734291*^9, 
    3.943567950913409*^9}},
- CellID->195335164,ExpressionUUID->"aeff30c4-b325-4952-97d6-9ea1165e9238"]
+ CellID->195335164,ExpressionUUID->"aeff30c4-b325-4952-97d6-9ea1165e9238"],
+
+Cell["Variables and Functions", "Subsection",
+ CellChangeTimes->{
+  3.652728456208679*^9, 3.652728527108994*^9, {3.943667416739253*^9, 
+   3.943667420422853*^9}},
+ CellID->1701995223,ExpressionUUID->"83ce7304-9f84-4422-a348-e04d4e0525cd"],
+
+Cell["Lists", "Subsection",
+ CellChangeTimes->{
+  3.652728456208679*^9, 3.652728527108994*^9, {3.9436674235731688`*^9, 
+   3.943667424291417*^9}},
+ CellID->671927545,ExpressionUUID->"363fbd1d-6a57-4427-a5fb-7b9b70c0c450"],
+
+Cell["2D and 3D Graphing", "Subsection",
+ CellChangeTimes->{
+  3.652728456208679*^9, 3.652728527108994*^9, {3.9436674293044777`*^9, 
+   3.9436674356012383`*^9}},
+ CellID->1272275916,ExpressionUUID->"494c669b-d164-4972-b3d1-e2e13520cd25"],
+
+Cell["Control Structure", "Subsection",
+ CellChangeTimes->{
+  3.652728456208679*^9, 3.652728527108994*^9, {3.943667439037355*^9, 
+   3.943667442333997*^9}},
+ CellID->1526144475,ExpressionUUID->"113b89b9-e384-47be-abab-7a8c15fe438f"],
+
+Cell["Modules, Blocks, and Local Variables", "Subsection",
+ CellChangeTimes->{
+  3.652728456208679*^9, 3.652728527108994*^9, {3.943667444824292*^9, 
+   3.943667452387247*^9}},
+ CellID->1042796283,ExpressionUUID->"f5be672f-cc00-4ad8-b7eb-32c430997850"],
+
+Cell["Functional Programming", "Subsection",
+ CellChangeTimes->{
+  3.652728456208679*^9, 3.652728527108994*^9, {3.943667454972588*^9, 
+   3.943667457999758*^9}},
+ CellID->1473176087,ExpressionUUID->"e7418787-1fcd-4965-be9d-0b28a761bb23"]
 }, Open  ]]
 },
 WindowSize->{960, 916},
@@ -157,10 +194,22 @@ Notebook[{
 Cell[554, 20, 4066, 103, 130, "Text",ExpressionUUID->"67aab6c7-b186-4fbc-a04a-683b7453f682",
  CellID->912160115],
 Cell[CellGroupData[{
-Cell[4645, 127, 189, 2, 84, "Chapter",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
+Cell[4645, 127, 264, 3, 133, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
  CellID->622795188],
-Cell[4837, 131, 225, 4, 133, "Section",ExpressionUUID->"aeff30c4-b325-4952-97d6-9ea1165e9238",
- CellID->195335164]
+Cell[4912, 132, 228, 4, 68, "Subsection",ExpressionUUID->"aeff30c4-b325-4952-97d6-9ea1165e9238",
+ CellID->195335164],
+Cell[5143, 138, 238, 4, 32, "Subsection",ExpressionUUID->"83ce7304-9f84-4422-a348-e04d4e0525cd",
+ CellID->1701995223],
+Cell[5384, 144, 221, 4, 32, "Subsection",ExpressionUUID->"363fbd1d-6a57-4427-a5fb-7b9b70c0c450",
+ CellID->671927545],
+Cell[5608, 150, 237, 4, 32, "Subsection",ExpressionUUID->"494c669b-d164-4972-b3d1-e2e13520cd25",
+ CellID->1272275916],
+Cell[5848, 156, 232, 4, 32, "Subsection",ExpressionUUID->"113b89b9-e384-47be-abab-7a8c15fe438f",
+ CellID->1526144475],
+Cell[6083, 162, 251, 4, 32, "Subsection",ExpressionUUID->"f5be672f-cc00-4ad8-b7eb-32c430997850",
+ CellID->1042796283],
+Cell[6337, 168, 237, 4, 32, "Subsection",ExpressionUUID->"e7418787-1fcd-4965-be9d-0b28a761bb23",
+ CellID->1473176087]
 }, Open  ]]
 }
 ]

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      5028,        140]
-NotebookOptionsPosition[      4323,        118]
-NotebookOutlinePosition[      4788,        135]
-CellTagsIndexPosition[      4745,        132]
+NotebookDataLength[      5948,        163]
+NotebookOptionsPosition[      5239,        141]
+NotebookOutlinePosition[      5704,        158]
+CellTagsIndexPosition[      5661,        155]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -33,7 +33,27 @@ Cell[TextData[{
   FontSlant->"Italic",
   FontColor->RGBColor[1, 0.5, 0]],
  StyleBox["Neural Network and Deep Learning with Mathematica                  \
-             ",
+              ",
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox[ButtonBox["<",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
+      "EDITED", "Neural_NetWork_and_Deep_Learning"}, "NNDL-02-stat-prob.nb", 
+     CharacterEncoding -> "UTF-8"], None},
+  ButtonNote->
+   "/Users/fengh/Documents/RDS/EDITED/Neural_NetWork_and_Deep_Learning/NNDL-\
+02-stat-prob.nb"],
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox[" ",
   FontFamily->"Arial Unicode MS",
   FontSize->17.5,
   FontWeight->"Regular",
@@ -43,10 +63,11 @@ Cell[TextData[{
   BaseStyle->"Hyperlink",
   ButtonData->{
     FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
-      "EDITED", "MPAAI"}, "MPAAI-1-Introduction.nb", CharacterEncoding -> 
-     "UTF-8"], None},
+      "EDITED", "Neural_NetWork_and_Deep_Learning"}, 
+     "NNDL-04-multilayer-ffnn.nb", CharacterEncoding -> "UTF-8"], None},
   ButtonNote->
-   "/Users/fengh/Documents/RDS/EDITED/MPAAI/MPAAI-1-Introduction.nb"],
+   "/Users/fengh/Documents/RDS/EDITED/Neural_NetWork_and_Deep_Learning/NNDL-\
+04-multilayer-ffnn.nb"],
   FontFamily->"Arial Unicode MS",
   FontSize->17.5,
   FontWeight->"Regular",
@@ -96,7 +117,8 @@ contents.nb"],
    3.940303217729404*^9, 3.940303217737211*^9}, {3.940741024123201*^9, 
    3.940741027365489*^9}, {3.940741081934002*^9, 3.940741081942062*^9}, {
    3.943567220607367*^9, 3.9435672414910088`*^9}, {3.94356735516547*^9, 
-   3.943567355169693*^9}},
+   3.943567355169693*^9}, 3.943669935425066*^9, {3.9436699756110992`*^9, 
+   3.943669986911532*^9}},
  LineSpacing->{0.6999999999999997, 3},
  Background->RGBColor[
   0.13066300450141147`, 0.12460517280842298`, 0.4353551537346456],
@@ -104,12 +126,13 @@ contents.nb"],
 
 Cell[CellGroupData[{
 
-Cell["Matrix Calculus and Gradient Optimization", "Chapter",
+Cell["3 Matrix Calculus and Gradient Optimization", "Section",
  CellChangeTimes->{{3.943567936366756*^9, 3.9435679403338757`*^9}, {
-  3.943568028314137*^9, 3.94356803879814*^9}},
+  3.943568028314137*^9, 3.94356803879814*^9}, {3.9436699176626053`*^9, 
+  3.943669917779005*^9}},
  CellID->622795188,ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49"],
 
-Cell["optimization", "Section",
+Cell["optimization", "Subsection",
  CellChangeTimes->{
   3.652728456208679*^9, 3.652728527108994*^9, {3.943576245146694*^9, 
    3.94357624951036*^9}},
@@ -134,12 +157,12 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[554, 20, 3252, 82, 130, "Text",ExpressionUUID->"67aab6c7-b186-4fbc-a04a-683b7453f682",
+Cell[554, 20, 4112, 104, 130, "Text",ExpressionUUID->"67aab6c7-b186-4fbc-a04a-683b7453f682",
  CellID->912160115],
 Cell[CellGroupData[{
-Cell[3831, 106, 251, 3, 84, "Chapter",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
+Cell[4691, 128, 304, 4, 133, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
  CellID->622795188],
-Cell[4085, 111, 222, 4, 133, "Section",ExpressionUUID->"cd6c164c-e8f3-49b1-8641-aa304af11da2",
+Cell[4998, 134, 225, 4, 68, "Subsection",ExpressionUUID->"cd6c164c-e8f3-49b1-8641-aa304af11da2",
  CellID->554299123]
 }, Open  ]]
 }
