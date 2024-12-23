@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      5948,        163]
-NotebookOptionsPosition[      5239,        141]
-NotebookOutlinePosition[      5704,        158]
-CellTagsIndexPosition[      5661,        155]
+NotebookDataLength[     49559,       1125]
+NotebookOptionsPosition[     45247,       1036]
+NotebookOutlinePosition[     45640,       1052]
+CellTagsIndexPosition[     45597,       1049]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -132,6 +132,901 @@ Cell["3 Matrix Calculus and Gradient Optimization", "Section",
   3.943669917779005*^9}},
  CellID->622795188,ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49"],
 
+Cell[TextData[{
+ StyleBox["Remark: ",
+  FontWeight->"Bold"],
+ "This chapter provides a Mathematica implementation of the concepts and \
+ideas presented in Chapter 2, [1], of the book titled ",
+ ButtonBox["Artificial Neural Network and Deep Learning: Fundamentals and \
+Theory",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
+      "EDITED", "Artifical_Neural_Network_and_Deep_Learning"}, "contents.nb", 
+     CharacterEncoding -> "UTF-8"], None},
+  ButtonNote->
+   "/Users/fengh/Documents/RDS/EDITED/Artifical_Neural_Network_and_Deep_\
+Learning/contents.nb"],
+ ". We strongly recommend that you begin with the theoretical chapter to \
+build a solid foundation before exploring the corresponding practical \
+implementation. This chapter also serves as a summary of the book titled \
+Mathematics for ",
+ ButtonBox["Machine Learning and Data Science: Optimization with Mathematica \
+Applications",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
+      "EDITED", "Mathematics_for_Machine_Learning_and_Data_Science"}, 
+     "contents.nb", CharacterEncoding -> "UTF-8"], None},
+  ButtonNote->
+   "/Users/fengh/Documents/RDS/EDITED/Mathematics_for_Machine_Learning_and_\
+Data_Science/contents.nb"],
+ ". For detailed proofs of theorems, additional examples, and comprehensive \
+explanations, including Mathematica applications, please refer to Ref [11].\
+\[CloseCurlyDoubleQuote]"
+}], "Note",
+ CellChangeTimes->{{3.943912292232725*^9, 3.94391230016037*^9}, {
+  3.943912363626767*^9, 3.943912363631219*^9}, {3.943912409292329*^9, 
+  3.943912409298015*^9}},
+ CellID->601877545,ExpressionUUID->"615fa15e-a531-46a7-89af-e31f2ed19f17"],
+
+Cell["\<\
+In the realm of AI and machine learning, the modern development of NNs stands \
+as a testament to the marriage of sophisticated mathematical frameworks and \
+computational ingenuity. At the heart of this evolution lies the profound \
+influence of matrix calculus [12-14] and gradient optimization techniques \
+[15-23]. These foundational pillars have not only reshaped the landscape of \
+NN design but have also propelled advancements in diverse domains, ranging \
+from computer vision to natural language processing and beyond.\
+\>", "Text",
+ CellChangeTimes->{{3.943912427740017*^9, 3.9439124582238407`*^9}},
+ CellID->1012640000,ExpressionUUID->"a6dbc110-b65c-4f09-bf8c-1b140de91b9e"],
+
+Cell["\<\
+Matrix calculus, with its roots in linear algebra, provides a powerful \
+toolset for analyzing and manipulating multidimensional data structures. It \
+offers a systematic framework for computing derivatives and gradients of \
+functions involving matrices and vectors, enabling efficient optimization in \
+high-dimensional spaces. Matrix calculus is indeed essential for building and \
+training NNs. NNs, especially deep learning models, heavily rely on matrix \
+operations for their computations.\
+\>", "Text",
+ CellChangeTimes->{{3.943912427740017*^9, 3.9439124582669783`*^9}},
+ CellID->1269080557,ExpressionUUID->"ad256dcd-d6c4-4655-aac4-405f24eceaa6"],
+
+Cell["Here\[CloseCurlyQuote]s why matrix calculus is crucial for NNs:", "Text",
+ CellChangeTimes->{{3.943912427740017*^9, 3.943912440730233*^9}},
+ CellID->9881320,ExpressionUUID->"cda9e92e-7358-4b81-85b4-3d2c835cd4ff"],
+
+Cell["\<\
+\[Bullet] NNs are typically represented and implemented using matrices and \
+vectors. Each layer in a NN can be seen as a matrix operation, where inputs \
+(vectors) are multiplied by weights (matrices) and passed through functions \
+(activation functions).\
+\>", "Text",
+ CellChangeTimes->{{3.943912427740017*^9, 3.943912458287373*^9}},
+ CellID->1199123979,ExpressionUUID->"884ce80d-e6e7-423c-999f-48cb1c26646d"],
+
+Cell["\<\
+\[Bullet] The training of NNs often involves optimization algorithms like \
+Gradient Descent (GD). Matrix calculus provides the necessary tools to \
+compute gradients efficiently, enabling the optimization process to update \
+the network parameters (weights) in the direction that minimizes the \
+objective (loss) function.\
+\>", "Text",
+ CellChangeTimes->{{3.943912427740017*^9, 3.9439124583089333`*^9}},
+ CellID->518342284,ExpressionUUID->"714275bf-2d5f-4353-8933-46a72666c7e2"],
+
+Cell["\<\
+\[Bullet] Backpropagation is the primary algorithm used to compute gradients \
+efficiently in NNs. It is essentially an application of the chain rule from \
+calculus, which involves matrix multiplication and transposition operations.\
+\>", "Text",
+ CellChangeTimes->{{3.943912427740017*^9, 3.9439124583293667`*^9}},
+ CellID->32971686,ExpressionUUID->"72fa1612-17ae-41f3-9ace-0352efb67f74"],
+
+Cell["\<\
+\[Bullet] Matrix calculus allows for efficient computation of derivatives and \
+gradients in NNs. This efficiency is crucial for training deep NNs, which may \
+have millions of parameters.\
+\>", "Text",
+ CellChangeTimes->{{3.943912427740017*^9, 3.943912458339501*^9}},
+ CellID->1006951296,ExpressionUUID->"be440836-4d53-4b84-9fdc-0ad6ff22ff1c"],
+
+Cell["\<\
+\[Bullet] Most deep learning frameworks handle much of the matrix calculus \
+under the hood. However, understanding the underlying principles of matrix \
+calculus can help in debugging, optimizing, and customizing NN architectures.\
+\
+\>", "Text",
+ CellChangeTimes->{{3.943912427740017*^9, 3.9439124583597383`*^9}},
+ CellID->483867996,ExpressionUUID->"e6f86f9d-8206-4799-a91f-467408b2da1a"],
+
+Cell["\<\
+Complementing matrix calculus is the arsenal of gradient optimization \
+techniques, which are fundamental to training NNs. By iteratively adjusting \
+model parameters in the direction of steepest descent, these methods seek to \
+minimize a predefined objective function, such as the loss function in \
+supervised learning tasks. From classic algorithms like GD to more advanced \
+variants like Stochastic Gradient Descent (SGD) and Adaptive Moment (Adam) \
+optimization, these techniques play a pivotal role in navigating the vast \
+landscape of model parameter space efficiently and effectively.\
+\>", "Text",
+ CellChangeTimes->{
+  3.943912427740017*^9, {3.943912458370421*^9, 3.943912458411495*^9}},
+ CellID->1271169941,ExpressionUUID->"683a4c70-d076-4adf-8d30-70ad31b7dd22"],
+
+Cell["\<\
+This chapter aims to introduce the concepts of numerical differentiation, \
+matrix calculus, gradient optimization, and demonstrate their implementation \
+using Mathematica.\
+\>", "Text",
+ CellChangeTimes->{{3.9439127857038593`*^9, 3.9439128044501143`*^9}},
+ CellID->829403258,ExpressionUUID->"b02da5cb-fcf6-4e88-b0f9-a692175ab19c"],
+
+Cell["\<\
+\[Bullet] Numerical differentiation is a crucial technique in computational \
+mathematics, enabling the approximation of derivatives from discrete data \
+points. This is particularly useful when analytical differentiation is \
+challenging or impossible.\
+\>", "Text",
+ CellChangeTimes->{{3.9439127857038593`*^9, 3.943912804478743*^9}},
+ CellID->2127512629,ExpressionUUID->"588a158a-eca7-4588-964e-028efe989b27"],
+
+Cell["\<\
+\[Bullet] Matrix calculus extends traditional calculus to higher dimensions, \
+dealing with functions that map matrices to scalars, vectors, or other \
+matrices.\
+\>", "Text",
+ CellChangeTimes->{{3.9439127857038593`*^9, 3.9439128044909487`*^9}},
+ CellID->1223860553,ExpressionUUID->"cce9b086-bd28-438d-8fc2-5e3a15e09832"],
+
+Cell["\<\
+\[Bullet] Optimization is at the heart of machine learning, where we aim to \
+minimize a loss (or objective) function. Gradient-based methods, such as \
+gradient descent, iteratively adjust the parameters to reduce the loss.\
+\>", "Text",
+ CellChangeTimes->{{3.9439127857038593`*^9, 3.9439128045023518`*^9}},
+ CellID->1928673541,ExpressionUUID->"c898e665-423a-46a0-a646-0c420277de2e"],
+
+Cell["By the end of this chapter, you will be able to:", "Text",
+ CellChangeTimes->{{3.9439127857038593`*^9, 3.943912797167439*^9}},
+ CellID->1660485117,ExpressionUUID->"b63cac31-da0e-4f8a-b0db-3de766ac1186"],
+
+Cell["\[Bullet] Implement matrix calculus operations in Mathematica.", "Text",
+ CellChangeTimes->{{3.9439127857038593`*^9, 3.943912798386715*^9}},
+ CellID->1982742554,ExpressionUUID->"f1c1f558-0c14-4eb0-b330-74fc5a01c160"],
+
+Cell["\<\
+\[Bullet] Implement numerical differentiation techniques in Mathematica.\
+\>", "Text",
+ CellChangeTimes->{{3.9439127857038593`*^9, 3.943912799605466*^9}},
+ CellID->1356146512,ExpressionUUID->"60936478-8072-4640-9693-fa20b4ac3aff"],
+
+Cell["\<\
+\[Bullet] Utilize Mathematica to perform gradient-based optimization.\
+\>", "Text",
+ CellChangeTimes->{{3.9439127857038593`*^9, 3.943912800463073*^9}},
+ CellID->836354779,ExpressionUUID->"e3147c20-fac9-4e57-bf8b-b0767f64d584"],
+
+Cell["\<\
+This chapter will include detailed explanations, examples, and Mathematica \
+code snippets to ensure a comprehensive understanding of these topics.\
+\>", "Text",
+ CellChangeTimes->{{3.9439127857038593`*^9, 3.943912804513298*^9}},
+ CellID->223972495,ExpressionUUID->"a15be5fe-0746-445d-810f-e28d1f885c09"],
+
+Cell["code 3.1", "CodeCaption",
+ CellChangeTimes->{{3.943912953017989*^9, 3.943912954516843*^9}},
+ CellID->75962923,ExpressionUUID->"93a7f5d7-62ce-43d2-ac8c-63f0d943dbd9"],
+
+Cell["\<\
+(* The code demonstrates the numerical approximation of the first derivative of
+the function f(x)= sin(x) at x0=Pi/4 using finite difference methods. It \
+calculates
+the forward, backward, and central difference approximations with a step size
+h=0.1,and compares these results to the exact derivative obtained analytically.
+The code prints the approximations and the exact derivative, and generates a \
+plot
+of the function over the interval [x_0-h,x_0+h], highlighting the point at x0
+where the derivative is approximated: *)\
+\>", "comment",
+ CellChangeTimes->{3.9439129655956984`*^9},
+ CellID->610925311,ExpressionUUID->"2bf4cfcc-cba8-4771-b940-03a59f39c6f1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", "x_", "]"}], ":=", 
+  RowBox[{"Sin", "[", "x", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x0", "=", 
+   RowBox[{"\[Pi]", "/", "4"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"h", "=", "0.1"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"forwardDifference", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"f", "[", 
+       RowBox[{"x0", "+", "h"}], "]"}], "-", 
+      RowBox[{"f", "[", "x0", "]"}]}], ")"}], "/", "h"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"backwardDifference", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"f", "[", "x0", "]"}], "-", 
+      RowBox[{"f", "[", 
+       RowBox[{"x0", "-", "h"}], "]"}]}], ")"}], "/", "h"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"centralDifference", "=", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"f", "[", 
+        RowBox[{"x0", "+", "h"}], "]"}], "-", 
+       RowBox[{"f", "[", 
+        RowBox[{"x0", "-", "h"}], "]"}]}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"2", "h"}], ")"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"exactDerivate", "=", 
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f", "[", "x", "]"}], ",", "x"}], "]"}], "/.", 
+     RowBox[{"x", "->", "x0"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{
+  "\"\<Forward Difference Approximation: \>\"", ",", "forwardDifference"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{
+  "\"\<Backward Difference Approximation: \>\"", ",", "backwardDifference"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{
+  "\"\<Central Difference Approximation: \>\"", ",", "centralDifference"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Exact Derivative: \>\"", ",", 
+    RowBox[{"N", "[", "exactDerivate", "]"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"plotFunction", "=", 
+    RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"f", "[", "x", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", 
+        RowBox[{"x0", "-", "h"}], ",", 
+        RowBox[{"x0", "+", "h"}]}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"PlotStyle", "->", "Blue"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+      "PlotLabel", "->", "\"\<Function and Numerial Approximations\>\""}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{"Epilog", "->", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{"Red", ",", "\[IndentingNewLine]", 
+         RowBox[{"PointSize", "[", "Large", "]"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"Point", "[", 
+          RowBox[{"{", 
+           RowBox[{"x0", ",", 
+            RowBox[{"f", "[", "x0", "]"}]}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Text", "[", 
+          RowBox[{"\"\<x0\>\"", ",", 
+           RowBox[{"{", 
+            RowBox[{"x0", ",", 
+             RowBox[{"f", "[", "x0", "]"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", 
+             RowBox[{"-", "1"}]}], "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+        "}"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"AxesLabel", "->", 
+       RowBox[{"{", 
+        RowBox[{"\"\<x\>\"", ",", "\"\<f[x]\>\""}], "}"}]}]}], 
+     "\[IndentingNewLine]", "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", "plotFunction", "]"}]}], "Input",
+ CellChangeTimes->{{3.943912978683053*^9, 3.943913270650189*^9}},
+ CellLabel->"In[164]:=",
+ CellID->278348131,ExpressionUUID->"bfc86fe8-ac1d-469e-8396-c731e53963a2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Forward Difference Approximation: \"\>", "\[InvisibleSpace]", 
+   "0.6706029729039897`"}],
+  SequenceForm["Forward Difference Approximation: ", 0.6706029729039897],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.943913231019195*^9, 3.9439132714331093`*^9},
+ CellLabel->"During evaluation of In[164]:=",
+ CellID->1170764642,ExpressionUUID->"58668e85-a024-4edc-b507-c083c701bf1b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Backward Difference Approximation: \"\>", "\[InvisibleSpace]", 
+   "0.7412547450958928`"}],
+  SequenceForm["Backward Difference Approximation: ", 0.7412547450958928],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.943913231019195*^9, 3.943913271446992*^9},
+ CellLabel->"During evaluation of In[164]:=",
+ CellID->1796164280,ExpressionUUID->"1669677c-8f97-4826-83e0-28cf7ad360f4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Central Difference Approximation: \"\>", "\[InvisibleSpace]", 
+   "0.7059288589999413`"}],
+  SequenceForm["Central Difference Approximation: ", 0.7059288589999413],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.943913231019195*^9, 3.943913271463162*^9},
+ CellLabel->"During evaluation of In[164]:=",
+ CellID->955428081,ExpressionUUID->"422fc684-08f5-4f6d-a796-654a62e47a04"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Exact Derivative: \"\>", "\[InvisibleSpace]", 
+   "0.7071067811865475`"}],
+  SequenceForm["Exact Derivative: ", 0.7071067811865475],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.943913231019195*^9, 3.9439132714680567`*^9},
+ CellLabel->"During evaluation of In[164]:=",
+ CellID->1144528748,ExpressionUUID->"1bc89347-0d5c-4d20-959a-66b51c8de062"]
+}, Open  ]],
+
+Cell[BoxData[
+ GraphicsBox[
+  InterpretationBox[{
+    TagBox[{{{}, {}, 
+       TagBox[
+        {RGBColor[0, 0, 1], AbsoluteThickness[2], Opacity[1.], 
+         LineBox[CompressedData["
+1:eJwV0ntUjHkcBvBQYSLacr+lTq3OYAwirJ4uk2ZjirYLYkfZyShJF+XYLnsW
+JVJjFuuSVEvbNk5NSiTp5lJsWbPtNpHOUfO+729m3k1tpOys9t0/vuc5n3+e
+f57v4ojYQNl4MzMzCXf/57khT8eWfgo2AbMsIjx1yPlY/Fj8lkLEgZeXH3HO
+HDclqpXzC0GIwMVLh6PT/lQ/HaDA5CYHDXDew49yb/ubQr95eG6aSIele5U7
+NMMU2rxan1z21eGhpje3+xOFIbtmL41Eh6GKY6YBaxpLFCbpxp06RAmTQtqF
+NEo2JDTOPqyDOvKa265AGlcXJF+cmaPDyeDUgk3xNBJkWvH3xTokW0zJos7R
+uO/Ym08adHCNfjG6+jaNxsErlkldOlgpfY1uWhrem5mfR4d0iI+Pj7j0kcaJ
+E9pZ+qkUSiZ1hJfOZZBQUx9p7kxhWEq/id3IoDjRZut0Dwq2MQIDtZvBA0V1
+ht92Co2rlh25m8rAY1Ok/H0shczaVxkoYHDsStT201kU5o82LEhuYCB/qggP
+KqTQ8iHEdW8fA8OpOP2EWgqW6kKNyoLAcZ50okMH17/QceS6E0FM9/CGI0YK
+bpLg/EAxQV0yz6ncnAZ/5YNf1XIC3lWjyn4+jTXazm+bTxN089+tO+hK4/e1
+xeqVZQSH7sj7+P40IFHFBLYT7Eno3uIio9HkGK5yHiRIr7nQbkqlYaeWxKls
+9NguE5R+dp7GyPv++9lCPWqDrnVcVdEYMnlkOQTpMbjTx320mUZdTetreaIe
+LT0LFuW9pHFt7YTKvT/qcUYafYg3RMM2dnBqbY0epyrDGCOPQfCumYNNXXoI
+hwud5i5mUM5jg9JNeojsJ9dNXcdAe3DEg51vgCnJvW1rAANlds2t218YMNOv
+WjZFxuCbaP6NVVIDbp3PDs1MYWBh1rEoIt0A70f2VqFKbofgZfN8igzY0Zzq
+8uYXBj7hdfnaJgNylpu3NdUz+Np5fElLrwFWGt+6hX8wyL35QRhjYYRJWjm8
+nGWQQxxFTU5GmOvE9nnjCG5QZp3PxEaE7q8/eXc2gX+e8q0w2ggk8sdLBASP
+J4UpxKeNSEpM54lEBMFrOipsy4zosaMG+3YSVM45HpbbbkRy1KinPpbgp2py
+al+/EYUe3iEHjhOU2n1a/246iyr3CebKywTfLfFLEApZyFcXlDmUExyZo9zX
+yLmhRPFlGuc43suwbStZVGef6e3iHMHuF8WtYpGWcdP6rJpApM6aUeHKQpOU
+FjBWQTDRrfXOivUsdr+PTnhVRZDjKzYJvFkYW9aLlPcIMtwUA/WcNy9VFfzF
+Od1FqwsQsXg96/N/xLXc31jJ22J9WNREeZaOcQ58nplf7svCwXVs4EAdwYzQ
+Jx6CLSz6rC7Z+zYQWIunudZzdlU82F3E2XJdqEuAhIWny9uL/3IensvYxPqz
+KEuJm1zVSKDtsewr28pipGdUY99M8Ntz/073bSxWI9kshXNrw4Vn7ZxTj47x
+OznfK3Ku6g9kIZWtSD3zkODWDwdL0r5ikWPZVUQ4q45X51kHcX2y7Mfejwiu
+H/6kyOccmeJH8jnnRW46sTyYxXUv20kfOf8HHxSAGQ==
+          "]]},
+        Annotation[#, "Charting`Private`Tag#1"]& ]}, {}},
+     {"WolframDynamicHighlight", <|
+      "Label" -> {"XYLabel"}, "Ball" -> {"InterpolatedBall"}|>}], 
+    StyleBox[
+     DynamicBox[(Charting`HighlightActionBox["DynamicHighlight", {}, 
+       Slot["HighlightElements"], 
+       Slot["LayoutOptions"], 
+       Slot["Meta"], 
+       Charting`HighlightActionFunction["DynamicHighlight", {{{{}, {}, 
+           Annotation[{
+             Directive[
+              Opacity[1.], 
+              AbsoluteThickness[2], 
+              RGBColor[0, 0, 1]], 
+             Line[CompressedData["
+1:eJwV0ntUjHkcBvBQYSLacr+lTq3OYAwirJ4uk2ZjirYLYkfZyShJF+XYLnsW
+JVJjFuuSVEvbNk5NSiTp5lJsWbPtNpHOUfO+729m3k1tpOys9t0/vuc5n3+e
+f57v4ojYQNl4MzMzCXf/57khT8eWfgo2AbMsIjx1yPlY/Fj8lkLEgZeXH3HO
+HDclqpXzC0GIwMVLh6PT/lQ/HaDA5CYHDXDew49yb/ubQr95eG6aSIele5U7
+NMMU2rxan1z21eGhpje3+xOFIbtmL41Eh6GKY6YBaxpLFCbpxp06RAmTQtqF
+NEo2JDTOPqyDOvKa265AGlcXJF+cmaPDyeDUgk3xNBJkWvH3xTokW0zJos7R
+uO/Ym08adHCNfjG6+jaNxsErlkldOlgpfY1uWhrem5mfR4d0iI+Pj7j0kcaJ
+E9pZ+qkUSiZ1hJfOZZBQUx9p7kxhWEq/id3IoDjRZut0Dwq2MQIDtZvBA0V1
+ht92Co2rlh25m8rAY1Ok/H0shczaVxkoYHDsStT201kU5o82LEhuYCB/qggP
+KqTQ8iHEdW8fA8OpOP2EWgqW6kKNyoLAcZ50okMH17/QceS6E0FM9/CGI0YK
+bpLg/EAxQV0yz6ncnAZ/5YNf1XIC3lWjyn4+jTXazm+bTxN089+tO+hK4/e1
+xeqVZQSH7sj7+P40IFHFBLYT7Eno3uIio9HkGK5yHiRIr7nQbkqlYaeWxKls
+9NguE5R+dp7GyPv++9lCPWqDrnVcVdEYMnlkOQTpMbjTx320mUZdTetreaIe
+LT0LFuW9pHFt7YTKvT/qcUYafYg3RMM2dnBqbY0epyrDGCOPQfCumYNNXXoI
+hwud5i5mUM5jg9JNeojsJ9dNXcdAe3DEg51vgCnJvW1rAANlds2t218YMNOv
+WjZFxuCbaP6NVVIDbp3PDs1MYWBh1rEoIt0A70f2VqFKbofgZfN8igzY0Zzq
+8uYXBj7hdfnaJgNylpu3NdUz+Np5fElLrwFWGt+6hX8wyL35QRhjYYRJWjm8
+nGWQQxxFTU5GmOvE9nnjCG5QZp3PxEaE7q8/eXc2gX+e8q0w2ggk8sdLBASP
+J4UpxKeNSEpM54lEBMFrOipsy4zosaMG+3YSVM45HpbbbkRy1KinPpbgp2py
+al+/EYUe3iEHjhOU2n1a/246iyr3CebKywTfLfFLEApZyFcXlDmUExyZo9zX
+yLmhRPFlGuc43suwbStZVGef6e3iHMHuF8WtYpGWcdP6rJpApM6aUeHKQpOU
+FjBWQTDRrfXOivUsdr+PTnhVRZDjKzYJvFkYW9aLlPcIMtwUA/WcNy9VFfzF
+Od1FqwsQsXg96/N/xLXc31jJ22J9WNREeZaOcQ58nplf7svCwXVs4EAdwYzQ
+Jx6CLSz6rC7Z+zYQWIunudZzdlU82F3E2XJdqEuAhIWny9uL/3IensvYxPqz
+KEuJm1zVSKDtsewr28pipGdUY99M8Ntz/073bSxWI9kshXNrw4Vn7ZxTj47x
+OznfK3Ku6g9kIZWtSD3zkODWDwdL0r5ikWPZVUQ4q45X51kHcX2y7Mfejwiu
+H/6kyOccmeJH8jnnRW46sTyYxXUv20kfOf8HHxSAGQ==
+              "]]}, "Charting`Private`Tag#1"]}}, {}}, <|
+        "HighlightElements" -> <|
+          "Label" -> {"XYLabel"}, "Ball" -> {"InterpolatedBall"}|>, 
+         "LayoutOptions" -> <|
+          "PanelPlotLayout" -> <||>, 
+           "PlotRange" -> {{0.6853981633974483, 0.8853981633974483}, {
+            0.6329813098368239, 0.7741670758933492}}, 
+           "Frame" -> {{False, False}, {False, False}}, 
+           "AxesOrigin" -> {0.6853981633974499, 0.6329813098368253}, 
+           "ImageSize" -> {360, 360/GoldenRatio}, "Axes" -> {True, True}, 
+           "LabelStyle" -> {}, "AspectRatio" -> GoldenRatio^(-1), 
+           "DefaultStyle" -> {
+             Directive[
+              Opacity[1.], 
+              AbsoluteThickness[2], 
+              RGBColor[0, 0, 1]]}, 
+           "HighlightLabelingFunctions" -> <|"CoordinatesToolOptions" -> ({
+               Identity[
+                Part[#, 1]], 
+               Identity[
+                Part[#, 2]]}& ), 
+             "ScalingFunctions" -> {{Identity, Identity}, {
+               Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> 
+           False|>, 
+         "Meta" -> <|
+          "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, "Function" -> 
+           Plot, "GroupHighlight" -> False|>|>]]& )[<|
+       "HighlightElements" -> <|
+         "Label" -> {"XYLabel"}, "Ball" -> {"InterpolatedBall"}|>, 
+        "LayoutOptions" -> <|
+         "PanelPlotLayout" -> <||>, 
+          "PlotRange" -> {{0.6853981633974483, 0.8853981633974483}, {
+           0.6329813098368239, 0.7741670758933492}}, 
+          "Frame" -> {{False, False}, {False, False}}, 
+          "AxesOrigin" -> {0.6853981633974499, 0.6329813098368253}, 
+          "ImageSize" -> {360, 360/GoldenRatio}, "Axes" -> {True, True}, 
+          "LabelStyle" -> {}, "AspectRatio" -> GoldenRatio^(-1), 
+          "DefaultStyle" -> {
+            Directive[
+             Opacity[1.], 
+             AbsoluteThickness[2], 
+             RGBColor[0, 0, 1]]}, 
+          "HighlightLabelingFunctions" -> <|"CoordinatesToolOptions" -> ({
+              Identity[
+               Part[#, 1]], 
+              Identity[
+               Part[#, 2]]}& ), 
+            "ScalingFunctions" -> {{Identity, Identity}, {
+              Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> False|>,
+         "Meta" -> <|
+         "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, "Function" -> 
+          Plot, "GroupHighlight" -> False|>|>],
+      ImageSizeCache->{{4.503599627370496*^15, -4.503599627370496*^15}, {
+       4.503599627370496*^15, -4.503599627370496*^15}}],
+     Selectable->False]},
+   Annotation[{{{{}, {}, 
+       Annotation[{
+         Directive[
+          Opacity[1.], 
+          AbsoluteThickness[2], 
+          RGBColor[0, 0, 1]], 
+         Line[CompressedData["
+1:eJwV0ntUjHkcBvBQYSLacr+lTq3OYAwirJ4uk2ZjirYLYkfZyShJF+XYLnsW
+JVJjFuuSVEvbNk5NSiTp5lJsWbPtNpHOUfO+729m3k1tpOys9t0/vuc5n3+e
+f57v4ojYQNl4MzMzCXf/57khT8eWfgo2AbMsIjx1yPlY/Fj8lkLEgZeXH3HO
+HDclqpXzC0GIwMVLh6PT/lQ/HaDA5CYHDXDew49yb/ubQr95eG6aSIele5U7
+NMMU2rxan1z21eGhpje3+xOFIbtmL41Eh6GKY6YBaxpLFCbpxp06RAmTQtqF
+NEo2JDTOPqyDOvKa265AGlcXJF+cmaPDyeDUgk3xNBJkWvH3xTokW0zJos7R
+uO/Ym08adHCNfjG6+jaNxsErlkldOlgpfY1uWhrem5mfR4d0iI+Pj7j0kcaJ
+E9pZ+qkUSiZ1hJfOZZBQUx9p7kxhWEq/id3IoDjRZut0Dwq2MQIDtZvBA0V1
+ht92Co2rlh25m8rAY1Ok/H0shczaVxkoYHDsStT201kU5o82LEhuYCB/qggP
+KqTQ8iHEdW8fA8OpOP2EWgqW6kKNyoLAcZ50okMH17/QceS6E0FM9/CGI0YK
+bpLg/EAxQV0yz6ncnAZ/5YNf1XIC3lWjyn4+jTXazm+bTxN089+tO+hK4/e1
+xeqVZQSH7sj7+P40IFHFBLYT7Eno3uIio9HkGK5yHiRIr7nQbkqlYaeWxKls
+9NguE5R+dp7GyPv++9lCPWqDrnVcVdEYMnlkOQTpMbjTx320mUZdTetreaIe
+LT0LFuW9pHFt7YTKvT/qcUYafYg3RMM2dnBqbY0epyrDGCOPQfCumYNNXXoI
+hwud5i5mUM5jg9JNeojsJ9dNXcdAe3DEg51vgCnJvW1rAANlds2t218YMNOv
+WjZFxuCbaP6NVVIDbp3PDs1MYWBh1rEoIt0A70f2VqFKbofgZfN8igzY0Zzq
+8uYXBj7hdfnaJgNylpu3NdUz+Np5fElLrwFWGt+6hX8wyL35QRhjYYRJWjm8
+nGWQQxxFTU5GmOvE9nnjCG5QZp3PxEaE7q8/eXc2gX+e8q0w2ggk8sdLBASP
+J4UpxKeNSEpM54lEBMFrOipsy4zosaMG+3YSVM45HpbbbkRy1KinPpbgp2py
+al+/EYUe3iEHjhOU2n1a/246iyr3CebKywTfLfFLEApZyFcXlDmUExyZo9zX
+yLmhRPFlGuc43suwbStZVGef6e3iHMHuF8WtYpGWcdP6rJpApM6aUeHKQpOU
+FjBWQTDRrfXOivUsdr+PTnhVRZDjKzYJvFkYW9aLlPcIMtwUA/WcNy9VFfzF
+Od1FqwsQsXg96/N/xLXc31jJ22J9WNREeZaOcQ58nplf7svCwXVs4EAdwYzQ
+Jx6CLSz6rC7Z+zYQWIunudZzdlU82F3E2XJdqEuAhIWny9uL/3IensvYxPqz
+KEuJm1zVSKDtsewr28pipGdUY99M8Ntz/073bSxWI9kshXNrw4Vn7ZxTj47x
+OznfK3Ku6g9kIZWtSD3zkODWDwdL0r5ikWPZVUQ4q45X51kHcX2y7Mfejwiu
+H/6kyOccmeJH8jnnRW46sTyYxXUv20kfOf8HHxSAGQ==
+          "]]}, "Charting`Private`Tag#1"]}}, {}}, <|
+    "HighlightElements" -> <|
+      "Label" -> {"XYLabel"}, "Ball" -> {"InterpolatedBall"}|>, 
+     "LayoutOptions" -> <|
+      "PanelPlotLayout" -> <||>, 
+       "PlotRange" -> {{0.6853981633974483, 0.8853981633974483}, {
+        0.6329813098368239, 0.7741670758933492}}, 
+       "Frame" -> {{False, False}, {False, False}}, 
+       "AxesOrigin" -> {0.6853981633974499, 0.6329813098368253}, 
+       "ImageSize" -> {360, 360/GoldenRatio}, "Axes" -> {True, True}, 
+       "LabelStyle" -> {}, "AspectRatio" -> GoldenRatio^(-1), "DefaultStyle" -> {
+         Directive[
+          Opacity[1.], 
+          AbsoluteThickness[2], 
+          RGBColor[0, 0, 1]]}, 
+       "HighlightLabelingFunctions" -> <|"CoordinatesToolOptions" -> ({
+           Identity[
+            Part[#, 1]], 
+           Identity[
+            Part[#, 2]]}& ), 
+         "ScalingFunctions" -> {{Identity, Identity}, {Identity, Identity}}|>,
+        "Primitives" -> {}, "GCFlag" -> False|>, 
+     "Meta" -> <|
+      "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, "Function" -> 
+       Plot, "GroupHighlight" -> False|>|>, "DynamicHighlight"]],
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox[
+     TagBox["\"x\"", HoldForm], TraditionalForm], 
+    FormBox[
+     TagBox["\"f[x]\"", HoldForm], TraditionalForm]},
+  AxesOrigin->{0.6853981633974499, 0.6329813098368253},
+  DisplayFunction->Identity,
+  Epilog->{
+    RGBColor[1, 0, 0], 
+    PointSize[Large], 
+    PointBox[
+     NCache[{Rational[1, 4] Pi, 2^Rational[-1, 2]}, {0.7853981633974483, 
+      0.7071067811865475}]], 
+    InsetBox[
+     FormBox["\"x0\"", TraditionalForm], 
+     NCache[{Rational[1, 4] Pi, 2^Rational[-1, 2]}, {0.7853981633974483, 
+      0.7071067811865475}], 
+     ImageScaled[{1, 0}]]},
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotLabel->FormBox[
+   "\"Function and Numerial Approximations\"", TraditionalForm],
+  PlotRange->{{0.6853981633974483, 0.8853981633974483}, {0.6329813098368239, 
+   0.7741670758933492}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.943913231068771*^9, 3.943913271495716*^9},
+ CellLabel->"Out[176]=",
+ CellID->1083641457,ExpressionUUID->"f6ab3cd9-4de7-4dd5-bfde-8b7ab3186de2"]
+}, Open  ]],
+
+Cell["code 3.2", "CodeCaption",
+ CellChangeTimes->{{3.943913354041851*^9, 3.943913355591098*^9}},
+ CellID->2100641239,ExpressionUUID->"b061f655-804f-4db6-9467-b15c2a21bcf4"],
+
+Cell["\<\
+(* The goal of the `Manipulate` code is to dynamically illustrate and compare \
+the
+numerical approximations of the first derivative of the function f(x)= sin(x) \
+at
+x0=Pi/4 using finite difference methods (forward, backward, and central
+differences) with a variable step size h. The code calculates these \
+approximations
+and the exact derivative, displays the results, and plots the function along \
+with
+the tangent lines corresponding to the numerical approximations. The \
+interactive
+slider allows users to adjust the step size h, providing a visual and numerical
+understanding of how the step size affects the accuracy of the derivative
+approximations: *)\
+\>", "comment",
+ CellChangeTimes->{3.94391336484947*^9},
+ CellID->811132638,ExpressionUUID->"1ba77d21-8850-442f-9228-c70d758732c1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Module", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "f", ",", "x0", ",", "forwardDifference", ",", "backwardDifference", 
+       ",", "centralDifference", ",", "exactDerivate", ",", "plotFunction"}], 
+      "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"f", "[", "x_", "]"}], ":=", 
+       RowBox[{"Sin", "[", "x", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"x0", "=", 
+       RowBox[{"\[Pi]", "/", "4"}]}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
+      RowBox[{"forwardDifference", "=", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"f", "[", 
+           RowBox[{"x0", "+", "h"}], "]"}], "-", 
+          RowBox[{"f", "[", "x0", "]"}]}], ")"}], "/", "h"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"backwardDifference", "=", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"f", "[", "x0", "]"}], "-", 
+          RowBox[{"f", "[", 
+           RowBox[{"x0", "-", "h"}], "]"}]}], ")"}], "/", "h"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"centralDifference", "=", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"f", "[", 
+           RowBox[{"x0", "+", "h"}], "]"}], "-", 
+          RowBox[{"f", "[", 
+           RowBox[{"x0", "-", "h"}], "]"}]}], ")"}], "/", 
+        RowBox[{"(", 
+         RowBox[{"2", "h"}], ")"}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"exactDerivate", "=", 
+       RowBox[{
+        RowBox[{"D", "[", 
+         RowBox[{
+          RowBox[{"f", "[", "x", "]"}], ",", "x"}], "]"}], "/.", 
+        RowBox[{"x", "->", "x0"}]}]}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Column", "[", "\[IndentingNewLine]", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Step size (h): \>\"", ",", 
+            RowBox[{"NumberForm", "[", 
+             RowBox[{"h", ",", 
+              RowBox[{"{", 
+               RowBox[{"4", ",", "2"}], "}"}]}], "]"}]}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Forward Difference Approximation: \>\"", ",", 
+            RowBox[{"NumberForm", "[", 
+             RowBox[{"forwardDifference", ",", 
+              RowBox[{"{", 
+               RowBox[{"8", ",", "6"}], "}"}]}], "]"}]}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Backward Difference Approximation: \>\"", ",", 
+            RowBox[{"NumberForm", "[", 
+             RowBox[{"backwardDifference", ",", 
+              RowBox[{"{", 
+               RowBox[{"8", ",", "6"}], "}"}]}], "]"}]}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Central Difference Approximation: \>\"", ",", 
+            RowBox[{"NumberForm", "[", 
+             RowBox[{"centralDifference", ",", 
+              RowBox[{"{", 
+               RowBox[{"8", ",", "6"}], "}"}]}], "]"}]}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Exact Derivate: \>\"", ",", 
+            RowBox[{"NumberForm", "[", 
+             RowBox[{"exactDerivate", ",", 
+              RowBox[{"{", 
+               RowBox[{"8", ",", "6"}], "}"}]}], "]"}]}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"f", "[", "x", "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"f", "[", "x0", "]"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"x", "-", "x0"}], ")"}], "forwardDifference"}]}], ",",
+              "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"f", "[", "x0", "]"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"x", "-", "x0"}], ")"}], "backwardDifference"}]}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"f", "[", "x0", "]"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"x", "-", "x0"}], ")"}], "centralDifference"}]}]}], 
+            "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", 
+             RowBox[{"x0", "-", 
+              RowBox[{"2", "h"}]}], ",", 
+             RowBox[{"x0", "+", 
+              RowBox[{"2", "h"}]}]}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"PlotStyle", "->", 
+            RowBox[{"{", 
+             RowBox[{"Blue", ",", "Red", ",", "Green", ",", "Purple"}], 
+             "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"PlotLegends", "->", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<f[x]\>\"", ",", "\"\<Forward Approximation\>\"", ",", 
+              "\"\<Backward Approximation\>\"", ",", 
+              "\"\<Central Approximation\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Epilog", "->", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{"Red", ",", "\[IndentingNewLine]", 
+              RowBox[{"PointSize", "[", "Large", "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Point", "[", 
+               RowBox[{"{", 
+                RowBox[{"x0", ",", 
+                 RowBox[{"f", "[", "x0", "]"}]}], "}"}], "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Text", "[", 
+               RowBox[{"\"\<x0\>\"", ",", 
+                RowBox[{"{", 
+                 RowBox[{"x0", ",", 
+                  RowBox[{"f", "[", "x0", "]"}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"1", ",", 
+                  RowBox[{"-", "1"}]}], "}"}]}], "]"}]}], 
+             "\[IndentingNewLine]", "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+           "PlotLabel", "->", 
+            "\"\<Function and Numerical Approximations\>\""}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"AxesLabel", "->", 
+            RowBox[{"{", 
+             RowBox[{"\"\<x\>\"", ",", "\"\<f[x]\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"ImageSize", "->", "300"}]}], "\[IndentingNewLine]", 
+          "]"}]}], "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", 
+       "]"}]}]}], "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"h", ",", "0.1", ",", "\"\<Step size (h)\>\""}], "}"}], ",", 
+     "0.001", ",", "2", ",", "0.01"}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9439133710944433`*^9, 3.943913793947733*^9}, {
+   3.94391384877013*^9, 3.943913861167672*^9}, 3.943913962109639*^9},
+ CellLabel->"In[177]:=",
+ CellID->200256191,ExpressionUUID->"f71b688d-0a45-4cce-930a-59551abdddc3"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`h$$ = 0.191, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`h$$], 0.1, "Step size (h)"}, 0.001, 2, 0.01, 
+      ControlType -> Manipulator}}, Typeset`size$$ = {
+    636.7877197265625, {193.48333519809376`, 202.52386254184376`}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`h$$ = 0.1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$, Typeset`keyframeActionsQ$$, 
+        Typeset`keyframeList$$}, "Body" :> 
+      Module[{$CellContext`f$, $CellContext`x0$, \
+$CellContext`forwardDifference$, $CellContext`backwardDifference$, \
+$CellContext`centralDifference$, $CellContext`exactDerivate$, \
+$CellContext`plotFunction$}, $CellContext`f$[
+           Pattern[$CellContext`x, 
+            Blank[]]] := Sin[$CellContext`x]; $CellContext`x0$ = 
+         Pi/4; $CellContext`forwardDifference$ = \
+($CellContext`f$[$CellContext`x0$ + $CellContext`h$$] - \
+$CellContext`f$[$CellContext`x0$])/$CellContext`h$$; \
+$CellContext`backwardDifference$ = ($CellContext`f$[$CellContext`x0$] - \
+$CellContext`f$[$CellContext`x0$ - $CellContext`h$$])/$CellContext`h$$; \
+$CellContext`centralDifference$ = ($CellContext`f$[$CellContext`x0$ + \
+$CellContext`h$$] - $CellContext`f$[$CellContext`x0$ - $CellContext`h$$])/(
+          2 $CellContext`h$$); $CellContext`exactDerivate$ = ReplaceAll[
+           D[
+            $CellContext`f$[$CellContext`x], $CellContext`x], $CellContext`x -> \
+$CellContext`x0$]; Column[{
+           Row[{"Step size (h): ", 
+             NumberForm[$CellContext`h$$, {4, 2}]}], 
+           Row[{"Forward Difference Approximation: ", 
+             NumberForm[$CellContext`forwardDifference$, {8, 6}]}], 
+           Row[{"Backward Difference Approximation: ", 
+             NumberForm[$CellContext`backwardDifference$, {8, 6}]}], 
+           Row[{"Central Difference Approximation: ", 
+             NumberForm[$CellContext`centralDifference$, {8, 6}]}], 
+           Row[{"Exact Derivate: ", 
+             NumberForm[$CellContext`exactDerivate$, {8, 6}]}], 
+           Plot[{
+             $CellContext`f$[$CellContext`x], \
+$CellContext`f$[$CellContext`x0$] + ($CellContext`x - $CellContext`x0$) \
+$CellContext`forwardDifference$, $CellContext`f$[$CellContext`x0$] + \
+($CellContext`x - $CellContext`x0$) $CellContext`backwardDifference$, \
+$CellContext`f$[$CellContext`x0$] + ($CellContext`x - $CellContext`x0$) \
+$CellContext`centralDifference$}, {$CellContext`x, $CellContext`x0$ - 
+             2 $CellContext`h$$, $CellContext`x0$ + 2 $CellContext`h$$}, 
+            PlotStyle -> {Blue, Red, Green, Purple}, 
+            PlotLegends -> {
+             "f[x]", "Forward Approximation", "Backward Approximation", 
+              "Central Approximation"}, Epilog -> {Red, 
+              PointSize[Large], 
+              Point[{$CellContext`x0$, 
+                $CellContext`f$[$CellContext`x0$]}], 
+              Text["x0", {$CellContext`x0$, 
+                $CellContext`f$[$CellContext`x0$]}, {1, -1}]}, PlotLabel -> 
+            "Function and Numerical Approximations", 
+            AxesLabel -> {"x", "f[x]"}, ImageSize -> 300]}]], 
+      "Specifications" :> {{{$CellContext`h$$, 0.1, "Step size (h)"}, 0.001, 
+         2, 0.01}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{
+      691.9127197265625, {247.60833519809376`, 256.64886254184376`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.943913963756418*^9},
+ CellLabel->"Out[177]=",
+ CellID->51784374,ExpressionUUID->"6042f876-4c70-485d-a8d5-a8a337d020fc"]
+}, Open  ]],
+
 Cell["optimization", "Subsection",
  CellChangeTimes->{
   3.652728456208679*^9, 3.652728527108994*^9, {3.943576245146694*^9, 
@@ -142,8 +1037,7 @@ Cell["optimization", "Subsection",
 WindowSize->{960, 1027},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
-StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "BookToolsStyles.nb", 
-  CharacterEncoding -> "UTF-8"],
+StyleDefinitions->"RDS-book.nb",
 ExpressionUUID->"8861bace-5584-420b-8e0c-c51fd7c6d3a1"
 ]
 (* End of Notebook Content *)
@@ -162,7 +1056,75 @@ Cell[554, 20, 4112, 104, 130, "Text",ExpressionUUID->"67aab6c7-b186-4fbc-a04a-68
 Cell[CellGroupData[{
 Cell[4691, 128, 304, 4, 133, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
  CellID->622795188],
-Cell[4998, 134, 225, 4, 68, "Subsection",ExpressionUUID->"cd6c164c-e8f3-49b1-8641-aa304af11da2",
+Cell[4998, 134, 1767, 36, 279, "Note",ExpressionUUID->"615fa15e-a531-46a7-89af-e31f2ed19f17",
+ CellID->601877545],
+Cell[6768, 172, 696, 10, 222, "Text",ExpressionUUID->"a6dbc110-b65c-4f09-bf8c-1b140de91b9e",
+ CellID->1012640000],
+Cell[7467, 184, 664, 10, 193, "Text",ExpressionUUID->"ad256dcd-d6c4-4655-aac4-405f24eceaa6",
+ CellID->1269080557],
+Cell[8134, 196, 218, 2, 45, "Text",ExpressionUUID->"cda9e92e-7358-4b81-85b4-3d2c835cd4ff",
+ CellID->9881320],
+Cell[8355, 200, 422, 7, 104, "Text",ExpressionUUID->"884ce80d-e6e7-423c-999f-48cb1c26646d",
+ CellID->1199123979],
+Cell[8780, 209, 490, 8, 134, "Text",ExpressionUUID->"714275bf-2d5f-4353-8933-46a72666c7e2",
+ CellID->518342284],
+Cell[9273, 219, 399, 6, 104, "Text",ExpressionUUID->"72fa1612-17ae-41f3-9ace-0352efb67f74",
+ CellID->32971686],
+Cell[9675, 227, 354, 6, 104, "Text",ExpressionUUID->"be440836-4d53-4b84-9fdc-0ad6ff22ff1c",
+ CellID->1006951296],
+Cell[10032, 235, 400, 7, 104, "Text",ExpressionUUID->"e6f86f9d-8206-4799-a91f-467408b2da1a",
+ CellID->483867996],
+Cell[10435, 244, 787, 12, 252, "Text",ExpressionUUID->"683a4c70-d076-4adf-8d30-70ad31b7dd22",
+ CellID->1271169941],
+Cell[11225, 258, 342, 6, 104, "Text",ExpressionUUID->"b02da5cb-fcf6-4e88-b0f9-a692175ab19c",
+ CellID->829403258],
+Cell[11570, 266, 421, 7, 104, "Text",ExpressionUUID->"588a158a-eca7-4588-964e-028efe989b27",
+ CellID->2127512629],
+Cell[11994, 275, 331, 6, 75, "Text",ExpressionUUID->"cce9b086-bd28-438d-8fc2-5e3a15e09832",
+ CellID->1223860553],
+Cell[12328, 283, 394, 6, 104, "Text",ExpressionUUID->"c898e665-423a-46a0-a646-0c420277de2e",
+ CellID->1928673541],
+Cell[12725, 291, 208, 2, 45, "Text",ExpressionUUID->"b63cac31-da0e-4f8a-b0db-3de766ac1186",
+ CellID->1660485117],
+Cell[12936, 295, 222, 2, 45, "Text",ExpressionUUID->"f1c1f558-0c14-4eb0-b330-74fc5a01c160",
+ CellID->1982742554],
+Cell[13161, 299, 240, 4, 45, "Text",ExpressionUUID->"60936478-8072-4640-9693-fa20b4ac3aff",
+ CellID->1356146512],
+Cell[13404, 305, 236, 4, 45, "Text",ExpressionUUID->"e3147c20-fac9-4e57-bf8b-b0767f64d584",
+ CellID->836354779],
+Cell[13643, 311, 314, 5, 75, "Text",ExpressionUUID->"a15be5fe-0746-445d-810f-e28d1f885c09",
+ CellID->223972495],
+Cell[13960, 318, 171, 2, 65, "CodeCaption",ExpressionUUID->"93a7f5d7-62ce-43d2-ac8c-63f0d943dbd9",
+ CellID->75962923],
+Cell[14134, 322, 672, 12, 225, "comment",ExpressionUUID->"2bf4cfcc-cba8-4771-b940-03a59f39c6f1",
+ CellID->610925311],
+Cell[CellGroupData[{
+Cell[14831, 338, 3842, 108, 730, "Input",ExpressionUUID->"bfc86fe8-ac1d-469e-8396-c731e53963a2",
+ CellID->278348131],
+Cell[CellGroupData[{
+Cell[18698, 450, 431, 8, 28, "Print",ExpressionUUID->"58668e85-a024-4edc-b507-c083c701bf1b",
+ CellID->1170764642],
+Cell[19132, 460, 431, 8, 28, "Print",ExpressionUUID->"1669677c-8f97-4826-83e0-28cf7ad360f4",
+ CellID->1796164280],
+Cell[19566, 470, 428, 8, 28, "Print",ExpressionUUID->"422fc684-08f5-4f6d-a796-654a62e47a04",
+ CellID->955428081],
+Cell[19997, 480, 399, 8, 28, "Print",ExpressionUUID->"1bc89347-0d5c-4d20-959a-66b51c8de062",
+ CellID->1144528748]
+}, Open  ]],
+Cell[20411, 491, 11861, 250, 235, "Output",ExpressionUUID->"f6ab3cd9-4de7-4dd5-bfde-8b7ab3186de2",
+ CellID->1083641457]
+}, Open  ]],
+Cell[32287, 744, 173, 2, 65, "CodeCaption",ExpressionUUID->"b061f655-804f-4db6-9467-b15c2a21bcf4",
+ CellID->2100641239],
+Cell[32463, 748, 806, 17, 279, "comment",ExpressionUUID->"1ba77d21-8850-442f-9228-c70d758732c1",
+ CellID->811132638],
+Cell[CellGroupData[{
+Cell[33294, 769, 7183, 172, 1129, "Input",ExpressionUUID->"f71b688d-0a45-4cce-930a-59551abdddc3",
+ CellID->200256191],
+Cell[40480, 943, 4511, 83, 530, "Output",ExpressionUUID->"6042f876-4c70-485d-a8d5-a8a337d020fc",
+ CellID->51784374]
+}, Open  ]],
+Cell[45006, 1029, 225, 4, 68, "Subsection",ExpressionUUID->"cd6c164c-e8f3-49b1-8641-aa304af11da2",
  CellID->554299123]
 }, Open  ]]
 }
