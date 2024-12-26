@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      7210,        192]
-NotebookOptionsPosition[      6385,        168]
-NotebookOutlinePosition[      6850,        185]
-CellTagsIndexPosition[      6807,        182]
+NotebookDataLength[      6702,        180]
+NotebookOptionsPosition[      6067,        159]
+NotebookOutlinePosition[      6460,        175]
+CellTagsIndexPosition[      6417,        172]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -154,23 +154,13 @@ implementation."
 }], "Note",
  CellChangeTimes->{{3.9435682523793507`*^9, 3.9435682907152853`*^9}, {
   3.9435754000406303`*^9, 3.943575400046158*^9}},
- CellID->1196547533,ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1"],
-
-Cell["\<\
-Building Neural Network from Scratch with Mathematica and Universal \
-Approximation Theorem\
-\>", "Subsection",
- CellChangeTimes->{
-  3.652728456208679*^9, 3.652728527108994*^9, {3.943576018005844*^9, 
-   3.9435760209884243`*^9}},
- CellID->767828264,ExpressionUUID->"aff5664b-5924-40e6-b556-a492a477f54a"]
+ CellID->1196547533,ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1"]
 }, Open  ]]
 },
 WindowSize->{960, 1027},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
-StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "BookToolsStyles.nb", 
-  CharacterEncoding -> "UTF-8"],
+StyleDefinitions->"RDS-book.nb",
 ExpressionUUID->"8861bace-5584-420b-8e0c-c51fd7c6d3a1"
 ]
 (* End of Notebook Content *)
@@ -190,9 +180,7 @@ Cell[CellGroupData[{
 Cell[4696, 128, 303, 4, 133, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
  CellID->622795188],
 Cell[5002, 134, 1049, 22, 190, "Note",ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1",
- CellID->1196547533],
-Cell[6054, 158, 315, 7, 96, "Subsection",ExpressionUUID->"aff5664b-5924-40e6-b556-a492a477f54a",
- CellID->767828264]
+ CellID->1196547533]
 }, Open  ]]
 }
 ]
