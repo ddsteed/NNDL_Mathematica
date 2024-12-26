@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      7276,        193]
-NotebookOptionsPosition[      6451,        169]
-NotebookOutlinePosition[      6916,        186]
-CellTagsIndexPosition[      6873,        183]
+NotebookDataLength[     20262,        433]
+NotebookOptionsPosition[     17596,        377]
+NotebookOutlinePosition[     18061,        394]
+CellTagsIndexPosition[     18018,        391]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -158,6 +158,214 @@ implementation."
  CellID->1196547533,ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1"],
 
 Cell["\<\
+In the rapidly evolving landscape of AI and machine learning [24-39], \
+Feed-Forward Neural Networks (FFNNs) stand out as foundational structures, \
+powering a multitude of applications across various domains. This chapter \
+serves as a comprehensive introduction to the inner workings of FFNNs, \
+delving into essential concepts and mechanisms crucial for understanding \
+their functionality and effectiveness. We will start by looking at the \
+structure of a FFNN, followed by how they are trained and used for making \
+predictions. We will also take a brief look at the loss functions that should \
+be used in different settings, the Activation Functions (AFs) used within a \
+neuron, and the different types of optimizers that could be used for training.\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.944183279887413*^9}, {
+  3.944183335614107*^9, 3.944183335677148*^9}},
+ CellID->1849863896,ExpressionUUID->"209b2c9c-8d3a-47c7-b9d5-0e45574957cc"],
+
+Cell["\<\
+The training process is a crucial phase in the development of FFNNs, enabling \
+them to learn from data and improve their performance over time. The training \
+procedure can be broken down into two main components, each playing a \
+distinct role in the network\[CloseCurlyQuote]s learning process (forward \
+propagation and back propagation).\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.944183284145987*^9}, {
+  3.944183335687504*^9, 3.94418333569781*^9}},
+ CellID->988770861,ExpressionUUID->"e5558834-f041-43ff-8bd5-5c8398bbd68c"],
+
+Cell["\<\
+We begin with an exploration of forward propagation in NNs, elucidating how \
+input data traverse through the network\[CloseCurlyQuote]s layers to produce \
+output predictions. Through a step-by-step examination, readers will grasp \
+the fundamental principles underlying the propagation of information within \
+these intricate systems.\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.944183286652136*^9}, {
+  3.944183335707962*^9, 3.944183335717924*^9}},
+ CellID->1961603825,ExpressionUUID->"b74d0df6-5839-4318-a5c2-104ba8d2d97c"],
+
+Cell["\<\
+A pivotal aspect of NN training is automatic differentiation and its main \
+modes [40-43]. Automatic differentiation illustrates the mechanisms through \
+which gradients are computed efficiently, enabling the network to adapt and \
+optimize its parameters during the learning process. We further explore the \
+training process and loss/cost functions integral to optimizing NNs. From \
+defining objectives through appropriate loss functions to navigating the \
+landscape of optimization algorithms.\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.944183292297367*^9}, {
+  3.9441833357278423`*^9, 3.9441833357575083`*^9}},
+ CellID->1705305366,ExpressionUUID->"2e999d1f-da73-4bbe-911e-fca1c851cde2"],
+
+Cell["\<\
+We shift our focus to the backward pass, often referred to as Back \
+Propagation (BP). During this phase, the network evaluates the error or the \
+disparity between its predictions (outputs) and the actual target values. \
+This discrepancy serves as a guide for adjusting the \
+network\[CloseCurlyQuote]s weights to minimize the error and enhance its \
+accuracy. BP involves traversing the network in reverse, updating weights \
+based on the calculated error and its gradients.\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.9441832952768583`*^9}, {
+  3.944183335768011*^9, 3.944183335788081*^9}},
+ CellID->1014980314,ExpressionUUID->"5bd0eca5-b630-48a6-ab0b-efacf87d13cb"],
+
+Cell["\<\
+Moreover, we explore the Universal Approximation Theorem (UAT) [44-46], which \
+asserts that a FFNN with a single hidden layer can approximate any continuous \
+function on a compact subset of \:211d\|01d45b. This theorem underscores the \
+remarkable flexibility and potential of NNs in modeling complex, non-linear \
+relationships.\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.944183265799192*^9}, {
+  3.944183297427903*^9, 3.9441832974534082`*^9}, {3.944183335798067*^9, 
+  3.9441833358079443`*^9}},
+ CellID->1279293721,ExpressionUUID->"1b191a4f-fd55-42c3-814d-faebf5bf34a9"],
+
+Cell["\<\
+In this chapter, we focus on the practical aspects of constructing NNs using \
+Mathematica. We explore a variety of essential components and techniques for \
+building NNs, ranging from fundamental layers to complex architectures.\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.944183265799192*^9}, {
+   3.9441832990640087`*^9, 3.944183299088849*^9}, 3.944183335817843*^9},
+ CellID->57669929,ExpressionUUID->"33a701db-b6d7-41cb-a911-5c84efffb842"],
+
+Cell["\<\
+\[Bullet] First, we will delve into the intricacies of constructing NNs from \
+scratch using Mathematica. By exploring the foundational elements and \
+step-by-step processes, you\[CloseCurlyQuote]ll gain a comprehensive \
+understanding of NN architecture, training methodologies, and performance \
+optimization.\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.944183265799192*^9}, {
+  3.944183300740945*^9, 3.944183300765936*^9}, {3.9441833358277493`*^9, 
+  3.944183335837627*^9}},
+ CellID->1245954321,ExpressionUUID->"9dfdb50a-6d7a-4060-8361-f8c71c4c6802"],
+
+Cell["\<\
+\[Bullet] Next, we begin by understanding the foundational building block of \
+NNs, the LinearLayer. This layer performs linear transformations on the input \
+data, playing a crucial role in connecting different layers of the network. \
+The key components of a LinearLayer are the weights and biases. During the \
+training process, these parameters are adjusted iteratively using \
+optimization algorithms such as gradient descent, enabling the network to \
+learn from the data. The number of input features and the number of neurons \
+in the LinearLayer determine the dimensions of the weight matrix.\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.944183265799192*^9}, {
+  3.944183303338502*^9, 3.944183303365037*^9}, {3.944183335847518*^9, 
+  3.944183335877743*^9}},
+ CellID->1266934571,ExpressionUUID->"c2a9ba5e-1f19-43b9-8e6a-835e3c677a01"],
+
+Cell["\<\
+\[Bullet] As we progress, we introduce the ElementwiseLayer, which enables \
+element-wise operations such as ReLU AF or sigmoid activation across the \
+network\[CloseCurlyQuote]s neurons. This layer adds non-linearity to the \
+network, allowing it to learn complex patterns in the data. Mathematica \
+provides options for customizing ElementwiseLayers, such as choosing \
+different AFs, or defining custom AFs, allowing practitioners to tailor the \
+behavior of ElementwiseLayers according to the specific requirements of their \
+tasks.\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.944183265799192*^9}, {
+  3.9441833056432333`*^9, 3.9441833056684837`*^9}, {3.944183335888049*^9, 
+  3.944183335918276*^9}},
+ CellID->744826949,ExpressionUUID->"3115b732-332e-445b-9bfe-b740e33de354"],
+
+Cell["\<\
+\[Bullet] We explore two essential constructs for organizing NN \
+architectures: NetChain and NetGraph. NetChain enables the sequential \
+composition of layers, where the output of one layer serves as the input to \
+the next layer. This sequential arrangement facilitates the construction of \
+straightforward feedforward NN architectures, where data flows from input to \
+output through a series of transformations. Creating a NetChain in \
+Mathematica involves specifying the layers and their configurations \
+sequentially.\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.944183265799192*^9}, {
+  3.944183307826664*^9, 3.944183335958403*^9}},
+ CellID->1300731359,ExpressionUUID->"528984a7-d236-4e5d-be81-dc641ed8a688"],
+
+Cell["\<\
+\[Bullet] NetGraph is a powerful construct in Mathematica for building NN \
+architectures that involve non-sequential or more complex connectivity \
+patterns. Unlike NetChain, which represents a linear sequence of layers, \
+NetGraph allows for the creation of arbitrary computational graphs, enabling \
+the design of intricate NN structures. NetGraph enables the creation of NNs \
+with arbitrary connectivity patterns, where layers can be connected in any \
+configuration, including branching, merging, looping, and skip connections. \
+This flexibility allows for the construction of sophisticated architectures \
+tailored to specific tasks. NN architectures built using NetGraph are \
+represented as directed graphs, where nodes represent layers or operations, \
+and edges represent the flow of data between them.\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.944183265799192*^9}, {
+  3.944183315606943*^9, 3.944183336029832*^9}},
+ CellID->1975561371,ExpressionUUID->"95cd0545-f288-49a9-98f8-4e116525322c"],
+
+Cell["\<\
+\[Bullet] A crucial step in NN construction is initializing the network\
+\[CloseCurlyQuote]s parameters. We discuss NetInitialize, a function in \
+Mathematica that initializes these parameters, setting the stage for \
+efficient training. Mathematica provides various initialization methods that \
+can be specified through options in NetInitialize. These methods include \
+\[OpenCurlyDoubleQuote]Random\[CloseCurlyDoubleQuote], \
+\[OpenCurlyDoubleQuote]Xavier\[CloseCurlyDoubleQuote], \
+\[OpenCurlyDoubleQuote]He\[CloseCurlyDoubleQuote], and custom initialization \
+functions.\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.944183265799192*^9}, {
+  3.944183325086718*^9, 3.944183336060052*^9}},
+ CellID->2117939187,ExpressionUUID->"58f4de8f-d63c-48be-ad83-18a1cdd060ab"],
+
+Cell["\<\
+\[Bullet] To quantify the performance of our NN models, we introduce loss \
+functions. MeanSquaredLossLayer and MeanAbsoluteLossLayer are commonly used \
+for regression tasks, measuring the difference between predicted and actual \
+values. For classification problems, we explore the CrossEntropyLossLayer, a \
+widely used loss function that measures the dissimilarity between predicted \
+and actual class distributions.\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.944183265799192*^9}, {
+  3.944183327369327*^9, 3.944183336090276*^9}},
+ CellID->1864241889,ExpressionUUID->"cb82d734-0e8b-4683-bb33-0a5d24d43578"],
+
+Cell["\<\
+\[Bullet] Finally, we conclude by discussing NetTrain, an essential function \
+in Mathematica for training NNs. Under the hood, NetTrain employs gradient \
+descent optimization algorithms, such as \[OpenCurlyDoubleQuote]SGD\
+\[CloseCurlyDoubleQuote],\[CloseCurlyDoubleQuote]ADAM\[CloseCurlyDoubleQuote] \
+or \[OpenCurlyDoubleQuote]RMSProp\[CloseCurlyDoubleQuote] and \
+\[OpenCurlyDoubleQuote]SignSGD\[CloseCurlyDoubleQuote], to update the \
+parameters of the NN iteratively.\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.944183265799192*^9}, {
+  3.944183330380703*^9, 3.944183336111033*^9}},
+ CellID->76170261,ExpressionUUID->"a571d5e0-28ed-4993-bde8-c1d2a0e2a47d"],
+
+Cell["\<\
+Throughout this chapter, we provide insights and practical examples to \
+empower readers in harnessing the capabilities of Mathematica for \
+constructing, training, and fine-tuning NNs for various machine learning \
+tasks.\
+\>", "Text",
+ CellChangeTimes->{{3.944183254843046*^9, 3.944183265799192*^9}, 
+   3.9441833361210213`*^9},
+ CellID->634225403,ExpressionUUID->"28c39083-2d18-4704-be5c-98518c6b3fef"],
+
+Cell["\<\
 Building Neural Network from Scratch with Mathematica and Universal \
 Approximation Theorem\
 \>", "Subsection",
@@ -192,7 +400,39 @@ Cell[4762, 129, 303, 4, 133, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-
  CellID->622795188],
 Cell[5068, 135, 1049, 22, 190, "Note",ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1",
  CellID->1196547533],
-Cell[6120, 159, 315, 7, 96, "Subsection",ExpressionUUID->"aff5664b-5924-40e6-b556-a492a477f54a",
+Cell[6120, 159, 973, 14, 281, "Text",ExpressionUUID->"209b2c9c-8d3a-47c7-b9d5-0e45574957cc",
+ CellID->1849863896],
+Cell[7096, 175, 555, 9, 134, "Text",ExpressionUUID->"e5558834-f041-43ff-8bd5-5c8398bbd68c",
+ CellID->988770861],
+Cell[7654, 186, 551, 9, 134, "Text",ExpressionUUID->"b74d0df6-5839-4318-a5c2-104ba8d2d97c",
+ CellID->1961603825],
+Cell[8208, 197, 717, 11, 193, "Text",ExpressionUUID->"2e999d1f-da73-4bbe-911e-fca1c851cde2",
+ CellID->1705305366],
+Cell[8928, 210, 694, 11, 193, "Text",ExpressionUUID->"5bd0eca5-b630-48a6-ab0b-efacf87d13cb",
+ CellID->1014980314],
+Cell[9625, 223, 599, 10, 134, "Text",ExpressionUUID->"1b191a4f-fd55-42c3-814d-faebf5bf34a9",
+ CellID->1279293721],
+Cell[10227, 235, 467, 7, 104, "Text",ExpressionUUID->"33a701db-b6d7-41cb-a911-5c84efffb842",
+ CellID->57669929],
+Cell[10697, 244, 577, 10, 134, "Text",ExpressionUUID->"9dfdb50a-6d7a-4060-8361-f8c71c4c6802",
+ CellID->1245954321],
+Cell[11277, 256, 865, 13, 222, "Text",ExpressionUUID->"c2a9ba5e-1f19-43b9-8e6a-835e3c677a01",
+ CellID->1266934571],
+Cell[12145, 271, 803, 13, 193, "Text",ExpressionUUID->"3115b732-332e-445b-9bfe-b740e33de354",
+ CellID->744826949],
+Cell[12951, 286, 740, 12, 222, "Text",ExpressionUUID->"528984a7-d236-4e5d-be81-dc641ed8a688",
+ CellID->1300731359],
+Cell[13694, 300, 1029, 15, 311, "Text",ExpressionUUID->"95cd0545-f288-49a9-98f8-4e116525322c",
+ CellID->1975561371],
+Cell[14726, 317, 790, 13, 163, "Text",ExpressionUUID->"58f4de8f-d63c-48be-ad83-18a1cdd060ab",
+ CellID->2117939187],
+Cell[15519, 332, 635, 10, 193, "Text",ExpressionUUID->"cb82d734-0e8b-4683-bb33-0a5d24d43578",
+ CellID->1864241889],
+Cell[16157, 344, 687, 11, 134, "Text",ExpressionUUID->"a571d5e0-28ed-4993-bde8-c1d2a0e2a47d",
+ CellID->76170261],
+Cell[16847, 357, 415, 8, 104, "Text",ExpressionUUID->"28c39083-2d18-4704-be5c-98518c6b3fef",
+ CellID->634225403],
+Cell[17265, 367, 315, 7, 96, "Subsection",ExpressionUUID->"aff5664b-5924-40e6-b556-a492a477f54a",
  CellID->767828264]
 }, Open  ]]
 }
