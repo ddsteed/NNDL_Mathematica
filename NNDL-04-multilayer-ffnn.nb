@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      7210,        192]
-NotebookOptionsPosition[      6385,        168]
-NotebookOutlinePosition[      6850,        185]
-CellTagsIndexPosition[      6807,        182]
+NotebookDataLength[      7276,        193]
+NotebookOptionsPosition[      6451,        169]
+NotebookOutlinePosition[      6916,        186]
+CellTagsIndexPosition[      6873,        183]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -63,11 +63,11 @@ Cell[TextData[{
   BaseStyle->"Hyperlink",
   ButtonData->{
     FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
-      "EDITED", "Neural_NetWork_and_Deep_Learning"}, "NNDL-05-challenges.nb", 
-     CharacterEncoding -> "UTF-8"], None},
+      "EDITED", "Neural_NetWork_and_Deep_Learning"}, 
+     "NNDL-05-challengs-NN-opt.nb", CharacterEncoding -> "UTF-8"], None},
   ButtonNote->
    "/Users/fengh/Documents/RDS/EDITED/Neural_NetWork_and_Deep_Learning/NNDL-\
-05-challenges.nb"],
+05-challengs-NN-opt.nb"],
   FontFamily->"Arial Unicode MS",
   FontSize->17.5,
   FontWeight->"Regular",
@@ -118,7 +118,8 @@ contents.nb"],
    3.940741027365489*^9}, {3.940741081934002*^9, 3.940741081942062*^9}, {
    3.943567220607367*^9, 3.9435672414910088`*^9}, {3.94356735516547*^9, 
    3.943567355169693*^9}, {3.9435681597640142`*^9, 3.943568192257277*^9}, {
-   3.94360553842068*^9, 3.943605549222768*^9}},
+   3.94360553842068*^9, 3.943605549222768*^9}, {3.9441832012915382`*^9, 
+   3.9441832012966022`*^9}},
  LineSpacing->{0.6999999999999997, 3},
  Background->RGBColor[
   0.13066300450141147`, 0.12460517280842298`, 0.4353551537346456],
@@ -184,14 +185,14 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[554, 20, 4117, 104, 130, "Text",ExpressionUUID->"67aab6c7-b186-4fbc-a04a-683b7453f682",
+Cell[554, 20, 4183, 105, 130, "Text",ExpressionUUID->"67aab6c7-b186-4fbc-a04a-683b7453f682",
  CellID->912160115],
 Cell[CellGroupData[{
-Cell[4696, 128, 303, 4, 133, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
+Cell[4762, 129, 303, 4, 133, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
  CellID->622795188],
-Cell[5002, 134, 1049, 22, 190, "Note",ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1",
+Cell[5068, 135, 1049, 22, 190, "Note",ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1",
  CellID->1196547533],
-Cell[6054, 158, 315, 7, 96, "Subsection",ExpressionUUID->"aff5664b-5924-40e6-b556-a492a477f54a",
+Cell[6120, 159, 315, 7, 96, "Subsection",ExpressionUUID->"aff5664b-5924-40e6-b556-a492a477f54a",
  CellID->767828264]
 }, Open  ]]
 }
