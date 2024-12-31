@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      6833,        181]
-NotebookOptionsPosition[      6198,        160]
-NotebookOutlinePosition[      6591,        176]
-CellTagsIndexPosition[      6548,        173]
+NotebookDataLength[      6773,        180]
+NotebookOptionsPosition[      6138,        159]
+NotebookOutlinePosition[      6531,        175]
+CellTagsIndexPosition[      6488,        172]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -43,11 +43,11 @@ Cell[TextData[{
   BaseStyle->"Hyperlink",
   ButtonData->{
     FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
-      "EDITED", "Neural_NetWork_and_Deep_Learning"}, 
-     "NNDL-04-multilayer-ffnn.nb", CharacterEncoding -> "UTF-8"], None},
+      "EDITED", "Neural_NetWork_and_Deep_Learning"}, "NNDL-03-matrix.nb", 
+     CharacterEncoding -> "UTF-8"], None},
   ButtonNote->
    "/Users/fengh/Documents/RDS/EDITED/Neural_NetWork_and_Deep_Learning/NNDL-\
-04-multilayer-ffnn.nb"],
+03-matrix.nb"],
   FontFamily->"Arial Unicode MS",
   FontSize->17.5,
   FontWeight->"Regular",
@@ -63,11 +63,11 @@ Cell[TextData[{
   BaseStyle->"Hyperlink",
   ButtonData->{
     FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
-      "EDITED", "Neural_NetWork_and_Deep_Learning"}, "NNDL-06-lr-gdv.nb", 
+      "EDITED", "Neural_NetWork_and_Deep_Learning"}, "NNDL-05-challenges.nb", 
      CharacterEncoding -> "UTF-8"], None},
   ButtonNote->
    "/Users/fengh/Documents/RDS/EDITED/Neural_NetWork_and_Deep_Learning/NNDL-\
-06-lr-gdv.nb"],
+05-challenges.nb"],
   FontFamily->"Arial Unicode MS",
   FontSize->17.5,
   FontWeight->"Regular",
@@ -118,8 +118,7 @@ contents.nb"],
    3.940741027365489*^9}, {3.940741081934002*^9, 3.940741081942062*^9}, {
    3.943567220607367*^9, 3.9435672414910088`*^9}, {3.94356735516547*^9, 
    3.943567355169693*^9}, {3.9435681597640142`*^9, 3.943568192257277*^9}, {
-   3.94360553842068*^9, 3.943605549222768*^9}, {3.944605232458186*^9, 
-   3.944605244787657*^9}},
+   3.94360553842068*^9, 3.943605549222768*^9}},
  LineSpacing->{0.6999999999999997, 3},
  Background->RGBColor[
   0.13066300450141147`, 0.12460517280842298`, 0.4353551537346456],
@@ -175,12 +174,12 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[554, 20, 4177, 105, 104, "Text",ExpressionUUID->"67aab6c7-b186-4fbc-a04a-683b7453f682",
+Cell[554, 20, 4117, 104, 104, "Text",ExpressionUUID->"67aab6c7-b186-4fbc-a04a-683b7453f682",
  CellID->912160115],
 Cell[CellGroupData[{
-Cell[4756, 129, 354, 4, 106, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
+Cell[4696, 128, 354, 4, 106, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
  CellID->622795188],
-Cell[5113, 135, 1069, 22, 152, "Note",ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1",
+Cell[5053, 134, 1069, 22, 152, "Note",ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1",
  CellID->1196547533]
 }, Open  ]]
 }
