@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      7009,        182]
-NotebookOptionsPosition[      6374,        161]
-NotebookOutlinePosition[      6767,        177]
-CellTagsIndexPosition[      6724,        174]
+NotebookDataLength[     33240,        713]
+NotebookOptionsPosition[     30253,        647]
+NotebookOutlinePosition[     30677,        664]
+CellTagsIndexPosition[     30634,        661]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -156,11 +156,498 @@ implementation."
  CellChangeTimes->{{3.9435682523793507`*^9, 3.9435682907152853`*^9}, {
   3.9435754000406303`*^9, 3.943575400046158*^9}, {3.944605112751877*^9, 
   3.944605131151554*^9}, {3.94503559681851*^9, 3.945035597233686*^9}},
- CellID->1196547533,ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1"]
+ CellID->1196547533,ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1"],
+
+Cell["\<\
+In deep learning, the optimization process lies at the heart of training \
+Neural Networks (NNs). Central to this optimization is the notion of the \
+learning rate, a crucial hyperparameter that dictates the step size in the \
+parameter space during optimization. Selecting an appropriate learning rate \
+and its schedule significantly impacts the convergence speed and the final \
+performance of the model. In this chapter, we delve into various learning \
+rate schedules and adaptive algorithms that play pivotal roles in optimizing \
+NNs. By understanding these techniques, practitioners can fine-tune their \
+training processes and achieve better results in their machine-learning \
+endeavors.\
+\>", "Text",
+ CellChangeTimes->{{3.94503628212224*^9, 3.945036306885441*^9}, {
+  3.9450363698005857`*^9, 3.945036369854005*^9}},
+ CellID->1852358015,ExpressionUUID->"9c04cc97-43e3-4730-b5bc-dcc954aa4d36"],
+
+Cell["\<\
+The chapter initiates an exploration of learning rate schedules [64-75], \
+which entail predefined strategies for altering the learning rate throughout \
+the training process. Learning rate schedules include step decay, inverse \
+time decay, exponential decay, polynomial decay with warm restart, cyclical \
+learning rate, stochastic gradient descent with warm restarts (cosine decay), \
+exponential decay sine wave learning rate, Hessian-aware learning rate decay, \
+etc., each with its own advantages and drawbacks. Understanding and \
+appropriately implementing these schedules are crucial for achieving optimal \
+convergence without encountering issues such as slow convergence or \
+overshooting the minima.\
+\>", "Text",
+ CellChangeTimes->{{3.94503628212224*^9, 3.9450363116684504`*^9}, {
+  3.9450363698652983`*^9, 3.94503636990637*^9}},
+ CellID->1958808618,ExpressionUUID->"32af0e9e-cff1-4546-a556-342119b1ebb8"],
+
+Cell["\<\
+Transitioning from learning rate schedules, we explore accelerated gradient \
+descent [76-79], a variant of the traditional GD algorithm designed to speed \
+up convergence. Two popular accelerated gradient descent algorithms are SGD \
+with momentum and Nesterov accelerated gradient descent. In both cases, the \
+momentum term helps the optimization algorithm to continue moving in the same \
+direction or accelerate in the relevant direction, even if the gradient \
+changes direction frequently or the surface of the loss function is highly \
+irregular. Both methods help in smoothing out the updates, which is \
+particularly useful when dealing with noisy or high-variance gradients common \
+in SGD. The momentum term helps navigate through the irregularities of the \
+loss surface more effectively, leading to a smoother and often faster path to \
+the minimum. By leveraging past gradients, these methods can speed up \
+convergence, reducing the time and computational resources needed for \
+training. This leads to faster convergence and better overall performance in \
+training NNs and other machine-learning models.\
+\>", "Text",
+ CellChangeTimes->{{3.94503628212224*^9, 3.9450363193359327`*^9}, {
+  3.945036369916417*^9, 3.945036369997025*^9}},
+ CellID->1222639042,ExpressionUUID->"725bc243-34ac-4fcd-b39b-1aa31711dd8e"],
+
+Cell["\<\
+Following the discussion on accelerated gradient descent, we turn our \
+attention to adaptive learning rate algorithms [80-93]. Adaptive learning \
+rate algorithms adaptively adjust the learning rate during training based on \
+past gradients, and other relevant metrics. These algorithms aim to strike a \
+balance between the benefits of using large learning rates for fast \
+convergence and the stability provided by smaller learning rates to prevent \
+overshooting or oscillations. Popular examples include AdaGrad, RMSProp, \
+AdaDelta, Adam, AdaMax, Nadam, and AMSGRAD, each with its own approach to \
+adaptively scale the learning rates for individual model parameters.\
+\>", "Text",
+ CellChangeTimes->{{3.94503628212224*^9, 3.94503632360953*^9}, {
+  3.945036370007318*^9, 3.945036370047329*^9}},
+ CellID->917494872,ExpressionUUID->"67459e35-aac0-4cfb-8540-9078cbe169d7"],
+
+Cell["\<\
+Moreover, we explore second-order optimization methods [11,15,25,37]. \
+Second-order optimization methods, such as Newton, Marquardt, and variants \
+like conjugate gradient (Hestenes-Stiefel formula, Polak-Ribiere formula, \
+Fletcher-Reeves formula), and quasi-Newton (rank one correction, DFP, and \
+BFGS), etc., leverage information from the second derivatives of the loss \
+function to guide the optimization process. By incorporating curvature \
+information, these methods can converge faster and more accurately than \
+first-order methods like GD. However, they often come with higher \
+computational costs and memory requirements due to the need to compute and \
+store second-order derivatives or their approximations.\
+\>", "Text",
+ CellChangeTimes->{{3.94503628212224*^9, 3.945036296812231*^9}, {
+  3.945036335195446*^9, 3.9450363352209063`*^9}, {3.945036370057334*^9, 
+  3.945036370097218*^9}},
+ CellID->1928013366,ExpressionUUID->"91cd7dcc-9710-4dd3-8837-22795265f2b6"],
+
+Cell[TextData[{
+ "This chapter serves as a continuation of the foundational principles \
+introduced in ",
+ ButtonBox["Chapter 5",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
+      "EDITED", "Neural_NetWork_and_Deep_Learning"}, 
+     "NNDL-05-challengs-NN-opt.nb", CharacterEncoding -> "UTF-8"], None},
+  ButtonNote->
+   "/Users/fengh/Documents/RDS/EDITED/Neural_NetWork_and_Deep_Learning/NNDL-\
+05-challengs-NN-opt.nb"],
+ ". Here, we delve into the intricate landscape of learning rate schedules \
+and adaptive algorithms, employing the computational power of Mathematica to \
+elucidate their mechanisms and applications. Divided into two units, this \
+chapter demystifies these fundamental concepts."
+}], "Text",
+ CellChangeTimes->{{3.94503628212224*^9, 3.945036296812231*^9}, {
+  3.945036339740938*^9, 3.945036339766679*^9}, {3.945036370107273*^9, 
+  3.945036370128275*^9}, {3.94503653915486*^9, 3.9450365391605463`*^9}},
+ CellID->1252636148,ExpressionUUID->"a4559d79-a52b-4b71-a36f-d86b9c10f7a7"],
+
+Cell["\<\
+The first unit serves as a foundational exploration of learning rate \
+schedules and adaptive optimization algorithms, leveraging the dynamic \
+capabilities of Mathematica to provide intuitive insights. By building \
+optimization algorithms from scratch, the reader gains a deeper understanding \
+of the underlying principles. Through interactive manipulations, readers are \
+guided step by step to comprehend the nuances of various algorithms. From \
+elucidating traditional learning rate schedules such as step decay, inverse \
+time decay, and exponential decay to unraveling sophisticated techniques like \
+accelerated gradient descent and adaptive learning rate algorithms, this unit \
+equips readers with a profound understanding of the mechanisms driving \
+optimization processes. Moreover, Mathematica provides a comprehensive suite \
+of built-in functions and tools for optimization, enabling users to \
+implement, analyze, and visualize a diverse range of optimization problems.\
+\>", "Text",
+ CellChangeTimes->{{3.94503628212224*^9, 3.945036296812231*^9}, {
+  3.94503634575467*^9, 3.945036370210355*^9}},
+ CellID->436130983,ExpressionUUID->"dfbe4eb3-47cb-406a-8360-736ec78ad9b5"],
+
+Cell[TextData[{
+ "In the second unit, the focus shifts towards practical applications, \
+centering on the optimization of NNs using learning rate schedules and \
+adaptive algorithms within the Mathematica environment. In this unit, we \
+explore the powerful capabilities of Mathematica\[CloseCurlyQuote]s ",
+ StyleBox["NetTrain", "CodeText"],
+ " function, leveraging a range of optimization methods and suboptions to \
+fine-tune the training process and enhance model performance. ",
+ StyleBox["NetTrain", "CodeText"],
+ " serves as the cornerstone of NN training within Mathematica, providing a \
+versatile and user-friendly interface for optimizing model parameters. At the \
+heart of NetTrain lies a suite of optimization methods, including ",
+ StyleBox["\[OpenCurlyDoubleQuote]ADAM\[CloseCurlyDoubleQuote], \
+\[OpenCurlyDoubleQuote]RMSProp\[CloseCurlyDoubleQuote], \
+\[OpenCurlyDoubleQuote]SGD\[CloseCurlyDoubleQuote]", "CodeText"],
+ ", and ",
+ StyleBox["\[OpenCurlyDoubleQuote]SignSGD\[CloseCurlyDoubleQuote]", 
+  "CodeText"],
+ ", each offering unique strategies for navigating the high-dimensional \
+parameter space of NNs. We will not only explore the selection and \
+utilization of these optimization methods but also, we will go into the \
+intricacies of their associated suboptions. These suboptions, including ",
+ StyleBox["\[OpenCurlyDoubleQuote]Momentum\[CloseCurlyDoubleQuote], \
+\[OpenCurlyDoubleQuote]Beta1\[CloseCurlyDoubleQuote], \
+\[OpenCurlyDoubleQuote]Beta2\[CloseCurlyDoubleQuote]", "CodeText"],
+ ", and ",
+ StyleBox["\[OpenCurlyDoubleQuote]Epsilon\[CloseCurlyDoubleQuote]", 
+  "CodeText"],
+ ", provide users with fine- grained control over the optimization process, \
+allowing for nuanced adjustments to suit the specific requirements of their \
+NN architectures and training objectives."
+}], "Text",
+ CellChangeTimes->{{3.94503628212224*^9, 3.945036296812231*^9}, {
+  3.945036353600314*^9, 3.945036370314094*^9}},
+ CellID->1066240197,ExpressionUUID->"45823881-5d48-42ba-809e-19140bd18048"],
+
+Cell[TextData[{
+ "Furthermore, the ",
+ StyleBox["\[OpenCurlyDoubleQuote]LearningRateSchedule\[CloseCurlyDoubleQuote]\
+", "CodeText"],
+ " suboption allows you to specify a learning rate schedule, which can be a \
+fixed learning rate, a schedule that decreases the learning rate over time \
+(such as exponential decay or step decay), or any other custom schedule you \
+define. Through comprehensive demonstrations and hands-on exercises, this \
+unit empowers practitioners to harness the full potential of learning rate \
+schedules and adaptive algorithms in enhancing the performance of NNs."
+}], "Text",
+ CellChangeTimes->{{3.94503628212224*^9, 3.945036296812231*^9}, {
+  3.945036356960003*^9, 3.9450363703550167`*^9}},
+ CellID->1061686974,ExpressionUUID->"56c49089-eb54-4933-bd67-2fb558a83506"],
+
+Cell["\<\
+Together, these units shed light on the nuanced interconnections among \
+learning rate schedules, adaptive algorithms, and NN optimization.\
+\>", "Text",
+ CellChangeTimes->{{3.94503628212224*^9, 3.945036296812231*^9}, 
+   3.945036370365139*^9},
+ CellID->1953244382,ExpressionUUID->"0e588cdb-56e4-44cc-b5f2-f65b8f4b83b2"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Understanding Learning Rate Schedules and Adaptive Algorithms with Mathematica\
+\>", "Subsection",
+ CellChangeTimes->{{3.945036657383816*^9, 3.945036672728717*^9}},
+ CellID->1037312285,ExpressionUUID->"cdc48c09-4572-4914-9a2a-5cddfbf41931"],
+
+Cell["code 6.1", "CodeCaption",
+ CellChangeTimes->{{3.945036675639832*^9, 3.945036677484394*^9}},
+ CellID->621517190,ExpressionUUID->"04f12eb4-2e31-4c4d-b128-1d0e14284dd0"],
+
+Cell["\<\
+(* The code implements an interactive visualization tool using Mathematica\
+\[CloseCurlyQuote]s Manipulate function to explore the behavior of a step \
+decay learning rate schedule. Users can adjust two parameters, the drop \
+factor (d) and step size (s), via sliders to observe their impact on the \
+learning rate decay. The code defines a step decay function that computes the \
+learning rate based on the initial learning rate, drop factor, step size, and \
+current iteration. Data points representing the learning rate at each \
+iteration are generated and plotted dynamically: *)\
+\>", "comment",
+ CellChangeTimes->{{3.945036687253132*^9, 3.945036692437409*^9}},
+ CellID->16470362,ExpressionUUID->"5a9ecda5-3caf-4d78-a6da-5c00ed3b5716"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Module", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", "data", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"stepDecay", "[", 
+        RowBox[{
+        "initialLearningRate_", ",", "dropFactor_", ",", "stepSize_", ",", 
+         "currentIteration_"}], "]"}], ":=", 
+       RowBox[{"initialLearningRate", "*", 
+        RowBox[{"dropFactor", "^", 
+         RowBox[{"Floor", "[", 
+          RowBox[{"currentIteration", "/", "stepSize"}], "]"}]}]}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"data", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"i", ",", 
+           RowBox[{"stepDecay", "[", 
+            RowBox[{"initialLearningRate", ",", "d", ",", "s", ",", "i"}], 
+            "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "0", ",", "100"}], "}"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"ListLinePlot", "[", "\[IndentingNewLine]", 
+       RowBox[{"data", ",", "\[IndentingNewLine]", 
+        RowBox[{"PlotRange", "->", "All"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"PlotLabel", "->", 
+         RowBox[{"StringForm", "[", 
+          RowBox[{
+          "\"\<Step Decay with d = `` and s = ``\>\"", ",", "d", ",", "s"}], 
+          "]"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"AxesLabel", "->", 
+         RowBox[{"{", 
+          RowBox[{"\"\<Iterations\>\"", ",", "\"\<Learning Rate\>\""}], 
+          "}"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"ImageSize", "->", "300"}]}], "\[IndentingNewLine]", 
+       "]"}]}]}], "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d", ",", "0.5", ",", "\"\<Drop Factor\>\""}], "}"}], ",", 
+     "0.1", ",", "0.9", ",", "0.01"}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"s", ",", "10", ",", "\"\<Step Size\>\""}], "}"}], ",", "1", 
+     ",", "20", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Initialization", ":>", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"initialLearningRate", "=", "0.2"}], ";"}], 
+     "\[IndentingNewLine]", "}"}]}]}], "\[IndentingNewLine]", "]"}]], "Input",\
+
+ CellChangeTimes->{{3.945036698140277*^9, 3.945036886874399*^9}},
+ CellLabel->"In[543]:=",
+ CellID->133249425,ExpressionUUID->"b10f9d9d-6008-4bcf-ba2a-cb10f100c6ed"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`d$$ = 0.5800000000000001, $CellContext`s$$ =
+     8, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`d$$], 0.5, "Drop Factor"}, 0.1, 0.9, 0.01, 
+      ControlType -> Manipulator}, {{
+       Hold[$CellContext`s$$], 10, "Step Size"}, 1, 20, 1, ControlType -> 
+      Manipulator}}, Typeset`size$$ = {
+    375., {108.40903235489422`, 117.44955969864422`}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = False, 
+    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`d$$ = 0.5, $CellContext`s$$ = 10}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$, Typeset`keyframeActionsQ$$, 
+        Typeset`keyframeList$$}, "Body" :> 
+      Module[{$CellContext`data$}, $CellContext`stepDecay[
+           Pattern[$CellContext`initialLearningRate, 
+            Blank[]], 
+           Pattern[$CellContext`dropFactor, 
+            Blank[]], 
+           Pattern[$CellContext`stepSize, 
+            Blank[]], 
+           Pattern[$CellContext`currentIteration, 
+            
+            Blank[]]] := $CellContext`initialLearningRate \
+$CellContext`dropFactor^
+           Floor[$CellContext`currentIteration/$CellContext`stepSize]; \
+$CellContext`data$ = Table[{$CellContext`i, 
+            $CellContext`stepDecay[$CellContext`initialLearningRate, \
+$CellContext`d$$, $CellContext`s$$, $CellContext`i]}, {$CellContext`i, 0, 
+            100}]; ListLinePlot[$CellContext`data$, PlotRange -> All, 
+          PlotLabel -> 
+          StringForm[
+           "Step Decay with d = `` and s = ``", $CellContext`d$$, \
+$CellContext`s$$], AxesLabel -> {"Iterations", "Learning Rate"}, ImageSize -> 
+          300]], "Specifications" :> {{{$CellContext`d$$, 0.5, "Drop Factor"},
+          0.1, 0.9, 0.01}, {{$CellContext`s$$, 10, "Step Size"}, 1, 20, 1}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{430.125, {179.15903235489424`, 188.19955969864424`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`initialLearningRate = 0.2; Null}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.9450368872026367`*^9},
+ CellLabel->"Out[543]=",
+ CellID->2048253551,ExpressionUUID->"39908a1c-e068-49fd-ab43-dfcf716fef53"]
+}, Open  ]],
+
+Cell["code 6.2", "CodeCaption",
+ CellChangeTimes->{{3.9450369149207697`*^9, 3.94503691638831*^9}},
+ CellID->834570247,ExpressionUUID->"9503363b-a30e-424d-8322-5c41958f92cc"],
+
+Cell["\<\
+(* In this Manipulate interface, you can interactively choose different \
+values for the decay rate and observe the corresponding learning rate decay \
+plot. Adjust the decayRate slider to explore how the learning rate changes \
+over iterations according to the inverse time decay formula: *)\
+\>", "comment",
+ CellChangeTimes->{{3.945036927429985*^9, 3.945036932245623*^9}},
+ CellID->2002736252,ExpressionUUID->"1c3d77ec-eebf-4a12-bfdf-ca3432e0620b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Module", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", "data", "}"}], ",", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"inverseTimeDecay", "[", 
+        RowBox[{
+        "initialLearningRate_", ",", "decayRate_", ",", "currentIteration_"}],
+         "]"}], ":=", 
+       RowBox[{"initialLearningRate", "/", 
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          RowBox[{"decayRate", "*", "currentIteration"}]}], ")"}]}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"data", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"i", ",", 
+           RowBox[{"inverseTimeDecay", "[", 
+            RowBox[{"initialLearningRate", ",", "d", ",", "i"}], "]"}]}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "0", ",", "100"}], "}"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"ListLinePlot", "[", "\[IndentingNewLine]", 
+       RowBox[{"data", ",", "\[IndentingNewLine]", 
+        RowBox[{"PlotRange", "->", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "100"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0.002", ",", "1"}], "}"}]}], "}"}]}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"PlotLabel", "->", 
+         RowBox[{"StringForm", "[", 
+          RowBox[{
+          "\"\<Inverse Time Decay \\nInital Rate = `` \\nd = ``\>\"", ",", 
+           "initialLearningRate", ",", "d"}], "]"}]}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AxesLabel", "->", 
+         RowBox[{"{", 
+          RowBox[{"\"\<Iterations\>\"", ",", "\"\<Learning Rate\>\""}], 
+          "}"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"ImageSize", "->", "300"}]}], "\[IndentingNewLine]", 
+       "]"}]}]}], "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "initialLearningRate", ",", "0.5", ",", 
+       "\"\<Initial Learning Rate\>\""}], "}"}], ",", "0.01", ",", "1", ",", 
+     "0.01"}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d", ",", "0.5", ",", "\"\<Decay Rate\>\""}], "}"}], ",", 
+     "0.01", ",", "0.9", ",", "0.01"}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9450369389539337`*^9, 3.945037107989814*^9}},
+ CellLabel->"In[544]:=",
+ CellID->760592262,ExpressionUUID->"231891b5-431a-4439-8dbf-ef9f1d27f667"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`d$$ = 
+    0.23, $CellContext`initialLearningRate$$ = 0.78, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`initialLearningRate$$], 0.5, 
+       "Initial Learning Rate"}, 0.01, 1, 0.01, ControlType -> Manipulator}, {{
+       Hold[$CellContext`d$$], 0.5, "Decay Rate"}, 0.01, 0.9, 0.01, 
+      ControlType -> Manipulator}}, Typeset`size$$ = {
+    375., {129.35629797989424`, 138.39682532364424`}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`d$$ = 
+        0.5, $CellContext`initialLearningRate$$ = 0.5}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$, Typeset`keyframeActionsQ$$, 
+        Typeset`keyframeList$$}, "Body" :> 
+      Module[{$CellContext`data$}, $CellContext`inverseTimeDecay[
+           Pattern[$CellContext`initialLearningRate, 
+            Blank[]], 
+           Pattern[$CellContext`decayRate, 
+            Blank[]], 
+           Pattern[$CellContext`currentIteration, 
+            Blank[]]] := $CellContext`initialLearningRate/(
+          1 + $CellContext`decayRate $CellContext`currentIteration); \
+$CellContext`data$ = Table[{$CellContext`i, 
+            $CellContext`inverseTimeDecay[$CellContext`initialLearningRate$$, \
+$CellContext`d$$, $CellContext`i]}, {$CellContext`i, 0, 100}]; 
+        ListLinePlot[$CellContext`data$, PlotRange -> {{0, 100}, {0.002, 1}}, 
+          PlotLabel -> 
+          StringForm[
+           "Inverse Time Decay \nInital Rate = `` \nd = ``", \
+$CellContext`initialLearningRate$$, $CellContext`d$$], 
+          AxesLabel -> {"Iterations", "Learning Rate"}, ImageSize -> 300]], 
+      "Specifications" :> {{{$CellContext`initialLearningRate$$, 0.5, 
+          "Initial Learning Rate"}, 0.01, 1, 
+         0.01}, {{$CellContext`d$$, 0.5, "Decay Rate"}, 0.01, 0.9, 0.01}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{430.125, {200.10629797989424`, 209.14682532364424`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.945037108253436*^9},
+ CellLabel->"Out[544]=",
+ CellID->784067528,ExpressionUUID->"9536af7f-6c59-4614-9771-360fe01239f2"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{960, 1027},
 WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+Magnification:>1.25 Inherited,
 FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
 StyleDefinitions->"RDS-book.nb",
 ExpressionUUID->"8861bace-5584-420b-8e0c-c51fd7c6d3a1"
@@ -176,13 +663,57 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[554, 20, 4243, 105, 104, "Text",ExpressionUUID->"67aab6c7-b186-4fbc-a04a-683b7453f682",
+Cell[554, 20, 4243, 105, 130, "Text",ExpressionUUID->"67aab6c7-b186-4fbc-a04a-683b7453f682",
  CellID->912160115],
 Cell[CellGroupData[{
-Cell[4822, 129, 419, 5, 139, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
+Cell[4822, 129, 419, 5, 174, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
  CellID->622795188],
-Cell[5244, 136, 1114, 22, 152, "Note",ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1",
- CellID->1196547533]
+Cell[5244, 136, 1114, 22, 190, "Note",ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1",
+ CellID->1196547533],
+Cell[6361, 160, 913, 14, 281, "Text",ExpressionUUID->"9c04cc97-43e3-4730-b5bc-dcc954aa4d36",
+ CellID->1852358015],
+Cell[7277, 176, 928, 14, 281, "Text",ExpressionUUID->"32af0e9e-cff1-4546-a556-342119b1ebb8",
+ CellID->1958808618],
+Cell[8208, 192, 1337, 19, 429, "Text",ExpressionUUID->"725bc243-34ac-4fcd-b39b-1aa31711dd8e",
+ CellID->1222639042],
+Cell[9548, 213, 885, 13, 281, "Text",ExpressionUUID->"67459e35-aac0-4cfb-8540-9078cbe169d7",
+ CellID->917494872],
+Cell[10436, 228, 989, 15, 281, "Text",ExpressionUUID->"91cd7dcc-9710-4dd3-8837-22795265f2b6",
+ CellID->1928013366],
+Cell[11428, 245, 1075, 20, 163, "Text",ExpressionUUID->"a4559d79-a52b-4b71-a36f-d86b9c10f7a7",
+ CellID->1252636148],
+Cell[12506, 267, 1199, 17, 370, "Text",ExpressionUUID->"dfbe4eb3-47cb-406a-8360-736ec78ad9b5",
+ CellID->436130983],
+Cell[13708, 286, 2012, 34, 458, "Text",ExpressionUUID->"45823881-5d48-42ba-809e-19140bd18048",
+ CellID->1066240197],
+Cell[15723, 322, 795, 13, 193, "Text",ExpressionUUID->"56c49089-eb54-4933-bd67-2fb558a83506",
+ CellID->1061686974],
+Cell[16521, 337, 330, 6, 75, "Text",ExpressionUUID->"0e588cdb-56e4-44cc-b5f2-f65b8f4b83b2",
+ CellID->1953244382],
+Cell[CellGroupData[{
+Cell[16876, 347, 250, 4, 96, "Subsection",ExpressionUUID->"cdc48c09-4572-4914-9a2a-5cddfbf41931",
+ CellID->1037312285],
+Cell[17129, 353, 172, 2, 65, "CodeCaption",ExpressionUUID->"04f12eb4-2e31-4c4d-b128-1d0e14284dd0",
+ CellID->621517190],
+Cell[17304, 357, 751, 11, 225, "comment",ExpressionUUID->"5a9ecda5-3caf-4d78-a6da-5c00ed3b5716",
+ CellID->16470362],
+Cell[CellGroupData[{
+Cell[18080, 372, 2579, 60, 543, "Input",ExpressionUUID->"b10f9d9d-6008-4bcf-ba2a-cb10f100c6ed",
+ CellID->133249425],
+Cell[20662, 434, 3126, 62, 393, "Output",ExpressionUUID->"39908a1c-e068-49fd-ab43-dfcf716fef53",
+ CellID->2048253551]
+}, Open  ]],
+Cell[23803, 499, 173, 2, 65, "CodeCaption",ExpressionUUID->"9503363b-a30e-424d-8322-5c41958f92cc",
+ CellID->834570247],
+Cell[23979, 503, 461, 7, 144, "comment",ExpressionUUID->"1c3d77ec-eebf-4a12-bfdf-ca3432e0620b",
+ CellID->2002736252],
+Cell[CellGroupData[{
+Cell[24465, 514, 2658, 66, 520, "Input",ExpressionUUID->"231891b5-431a-4439-8dbf-ef9f1d27f667",
+ CellID->760592262],
+Cell[27126, 582, 3087, 60, 435, "Output",ExpressionUUID->"9536af7f-6c59-4614-9771-360fe01239f2",
+ CellID->784067528]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]
