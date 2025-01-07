@@ -10,17 +10,17 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     21012,        512]
-NotebookOptionsPosition[     16311,        443]
-NotebookOutlinePosition[     17747,        480]
-CellTagsIndexPosition[     17704,        477]
+NotebookDataLength[     28479,        688]
+NotebookOptionsPosition[     22551,        607]
+NotebookOutlinePosition[     23987,        644]
+CellTagsIndexPosition[     23944,        641]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Contents", "TOCTitle",ExpressionUUID->"d0f4f039-a9a7-4e69-a9f3-414d4974ef7b"],
+Cell["Contents", "TOCTitle",ExpressionUUID->"066d2e02-1ab7-4902-9904-bc192616ffa5"],
 
 Cell[TextData[ButtonBox["0. Frontmatter",
  BaseStyle->"TOCSection",
@@ -32,8 +32,8 @@ Cell[TextData[ButtonBox["0. Frontmatter",
         NotebookDirectory[], "NNDL-00-preface.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "996faac4-d8f9-4863-badb-6d3ec0524de1", All,
-      ExpressionUUID]]]], "TOCSection",ExpressionUUID->"b48981bd-f5da-4089-\
-ad83-01ef8e88a435"],
+      ExpressionUUID]]]], "TOCSection",ExpressionUUID->"4409c08a-3bcc-4ae8-\
+83d7-60bb2d7857d2"],
 
 Cell[TextData[ButtonBox["Abstract",
  BaseStyle->"TOCSubsection",
@@ -45,8 +45,8 @@ Cell[TextData[ButtonBox["Abstract",
         NotebookDirectory[], "NNDL-00-preface.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "2e5765d9-8252-4cea-bdf4-0aa61e6cae3c", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"06ba9d10-c20c-41c7-\
-a2a8-9f2a9cc8f28a"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"60aab9a3-9846-407f-\
+9584-7aebdfb25417"],
 
 Cell[TextData[ButtonBox["Preface",
  BaseStyle->"TOCSubsection",
@@ -58,8 +58,8 @@ Cell[TextData[ButtonBox["Preface",
         NotebookDirectory[], "NNDL-00-preface.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "779ac440-64b9-421f-a613-32e9713c20c1", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"7c3edb28-90bc-4096-\
-891d-9161840cb675"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"5e0b8054-d664-42ff-\
+a44b-720a4172d785"],
 
 Cell[TextData[ButtonBox["Bridging Theory and Practice: The Dual Approach of \
 This Book",
@@ -72,8 +72,8 @@ This Book",
         NotebookDirectory[], "NNDL-00-preface.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "17faf0aa-a893-4ec8-a283-6dfd39b506a7", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"c3242ff0-e782-4f3b-\
-90ec-e6390104ff18"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"f02eab4d-0bc3-4d3a-\
+a3dc-dbbc9ae9634f"],
 
 Cell[TextData[ButtonBox["1 Introduction to Mathematica",
  BaseStyle->"TOCSection",
@@ -85,8 +85,8 @@ Cell[TextData[ButtonBox["1 Introduction to Mathematica",
         NotebookDirectory[], "NNDL-01-intro.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "4fba7fed-0087-40ae-a263-55e5b8fe4d49", All,
-      ExpressionUUID]]]], "TOCSection",ExpressionUUID->"a1efa88f-fec6-4b88-\
-ab91-2db2ff16ee9a"],
+      ExpressionUUID]]]], "TOCSection",ExpressionUUID->"3532773d-f509-4be6-\
+8281-c17eb58a168c"],
 
 Cell[TextData[ButtonBox["Basic Concepts",
  BaseStyle->"TOCSubsection",
@@ -98,8 +98,8 @@ Cell[TextData[ButtonBox["Basic Concepts",
         NotebookDirectory[], "NNDL-01-intro.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "aeff30c4-b325-4952-97d6-9ea1165e9238", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"20e6732c-b57e-4cf5-\
-b629-c96fbb296f38"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"0355cc41-dc10-41d5-\
+9c19-ee524e2eea47"],
 
 Cell[TextData[ButtonBox["Variables and Functions",
  BaseStyle->"TOCSubsection",
@@ -111,8 +111,8 @@ Cell[TextData[ButtonBox["Variables and Functions",
         NotebookDirectory[], "NNDL-01-intro.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "83ce7304-9f84-4422-a348-e04d4e0525cd", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"54ed06ed-e54a-4541-\
-9f69-e987dba553bb"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"b914c3a8-6135-424e-\
+aa28-ccec605c02c1"],
 
 Cell[TextData[ButtonBox["Lists",
  BaseStyle->"TOCSubsection",
@@ -124,8 +124,8 @@ Cell[TextData[ButtonBox["Lists",
         NotebookDirectory[], "NNDL-01-intro.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "363fbd1d-6a57-4427-a5fb-7b9b70c0c450", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"83a939eb-e755-47cc-\
-94fd-b38cefcf2780"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"a80e559d-1b0b-45de-\
+bab1-6fa430242709"],
 
 Cell[TextData[ButtonBox["2D and 3D Graphing",
  BaseStyle->"TOCSubsection",
@@ -137,8 +137,8 @@ Cell[TextData[ButtonBox["2D and 3D Graphing",
         NotebookDirectory[], "NNDL-01-intro.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "494c669b-d164-4972-b3d1-e2e13520cd25", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"e1b82c6f-37fc-4b3a-\
-a340-22ccf5a26d5b"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"13b5f104-685a-4da4-\
+88a7-4baa6de40e2d"],
 
 Cell[TextData[ButtonBox["Control Structure",
  BaseStyle->"TOCSubsection",
@@ -150,8 +150,8 @@ Cell[TextData[ButtonBox["Control Structure",
         NotebookDirectory[], "NNDL-01-intro.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "113b89b9-e384-47be-abab-7a8c15fe438f", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"d3675d54-3ca8-4302-\
-9f63-865663a0ba37"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"ca5a529c-2cea-477b-\
+9c31-751e680b35bf"],
 
 Cell[TextData[ButtonBox["Modules, Blocks, and Local Variables",
  BaseStyle->"TOCSubsection",
@@ -163,8 +163,8 @@ Cell[TextData[ButtonBox["Modules, Blocks, and Local Variables",
         NotebookDirectory[], "NNDL-01-intro.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "f5be672f-cc00-4ad8-b7eb-32c430997850", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"e5bf9e5d-ca46-49e5-\
-a596-849ae2adff4e"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"4c55869b-c901-49fa-\
+98eb-9789e77756d5"],
 
 Cell[TextData[ButtonBox["Functional Programming",
  BaseStyle->"TOCSubsection",
@@ -176,8 +176,8 @@ Cell[TextData[ButtonBox["Functional Programming",
         NotebookDirectory[], "NNDL-01-intro.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "e7418787-1fcd-4965-be9d-0b28a761bb23", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"39aeb76d-6e29-4b03-\
-b9f0-3c23031149ae"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"da764463-91cf-4de9-\
+9f10-5ae7dff1db53"],
 
 Cell[TextData[ButtonBox["2 Descriptive Statistics and Probability Theory",
  BaseStyle->"TOCSection",
@@ -189,8 +189,8 @@ Cell[TextData[ButtonBox["2 Descriptive Statistics and Probability Theory",
         NotebookDirectory[], "NNDL-02-stat-prob.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "4fba7fed-0087-40ae-a263-55e5b8fe4d49", All,
-      ExpressionUUID]]]], "TOCSection",ExpressionUUID->"31f8a76f-1252-4175-\
-b8cb-ff9ba0066c50"],
+      ExpressionUUID]]]], "TOCSection",ExpressionUUID->"78211b8b-affd-4a49-\
+a455-41fcf3420e37"],
 
 Cell[TextData[ButtonBox["Descriptive Statistics",
  BaseStyle->"TOCSubsection",
@@ -202,8 +202,8 @@ Cell[TextData[ButtonBox["Descriptive Statistics",
         NotebookDirectory[], "NNDL-02-stat-prob.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "aeff30c4-b325-4952-97d6-9ea1165e9238", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"f20eb610-f749-4748-\
-ae3a-ec77a6a6c1e7"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"0a2664ef-aec4-4579-\
+8575-292ccf7980a7"],
 
 Cell[TextData[ButtonBox["Probability Distributions",
  BaseStyle->"TOCSubsection",
@@ -215,8 +215,8 @@ Cell[TextData[ButtonBox["Probability Distributions",
         NotebookDirectory[], "NNDL-02-stat-prob.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "73e2f07b-2a94-42c4-b28f-c96a810ca0b2", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"3ea5fcc5-513a-4580-\
-bf66-a00effaab1d3"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"0486a7ee-f695-41db-\
+8b58-d451f4abd5a4"],
 
 Cell[TextData[ButtonBox["3 Matrix Calculus and Gradient Optimization",
  BaseStyle->"TOCSection",
@@ -228,8 +228,8 @@ Cell[TextData[ButtonBox["3 Matrix Calculus and Gradient Optimization",
         NotebookDirectory[], "NNDL-03-matrix.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "4fba7fed-0087-40ae-a263-55e5b8fe4d49", All,
-      ExpressionUUID]]]], "TOCSection",ExpressionUUID->"b9a1054c-f1f0-4b67-\
-be9f-b71f3d4c74be"],
+      ExpressionUUID]]]], "TOCSection",ExpressionUUID->"c31e8ed5-c2e1-4fcd-\
+8227-356902a96d48"],
 
 Cell[TextData[ButtonBox["FindMinimum",
  BaseStyle->"TOCSubsubsection",
@@ -241,8 +241,8 @@ Cell[TextData[ButtonBox["FindMinimum",
         NotebookDirectory[], "NNDL-03-matrix.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "072a526a-266b-451c-a3db-320e76fd23b2", All,
-      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"f20bd430-bca5-\
-47cf-af34-77dc6dd5bd90"],
+      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"479300eb-9562-\
+4efe-ae00-dfd8d7d3ce0d"],
 
 Cell[TextData[ButtonBox["NMinimize",
  BaseStyle->"TOCSubsubsection",
@@ -254,8 +254,8 @@ Cell[TextData[ButtonBox["NMinimize",
         NotebookDirectory[], "NNDL-03-matrix.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "954aa165-d49d-4113-985a-6a7bbb184bca", All,
-      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"3ca9cadb-85a5-\
-4af0-a5e1-a4ba294935d4"],
+      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"86161744-83de-\
+4798-84a9-d7ca398318c1"],
 
 Cell[TextData[ButtonBox["Minimize",
  BaseStyle->"TOCSubsubsection",
@@ -267,8 +267,8 @@ Cell[TextData[ButtonBox["Minimize",
         NotebookDirectory[], "NNDL-03-matrix.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "4a0a07d8-ac78-44bc-b810-d549b4302689", All,
-      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"0b1ebc0e-5770-\
-411a-ab85-0b6e4f513ec6"],
+      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"dd2f99cf-08e7-\
+41c0-96c4-fb8900a4041b"],
 
 Cell[TextData[ButtonBox["4 Multilayer Feed-Forward Neural Network",
  BaseStyle->"TOCSection",
@@ -280,8 +280,8 @@ Cell[TextData[ButtonBox["4 Multilayer Feed-Forward Neural Network",
         NotebookDirectory[], "NNDL-04-multilayer-ffnn.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "4fba7fed-0087-40ae-a263-55e5b8fe4d49", All,
-      ExpressionUUID]]]], "TOCSection",ExpressionUUID->"4d632184-148e-4766-\
-95d6-76e02e324d5d"],
+      ExpressionUUID]]]], "TOCSection",ExpressionUUID->"aa550882-9a3f-4a6a-\
+912a-82086a3dd0f4"],
 
 Cell[TextData[ButtonBox["Building Neural Network from Scratch with \
 Mathematica and Universal Approximation Theorem",
@@ -294,8 +294,8 @@ Mathematica and Universal Approximation Theorem",
         NotebookDirectory[], "NNDL-04-multilayer-ffnn.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "aff5664b-5924-40e6-b556-a492a477f54a", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"4fa63f8e-05e2-42fa-\
-89f7-faf6ce94d6f5"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"3b920c0f-0097-4c1f-\
+be45-6f3557f71c9b"],
 
 Cell[TextData[ButtonBox["Layers: LinearLayer and ElementwiseLayer",
  BaseStyle->"TOCSubsection",
@@ -307,8 +307,8 @@ Cell[TextData[ButtonBox["Layers: LinearLayer and ElementwiseLayer",
         NotebookDirectory[], "NNDL-04-multilayer-ffnn.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "654fc478-5ee9-4cd3-abb1-28beceed45ea", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"dc031407-3693-44ed-\
-9bb2-c01330baeb7c"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"fb417249-b9d8-4b7e-\
+829f-be5858be5ac4"],
 
 Cell[TextData[ButtonBox["LinearLayer",
  BaseStyle->"TOCSubsubsection",
@@ -320,8 +320,8 @@ Cell[TextData[ButtonBox["LinearLayer",
         NotebookDirectory[], "NNDL-04-multilayer-ffnn.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "67d1ce5a-396c-4e1c-a5af-33f1a1e2804c", All,
-      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"887c0a88-9071-\
-47bd-9b7f-e882512c09b8"],
+      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"29120653-56b3-\
+4784-a6cd-db05025f1a79"],
 
 Cell[TextData[ButtonBox["ElementwiseLayer",
  BaseStyle->"TOCSubsubsection",
@@ -333,8 +333,8 @@ Cell[TextData[ButtonBox["ElementwiseLayer",
         NotebookDirectory[], "NNDL-04-multilayer-ffnn.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "9069604d-e7f8-442e-9175-f2b0698ad607", All,
-      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"1fa622cb-0181-\
-4df5-8bf6-997ec40c7468"],
+      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"4578d3b2-84a1-\
+4c68-919d-b1e6ab84ef15"],
 
 Cell[TextData[ButtonBox["Containers: NetChain and NetGraph",
  BaseStyle->"TOCSubsection",
@@ -346,8 +346,8 @@ Cell[TextData[ButtonBox["Containers: NetChain and NetGraph",
         NotebookDirectory[], "NNDL-04-multilayer-ffnn.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "3c999e6c-772b-44da-8c8f-fd83264b807c", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"e88a9e4b-2292-4417-\
-936e-9e5332fcd175"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"ce5f8c66-fee6-446c-\
+ab50-79b4b6a0818a"],
 
 Cell[TextData[ButtonBox["NetChain",
  BaseStyle->"TOCSubsubsection",
@@ -359,8 +359,8 @@ Cell[TextData[ButtonBox["NetChain",
         NotebookDirectory[], "NNDL-04-multilayer-ffnn.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "0591c2df-7270-4d64-8622-8fe15e0035ac", All,
-      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"8f0bb05d-367b-\
-466b-9a12-2bb52901299a"],
+      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"2c594a93-d438-\
+40f6-9e5f-5e0b63fabbad"],
 
 Cell[TextData[ButtonBox["NetGraph",
  BaseStyle->"TOCSubsubsection",
@@ -372,8 +372,8 @@ Cell[TextData[ButtonBox["NetGraph",
         NotebookDirectory[], "NNDL-04-multilayer-ffnn.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "efb76c33-9d3e-4913-a7fe-4361e2cc4a41", All,
-      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"ee88a2a2-eee6-\
-46cc-8e3c-0a3218b51d4a"],
+      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"c965c5ee-4f73-\
+4aa9-bc0d-a1769dba76f1"],
 
 Cell[TextData[ButtonBox["NetPort",
  BaseStyle->"TOCSubsubsection",
@@ -385,8 +385,8 @@ Cell[TextData[ButtonBox["NetPort",
         NotebookDirectory[], "NNDL-04-multilayer-ffnn.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "efd3744e-c5b5-44bb-a523-211cd8bfe984", All,
-      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"dbebb440-a3b2-\
-4656-9b5f-5084dd072b06"],
+      ExpressionUUID]]]], "TOCSubsubsection",ExpressionUUID->"e30a57ec-8fe0-\
+425b-89c1-213c36163bde"],
 
 Cell[TextData[ButtonBox["NetInitialize",
  BaseStyle->"TOCSubsection",
@@ -398,8 +398,8 @@ Cell[TextData[ButtonBox["NetInitialize",
         NotebookDirectory[], "NNDL-04-multilayer-ffnn.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "7e07b4ab-12fd-45f6-89cf-f77a70f384a0", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"b7f21fdc-d594-4352-\
-aea9-92bbe6a11441"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"70ace1d0-df82-4494-\
+8d96-2236d44f77a8"],
 
 Cell[TextData[ButtonBox["Cost Functions",
  BaseStyle->"TOCSubsection",
@@ -411,8 +411,8 @@ Cell[TextData[ButtonBox["Cost Functions",
         NotebookDirectory[], "NNDL-04-multilayer-ffnn.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "e107c59a-9600-4c5a-8279-2a1f3a0d0be5", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"c9a97e19-2bd9-40be-\
-8cbd-e4cc3dbe0700"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"6a4c2030-6dcf-423c-\
+8458-d07546c70db4"],
 
 Cell[TextData[ButtonBox["NetTrain",
  BaseStyle->"TOCSubsection",
@@ -424,10 +424,10 @@ Cell[TextData[ButtonBox["NetTrain",
         NotebookDirectory[], "NNDL-04-multilayer-ffnn.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "2ce6eaa7-174b-4ffc-8fed-6a5ccc30aa67", All,
-      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"0bdd438b-6036-415f-\
-b721-f4b69b518411"],
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"3e659de5-1d53-48d4-\
+a9fb-8f29510bfa8f"],
 
-Cell[TextData[ButtonBox["4 Multilayer Feed-Forward Neural Network",
+Cell[TextData[ButtonBox["5 Challenges in Neural Network Optimization",
  BaseStyle->"TOCSection",
  Evaluator->Automatic,
  ButtonFunction:>
@@ -437,8 +437,172 @@ Cell[TextData[ButtonBox["4 Multilayer Feed-Forward Neural Network",
         NotebookDirectory[], "NNDL-05-challengs-NN-opt.nb"}]]; 
    NotebookFind[
     WolframBookTools`Private`nb$, "4fba7fed-0087-40ae-a263-55e5b8fe4d49", All,
-      ExpressionUUID]]]], "TOCSection",ExpressionUUID->"19abdccf-23fe-44a6-\
-a8d6-36f5cce8eade"]
+      ExpressionUUID]]]], "TOCSection",ExpressionUUID->"5a32fd55-37ab-43d9-\
+98de-f9cbe10a270d"],
+
+Cell[TextData[ButtonBox["NetPort and NetExtract",
+ BaseStyle->"TOCSubsection",
+ Evaluator->Automatic,
+ ButtonFunction:>
+  Module[{WolframBookTools`Private`nb$}, 
+   WolframBookTools`Private`nb$ = NotebookOpen[
+      FileNameJoin[{
+        NotebookDirectory[], "NNDL-05-challengs-NN-opt.nb"}]]; 
+   NotebookFind[
+    WolframBookTools`Private`nb$, "ac6c0f46-b724-4c17-9fec-582bf3635ba5", All,
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"0c598fe4-3d9c-4b64-\
+b072-84ea5740e39e"],
+
+Cell[TextData[ButtonBox["Monitor Training Progress",
+ BaseStyle->"TOCSubsection",
+ Evaluator->Automatic,
+ ButtonFunction:>
+  Module[{WolframBookTools`Private`nb$}, 
+   WolframBookTools`Private`nb$ = NotebookOpen[
+      FileNameJoin[{
+        NotebookDirectory[], "NNDL-05-challengs-NN-opt.nb"}]]; 
+   NotebookFind[
+    WolframBookTools`Private`nb$, "3d643ac4-d627-481f-b38a-8c115467c9e3", All,
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"2146974c-cfed-4f22-\
+8f10-ecb1cd79fbff"],
+
+Cell[TextData[ButtonBox["Monitor Saturation and Vanishing Gradients During \
+Training",
+ BaseStyle->"TOCSubsection",
+ Evaluator->Automatic,
+ ButtonFunction:>
+  Module[{WolframBookTools`Private`nb$}, 
+   WolframBookTools`Private`nb$ = NotebookOpen[
+      FileNameJoin[{
+        NotebookDirectory[], "NNDL-05-challengs-NN-opt.nb"}]]; 
+   NotebookFind[
+    WolframBookTools`Private`nb$, "390bb0ea-4901-4234-ad22-4e36b32efc30", All,
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"7dce02a5-8f6e-4151-\
+a518-ac881c972db7"],
+
+Cell[TextData[ButtonBox["NetInitialize (Xavier and Kaiming)",
+ BaseStyle->"TOCSubsection",
+ Evaluator->Automatic,
+ ButtonFunction:>
+  Module[{WolframBookTools`Private`nb$}, 
+   WolframBookTools`Private`nb$ = NotebookOpen[
+      FileNameJoin[{
+        NotebookDirectory[], "NNDL-05-challengs-NN-opt.nb"}]]; 
+   NotebookFind[
+    WolframBookTools`Private`nb$, "fdccde01-c199-459d-8feb-49187de252ea", All,
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"e5a43447-7497-4b45-\
+8ca8-1305b0f438f1"],
+
+Cell[TextData[ButtonBox["Feature Scaling: Standardize, Whitenend and \
+Mahalanobis Distances",
+ BaseStyle->"TOCSubsection",
+ Evaluator->Automatic,
+ ButtonFunction:>
+  Module[{WolframBookTools`Private`nb$}, 
+   WolframBookTools`Private`nb$ = NotebookOpen[
+      FileNameJoin[{
+        NotebookDirectory[], "NNDL-05-challengs-NN-opt.nb"}]]; 
+   NotebookFind[
+    WolframBookTools`Private`nb$, "d8e397a4-0b64-41f7-b620-c1d159ddeca1", All,
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"924c79c5-fe37-48ae-\
+89ee-62998e33c0b3"],
+
+Cell[TextData[ButtonBox["BatchNormalizationLayer",
+ BaseStyle->"TOCSubsection",
+ Evaluator->Automatic,
+ ButtonFunction:>
+  Module[{WolframBookTools`Private`nb$}, 
+   WolframBookTools`Private`nb$ = NotebookOpen[
+      FileNameJoin[{
+        NotebookDirectory[], "NNDL-05-challengs-NN-opt.nb"}]]; 
+   NotebookFind[
+    WolframBookTools`Private`nb$, "cce789e7-a5d9-4363-864f-3fd106adbec9", All,
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"646aafa7-4ca4-4aab-\
+add1-5e264541771b"],
+
+Cell[TextData[ButtonBox["6 Learning Rate Schedules and Gradient Descent \
+Variants",
+ BaseStyle->"TOCSection",
+ Evaluator->Automatic,
+ ButtonFunction:>
+  Module[{WolframBookTools`Private`nb$}, 
+   WolframBookTools`Private`nb$ = NotebookOpen[
+      FileNameJoin[{
+        NotebookDirectory[], "NNDL-06-lr-gdv.nb"}]]; 
+   NotebookFind[
+    WolframBookTools`Private`nb$, "4fba7fed-0087-40ae-a263-55e5b8fe4d49", All,
+      ExpressionUUID]]]], "TOCSection",ExpressionUUID->"a7f2ca67-15eb-48fa-\
+95c4-71e7cad21a21"],
+
+Cell[TextData[ButtonBox["Understanding Learning Rate Schedules and Adaptive \
+Algorithms with Mathematica",
+ BaseStyle->"TOCSubsection",
+ Evaluator->Automatic,
+ ButtonFunction:>
+  Module[{WolframBookTools`Private`nb$}, 
+   WolframBookTools`Private`nb$ = NotebookOpen[
+      FileNameJoin[{
+        NotebookDirectory[], "NNDL-06-lr-gdv.nb"}]]; 
+   NotebookFind[
+    WolframBookTools`Private`nb$, "cdc48c09-4572-4914-9a2a-5cddfbf41931", All,
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"40fb2712-c6de-4a4e-\
+a240-b63052ecbf31"],
+
+Cell[TextData[ButtonBox["Optimizing Neural Networks with Learning Rate \
+Schedules and Adaptive Algorithms in Mathematica",
+ BaseStyle->"TOCSubsection",
+ Evaluator->Automatic,
+ ButtonFunction:>
+  Module[{WolframBookTools`Private`nb$}, 
+   WolframBookTools`Private`nb$ = NotebookOpen[
+      FileNameJoin[{
+        NotebookDirectory[], "NNDL-06-lr-gdv.nb"}]]; 
+   NotebookFind[
+    WolframBookTools`Private`nb$, "c08aff04-8d95-4e3b-b69d-0abf96894f02", All,
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"4319899f-2a5b-48ec-\
+876a-735320f7b99c"],
+
+Cell[TextData[ButtonBox["7 Strategies for Generalization and Hyper-Parameter \
+Tuning",
+ BaseStyle->"TOCSection",
+ Evaluator->Automatic,
+ ButtonFunction:>
+  Module[{WolframBookTools`Private`nb$}, 
+   WolframBookTools`Private`nb$ = NotebookOpen[
+      FileNameJoin[{
+        NotebookDirectory[], "NNDL-07-gen-hyper-par.nb"}]]; 
+   NotebookFind[
+    WolframBookTools`Private`nb$, "4fba7fed-0087-40ae-a263-55e5b8fe4d49", All,
+      ExpressionUUID]]]], "TOCSection",ExpressionUUID->"ea1e894f-91fa-427a-\
+a9f3-6dd71da53a23"],
+
+Cell[TextData[ButtonBox["The Fundamentals of Overfitting: What It Is and Why \
+It Happens",
+ BaseStyle->"TOCSubsection",
+ Evaluator->Automatic,
+ ButtonFunction:>
+  Module[{WolframBookTools`Private`nb$}, 
+   WolframBookTools`Private`nb$ = NotebookOpen[
+      FileNameJoin[{
+        NotebookDirectory[], "NNDL-07-gen-hyper-par.nb"}]]; 
+   NotebookFind[
+    WolframBookTools`Private`nb$, "5d0ec960-d25a-444e-8ccf-5f3155b378d6", All,
+      ExpressionUUID]]]], "TOCSubsection",ExpressionUUID->"cc761ecc-0485-4bc4-\
+9c67-dfb61b5b3923"],
+
+Cell[TextData[ButtonBox["7 Strategies for Generalization and Hyper-Parameter \
+Tuning",
+ BaseStyle->"TOCSection",
+ Evaluator->Automatic,
+ ButtonFunction:>
+  Module[{WolframBookTools`Private`nb$}, 
+   WolframBookTools`Private`nb$ = NotebookOpen[
+      FileNameJoin[{
+        NotebookDirectory[], "NNDL-08-regular.nb"}]]; 
+   NotebookFind[
+    WolframBookTools`Private`nb$, "4fba7fed-0087-40ae-a263-55e5b8fe4d49", All,
+      ExpressionUUID]]]], "TOCSection",ExpressionUUID->"4b999ed0-4a51-455c-\
+98bf-788e38574cd8"]
 }, Open  ]]
 },
 WindowToolbars->{},
@@ -466,7 +630,7 @@ StyleDefinitions->Notebook[{
     "Italic", FontColor -> GrayLevel[0.25]]}, Visible -> False, 
   FrontEndVersion -> "14.1 for Mac OS X ARM (64-bit) (July 16, 2024)", 
   StyleDefinitions -> "PrivateStylesheetFormatting.nb"],
-ExpressionUUID->"0f07ba1c-ac26-48cf-94b9-8f71031c852a"
+ExpressionUUID->"d4938246-b071-4e7d-b6be-dcfe942bcfcd"
 ]
 (* End of Notebook Content *)
 
@@ -480,39 +644,51 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[576, 22, 83, 0, 108, "TOCTitle",ExpressionUUID->"d0f4f039-a9a7-4e69-a9f3-414d4974ef7b"],
-Cell[662, 24, 467, 11, 32, "TOCSection",ExpressionUUID->"b48981bd-f5da-4089-ad83-01ef8e88a435"],
-Cell[1132, 37, 467, 11, 27, "TOCSubsection",ExpressionUUID->"06ba9d10-c20c-41c7-a2a8-9f2a9cc8f28a"],
-Cell[1602, 50, 466, 11, 27, "TOCSubsection",ExpressionUUID->"7c3edb28-90bc-4096-891d-9161840cb675"],
-Cell[2071, 63, 521, 12, 27, "TOCSubsection",ExpressionUUID->"c3242ff0-e782-4f3b-90ec-e6390104ff18"],
-Cell[2595, 77, 480, 11, 32, "TOCSection",ExpressionUUID->"a1efa88f-fec6-4b88-ab91-2db2ff16ee9a"],
-Cell[3078, 90, 471, 11, 27, "TOCSubsection",ExpressionUUID->"20e6732c-b57e-4cf5-b629-c96fbb296f38"],
-Cell[3552, 103, 480, 11, 27, "TOCSubsection",ExpressionUUID->"54ed06ed-e54a-4541-9f69-e987dba553bb"],
-Cell[4035, 116, 462, 11, 27, "TOCSubsection",ExpressionUUID->"83a939eb-e755-47cc-94fd-b38cefcf2780"],
-Cell[4500, 129, 475, 11, 27, "TOCSubsection",ExpressionUUID->"e1b82c6f-37fc-4b3a-a340-22ccf5a26d5b"],
-Cell[4978, 142, 474, 11, 27, "TOCSubsection",ExpressionUUID->"d3675d54-3ca8-4302-9f63-865663a0ba37"],
-Cell[5455, 155, 493, 11, 27, "TOCSubsection",ExpressionUUID->"e5bf9e5d-ca46-49e5-a596-849ae2adff4e"],
-Cell[5951, 168, 479, 11, 27, "TOCSubsection",ExpressionUUID->"39aeb76d-6e29-4b03-b9f0-3c23031149ae"],
-Cell[6433, 181, 502, 11, 32, "TOCSection",ExpressionUUID->"31f8a76f-1252-4175-b8cb-ff9ba0066c50"],
-Cell[6938, 194, 483, 11, 27, "TOCSubsection",ExpressionUUID->"f20eb610-f749-4748-ae3a-ec77a6a6c1e7"],
-Cell[7424, 207, 486, 11, 27, "TOCSubsection",ExpressionUUID->"3ea5fcc5-513a-4580-bf66-a00effaab1d3"],
-Cell[7913, 220, 495, 11, 32, "TOCSection",ExpressionUUID->"b9a1054c-f1f0-4b67-be9f-b71f3d4c74be"],
-Cell[8411, 233, 475, 11, 24, "TOCSubsubsection",ExpressionUUID->"f20bd430-bca5-47cf-af34-77dc6dd5bd90"],
-Cell[8889, 246, 473, 11, 24, "TOCSubsubsection",ExpressionUUID->"3ca9cadb-85a5-4af0-a5e1-a4ba294935d4"],
-Cell[9365, 259, 472, 11, 24, "TOCSubsubsection",ExpressionUUID->"0b1ebc0e-5770-411a-ab85-0b6e4f513ec6"],
-Cell[9840, 272, 501, 11, 32, "TOCSection",ExpressionUUID->"4d632184-148e-4766-95d6-76e02e324d5d"],
-Cell[10344, 285, 558, 12, 27, "TOCSubsection",ExpressionUUID->"4fa63f8e-05e2-42fa-89f7-faf6ce94d6f5"],
-Cell[10905, 299, 507, 11, 27, "TOCSubsection",ExpressionUUID->"dc031407-3693-44ed-9bb2-c01330baeb7c"],
-Cell[11415, 312, 484, 11, 24, "TOCSubsubsection",ExpressionUUID->"887c0a88-9071-47bd-9b7f-e882512c09b8"],
-Cell[11902, 325, 489, 11, 24, "TOCSubsubsection",ExpressionUUID->"1fa622cb-0181-4df5-8bf6-997ec40c7468"],
-Cell[12394, 338, 500, 11, 27, "TOCSubsection",ExpressionUUID->"e88a9e4b-2292-4417-936e-9e5332fcd175"],
-Cell[12897, 351, 481, 11, 24, "TOCSubsubsection",ExpressionUUID->"8f0bb05d-367b-466b-9a12-2bb52901299a"],
-Cell[13381, 364, 481, 11, 24, "TOCSubsubsection",ExpressionUUID->"ee88a2a2-eee6-46cc-8e3c-0a3218b51d4a"],
-Cell[13865, 377, 480, 11, 24, "TOCSubsubsection",ExpressionUUID->"dbebb440-a3b2-4656-9b5f-5084dd072b06"],
-Cell[14348, 390, 480, 11, 27, "TOCSubsection",ExpressionUUID->"b7f21fdc-d594-4352-aea9-92bbe6a11441"],
-Cell[14831, 403, 481, 11, 27, "TOCSubsection",ExpressionUUID->"c9a97e19-2bd9-40be-8cbd-e4cc3dbe0700"],
-Cell[15315, 416, 475, 11, 27, "TOCSubsection",ExpressionUUID->"0bdd438b-6036-415f-b721-f4b69b518411"],
-Cell[15793, 429, 502, 11, 32, "TOCSection",ExpressionUUID->"19abdccf-23fe-44a6-a8d6-36f5cce8eade"]
+Cell[576, 22, 83, 0, 108, "TOCTitle",ExpressionUUID->"066d2e02-1ab7-4902-9904-bc192616ffa5"],
+Cell[662, 24, 467, 11, 32, "TOCSection",ExpressionUUID->"4409c08a-3bcc-4ae8-83d7-60bb2d7857d2"],
+Cell[1132, 37, 467, 11, 27, "TOCSubsection",ExpressionUUID->"60aab9a3-9846-407f-9584-7aebdfb25417"],
+Cell[1602, 50, 466, 11, 27, "TOCSubsection",ExpressionUUID->"5e0b8054-d664-42ff-a44b-720a4172d785"],
+Cell[2071, 63, 521, 12, 27, "TOCSubsection",ExpressionUUID->"f02eab4d-0bc3-4d3a-a3dc-dbbc9ae9634f"],
+Cell[2595, 77, 480, 11, 32, "TOCSection",ExpressionUUID->"3532773d-f509-4be6-8281-c17eb58a168c"],
+Cell[3078, 90, 471, 11, 27, "TOCSubsection",ExpressionUUID->"0355cc41-dc10-41d5-9c19-ee524e2eea47"],
+Cell[3552, 103, 480, 11, 27, "TOCSubsection",ExpressionUUID->"b914c3a8-6135-424e-aa28-ccec605c02c1"],
+Cell[4035, 116, 462, 11, 27, "TOCSubsection",ExpressionUUID->"a80e559d-1b0b-45de-bab1-6fa430242709"],
+Cell[4500, 129, 475, 11, 27, "TOCSubsection",ExpressionUUID->"13b5f104-685a-4da4-88a7-4baa6de40e2d"],
+Cell[4978, 142, 474, 11, 27, "TOCSubsection",ExpressionUUID->"ca5a529c-2cea-477b-9c31-751e680b35bf"],
+Cell[5455, 155, 493, 11, 27, "TOCSubsection",ExpressionUUID->"4c55869b-c901-49fa-98eb-9789e77756d5"],
+Cell[5951, 168, 479, 11, 27, "TOCSubsection",ExpressionUUID->"da764463-91cf-4de9-9f10-5ae7dff1db53"],
+Cell[6433, 181, 502, 11, 32, "TOCSection",ExpressionUUID->"78211b8b-affd-4a49-a455-41fcf3420e37"],
+Cell[6938, 194, 483, 11, 27, "TOCSubsection",ExpressionUUID->"0a2664ef-aec4-4579-8575-292ccf7980a7"],
+Cell[7424, 207, 486, 11, 27, "TOCSubsection",ExpressionUUID->"0486a7ee-f695-41db-8b58-d451f4abd5a4"],
+Cell[7913, 220, 495, 11, 32, "TOCSection",ExpressionUUID->"c31e8ed5-c2e1-4fcd-8227-356902a96d48"],
+Cell[8411, 233, 475, 11, 24, "TOCSubsubsection",ExpressionUUID->"479300eb-9562-4efe-ae00-dfd8d7d3ce0d"],
+Cell[8889, 246, 473, 11, 24, "TOCSubsubsection",ExpressionUUID->"86161744-83de-4798-84a9-d7ca398318c1"],
+Cell[9365, 259, 472, 11, 24, "TOCSubsubsection",ExpressionUUID->"dd2f99cf-08e7-41c0-96c4-fb8900a4041b"],
+Cell[9840, 272, 501, 11, 32, "TOCSection",ExpressionUUID->"aa550882-9a3f-4a6a-912a-82086a3dd0f4"],
+Cell[10344, 285, 558, 12, 27, "TOCSubsection",ExpressionUUID->"3b920c0f-0097-4c1f-be45-6f3557f71c9b"],
+Cell[10905, 299, 507, 11, 27, "TOCSubsection",ExpressionUUID->"fb417249-b9d8-4b7e-829f-be5858be5ac4"],
+Cell[11415, 312, 484, 11, 24, "TOCSubsubsection",ExpressionUUID->"29120653-56b3-4784-a6cd-db05025f1a79"],
+Cell[11902, 325, 489, 11, 24, "TOCSubsubsection",ExpressionUUID->"4578d3b2-84a1-4c68-919d-b1e6ab84ef15"],
+Cell[12394, 338, 500, 11, 27, "TOCSubsection",ExpressionUUID->"ce5f8c66-fee6-446c-ab50-79b4b6a0818a"],
+Cell[12897, 351, 481, 11, 24, "TOCSubsubsection",ExpressionUUID->"2c594a93-d438-40f6-9e5f-5e0b63fabbad"],
+Cell[13381, 364, 481, 11, 24, "TOCSubsubsection",ExpressionUUID->"c965c5ee-4f73-4aa9-bc0d-a1769dba76f1"],
+Cell[13865, 377, 480, 11, 24, "TOCSubsubsection",ExpressionUUID->"e30a57ec-8fe0-425b-89c1-213c36163bde"],
+Cell[14348, 390, 480, 11, 27, "TOCSubsection",ExpressionUUID->"70ace1d0-df82-4494-8d96-2236d44f77a8"],
+Cell[14831, 403, 481, 11, 27, "TOCSubsection",ExpressionUUID->"6a4c2030-6dcf-423c-8458-d07546c70db4"],
+Cell[15315, 416, 475, 11, 27, "TOCSubsection",ExpressionUUID->"3e659de5-1d53-48d4-a9fb-8f29510bfa8f"],
+Cell[15793, 429, 505, 11, 32, "TOCSection",ExpressionUUID->"5a32fd55-37ab-43d9-98de-f9cbe10a270d"],
+Cell[16301, 442, 490, 11, 27, "TOCSubsection",ExpressionUUID->"0c598fe4-3d9c-4b64-b072-84ea5740e39e"],
+Cell[16794, 455, 493, 11, 27, "TOCSubsection",ExpressionUUID->"2146974c-cfed-4f22-8f10-ecb1cd79fbff"],
+Cell[17290, 468, 528, 12, 27, "TOCSubsection",ExpressionUUID->"7dce02a5-8f6e-4151-a518-ac881c972db7"],
+Cell[17821, 482, 502, 11, 27, "TOCSubsection",ExpressionUUID->"e5a43447-7497-4b45-8ca8-1305b0f438f1"],
+Cell[18326, 495, 535, 12, 27, "TOCSubsection",ExpressionUUID->"924c79c5-fe37-48ae-89ee-62998e33c0b3"],
+Cell[18864, 509, 491, 11, 27, "TOCSubsection",ExpressionUUID->"646aafa7-4ca4-4aab-add1-5e264541771b"],
+Cell[19358, 522, 509, 12, 32, "TOCSection",ExpressionUUID->"a7f2ca67-15eb-48fa-95c4-71e7cad21a21"],
+Cell[19870, 536, 538, 12, 27, "TOCSubsection",ExpressionUUID->"40fb2712-c6de-4a4e-a240-b63052ecbf31"],
+Cell[20411, 550, 554, 12, 47, "TOCSubsection",ExpressionUUID->"4319899f-2a5b-48ec-876a-735320f7b99c"],
+Cell[20968, 564, 519, 12, 32, "TOCSection",ExpressionUUID->"ea1e894f-91fa-427a-a9f3-6dd71da53a23"],
+Cell[21490, 578, 529, 12, 27, "TOCSubsection",ExpressionUUID->"cc761ecc-0485-4bc4-9c67-dfb61b5b3923"],
+Cell[22022, 592, 513, 12, 32, "TOCSection",ExpressionUUID->"4b999ed0-4a51-455c-98bf-788e38574cd8"]
 }, Open  ]]
 }
 ]
