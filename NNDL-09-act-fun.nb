@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      7161,        185]
-NotebookOptionsPosition[      6526,        164]
-NotebookOutlinePosition[      6919,        180]
-CellTagsIndexPosition[      6876,        177]
+NotebookDataLength[     21272,        450]
+NotebookOptionsPosition[     18656,        394]
+NotebookOutlinePosition[     19080,        411]
+CellTagsIndexPosition[     19037,        408]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -43,11 +43,11 @@ Cell[TextData[{
   BaseStyle->"Hyperlink",
   ButtonData->{
     FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
-      "EDITED", "Neural_NetWork_and_Deep_Learning"}, 
-     "NNDL-07-gen-hyper-par.nb", CharacterEncoding -> "UTF-8"], None},
+      "EDITED", "Neural_NetWork_and_Deep_Learning"}, "NNDL-08-regular.nb", 
+     CharacterEncoding -> "UTF-8"], None},
   ButtonNote->
    "/Users/fengh/Documents/RDS/EDITED/Neural_NetWork_and_Deep_Learning/NNDL-\
-07-gen-hyper-par.nb"],
+08-regular.nb"],
   FontFamily->"Arial Unicode MS",
   FontSize->17.5,
   FontWeight->"Regular",
@@ -63,11 +63,11 @@ Cell[TextData[{
   BaseStyle->"Hyperlink",
   ButtonData->{
     FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
-      "EDITED", "Neural_NetWork_and_Deep_Learning"}, "NNDL-05-challenges.nb", 
-     CharacterEncoding -> "UTF-8"], None},
+      "EDITED", "Neural_NetWork_and_Deep_Learning"}, "NNDL-10-complex-val.nb",
+      CharacterEncoding -> "UTF-8"], None},
   ButtonNote->
    "/Users/fengh/Documents/RDS/EDITED/Neural_NetWork_and_Deep_Learning/NNDL-\
-05-challenges.nb"],
+10-complex-val.nb"],
   FontFamily->"Arial Unicode MS",
   FontSize->17.5,
   FontWeight->"Regular",
@@ -119,7 +119,9 @@ contents.nb"],
    3.943567220607367*^9, 3.9435672414910088`*^9}, {3.94356735516547*^9, 
    3.943567355169693*^9}, {3.9435681597640142`*^9, 3.943568192257277*^9}, {
    3.94360553842068*^9, 3.943605549222768*^9}, {3.9450355549790707`*^9, 
-   3.9450355549843817`*^9}, {3.945373836942814*^9, 3.945373836947996*^9}},
+   3.9450355549843817`*^9}, {3.945373836942814*^9, 3.945373836947996*^9}, {
+   3.945392528051655*^9, 3.9453925280570717`*^9}, {3.945392654073669*^9, 
+   3.945392654078266*^9}},
  LineSpacing->{0.6999999999999997, 3},
  Background->RGBColor[
   0.13066300450141147`, 0.12460517280842298`, 0.4353551537346456],
@@ -127,19 +129,20 @@ contents.nb"],
 
 Cell[CellGroupData[{
 
-Cell["8 Regularization Techniques", "Section",
+Cell["9 Advanced Activation Functions", "Section",
  CellChangeTimes->{{3.943567936366756*^9, 3.9435679403338757`*^9}, {
   3.94356810611018*^9, 3.9435681138472424`*^9}, {3.9436697752713633`*^9, 
   3.943669780056386*^9}, {3.944605092244577*^9, 3.9446051027689734`*^9}, {
   3.9450355605744457`*^9, 3.9450355732021914`*^9}, {3.945141494917075*^9, 
-  3.945141507386279*^9}, {3.94537384307653*^9, 3.945373849591806*^9}},
+  3.945141507386279*^9}, {3.94537384307653*^9, 3.945373849591806*^9}, {
+  3.9453925316359386`*^9, 3.945392537850959*^9}},
  CellID->622795188,ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49"],
 
 Cell[TextData[{
  StyleBox["Remark:",
   FontWeight->"Bold"],
  "\[LineSeparator]This chapter provides a Mathematica implementation of the \
-concepts and ideas presented in Chapter 7, [1], of the book titled ",
+concepts and ideas presented in Chapter 8, [1], of the book titled ",
  ButtonBox["Artificial Neural Network and Deep Learning: Fundamentals and \
 Theory",
   BaseStyle->"Hyperlink",
@@ -152,18 +155,246 @@ Theory",
 Learning/contents.nb"],
  ". We strongly recommend that you begin with the theoretical chapter to \
 build a solid foundation before exploring the corresponding practical \
-implementation."
+implementation. This chapter also serves as a summary of the article titled \
+",
+ ButtonBox["Deep Learning Activation Functions: Fixed-Shape, Parametric, \
+Adaptive, Stochastic, Miscellaneous, Non-Standard, Ensemble",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.researchgate.net/publication/382302382_Deep_Learning_\
+Activation_Functions_Fixed-Shape_Parametric_Adaptive_Stochastic_Miscellaneous_\
+Non-Standard_Ensemble"], None},
+  ButtonNote->
+   "https://www.researchgate.net/publication/382302382_Deep_Learning_\
+Activation_Functions_Fixed-Shape_Parametric_Adaptive_Stochastic_Miscellaneous_\
+Non-Standard_Ensemble"],
+ ". For more details about activation functions, please refer to Ref [24].\
+\[CloseCurlyDoubleQuote]"
 }], "Note",
  CellChangeTimes->{{3.9435682523793507`*^9, 3.9435682907152853`*^9}, {
   3.9435754000406303`*^9, 3.943575400046158*^9}, {3.944605112751877*^9, 
   3.944605131151554*^9}, {3.94503559681851*^9, 3.945035597233686*^9}, {
   3.945141511691704*^9, 3.945141512098846*^9}, {3.945373853537513*^9, 
-  3.945373853958205*^9}},
- CellID->1196547533,ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1"]
+  3.945373853958205*^9}, {3.945392541089655*^9, 3.945392584177949*^9}},
+ CellID->1196547533,ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1"],
+
+Cell["\<\
+The activation functions (AFs) play a very crucial role in Neural Networks \
+(NNs) by learning the abstract features through non-linear transformations. \
+Some common properties of the AFs are as follows: a) it should add the non- \
+linear curvature in the optimization landscape to improve the training \
+convergence of the network; b) it should not increase the computational \
+complexity of the model extensively; c) it should not hamper the gradient \
+flow during training. Several AFs have been explored in recent years for deep \
+learning to achieve the above-mentioned properties. For a more comprehensive \
+background, we refer to [24] and the references cited therein.\
+\>", "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392688954075*^9}, {
+  3.94539272359514*^9, 3.9453927236187763`*^9}, {3.945392805071443*^9, 
+  3.945392805124304*^9}},
+ CellID->802552758,ExpressionUUID->"c659ac85-b602-4027-9a71-ff5bdd60c1a9"],
+
+Cell["\<\
+In the present work, we categorized the AFs into six distinct groups: \
+sigmoid-based, ReLU-based, ELU-based, miscellaneous, non-standard, and \
+ensemble AFs.\
+\>", "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392688954075*^9}, {
+   3.9453927267468977`*^9, 3.945392726772262*^9}, 3.9453928051352777`*^9},
+ CellID->7860646,ExpressionUUID->"74f0a2e4-0e03-4c40-9b62-4d4fdf2952b8"],
+
+Cell["\<\
+Sigmoid-Based AFs: In order to introduce non-linearity into the NNs, the \
+Logistic Sigmoid, and Tanh AFs have been used in the early days. The firing \
+of biological neurons was the motivation for using the Logistic Sigmoid and \
+Tanh AFs with artificial neurons. The Logistic Sigmoid and Tanh AFs majorly \
+suffer from vanishing gradients. Several improvements have been proposed \
+based on the Logistic Sigmoid AF. The most common Sigmoid- based/related \
+functions are Tanh, HardSigmoid, and HardTanh, Penalized Tanh, \
+Soft-Root-Sign, and Sigmoid- Weighted Linear.\
+\>", "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392688954075*^9}, {
+  3.945392732939966*^9, 3.945392732965014*^9}, {3.94539280514594*^9, 
+  3.9453928051862288`*^9}},
+ CellID->1235563182,ExpressionUUID->"9dc27196-795e-4158-9b8e-4e1ea164a4fd"],
+
+Cell["\<\
+ReLU-Based AFs: The saturated output and increased complexity are the key \
+limitations of the above-mentioned Logistic Sigmoid-based AFs. The ReLU has \
+become the state-of-the-art AF due to its simplicity and improved \
+performance. Various variants of ReLU have been investigated by tackling its \
+drawbacks, such as non-utilization of negative values, limited non-linearity, \
+and unbounded output. The most common ReLU-based/related functions are: Leaky \
+Rectified Linear Unit, Parametric ReLU, Randomized ReLU, Random Translation \
+ReLU, Elastic ReLU, Elastic Parametric ReLU, Linearized Sigmoidal Activation, \
+Rectified Linear Tanh, Shifted ReLU, Displaced ReLU and Multi-bin Trainable \
+Linear Unit.\
+\>", "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392688954075*^9}, {
+  3.945392738986166*^9, 3.945392739011428*^9}, {3.945392805196303*^9, 
+  3.945392805246771*^9}},
+ CellID->1588747135,ExpressionUUID->"10c9f643-febf-4084-a18f-6b80151de455"],
+
+Cell["\<\
+ELU-Based AFs: The major problem faced by the Logistic Sigmoid-based AFs is \
+with its saturated output for large positive and negative input. Similarly, \
+the major problem with ReLU-based AFs is the under-utilization of negative \
+values leading to a vanishing gradient. In order to cope up with these \
+limitations the ELU-based AFs have been used in the literature. The ELU-based \
+AF utilizes the negative values with the help of the exponential function. \
+Several AFs have been introduced in the literature as ELU variants. The most \
+common ELU-based/related functions are Scaled ELU, Parametric ELU, Rectified \
+Exponential Unit, Parametric Rectified Exponential Unit, and Elastic ELU.\
+\>", "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392688954075*^9}, {
+  3.945392757568366*^9, 3.945392757594149*^9}, {3.945392805256876*^9, 
+  3.9453928052974863`*^9}},
+ CellID->770601618,ExpressionUUID->"7742f91e-0520-4b40-bc34-13538d182d26"],
+
+Cell["\<\
+Non-Standard AFs: Non-standard AFs include those that combine multiple \
+standard functions or operate on different principles. The common \
+non-standard AFs are Maxout and Softmax.\
+\>", "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392688954075*^9}, 
+   3.9453928053074923`*^9},
+ CellID->1324929611,ExpressionUUID->"5adc58c9-a242-4529-b59c-baeadb40779d"],
+
+Cell["\<\
+Miscellaneous AFs: Such as Swish-based/related AFs (Swish, E-Swish, \
+HardSwish), SoftPlus-based/related AFs (SoftPlus, SoftPlus Linear Unit, \
+Mish), Probabilistic AF (Gaussian Error Linear Unit, and Symmetrical Gaussian \
+Error Linear Unit).\
+\>", "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392701958333*^9}, {
+  3.945392773887282*^9, 3.94539277391292*^9}, {3.945392805317543*^9, 
+  3.9453928053276052`*^9}},
+ CellID->616547989,ExpressionUUID->"f4defc57-059e-4dc4-8a96-58fb605955be"],
+
+Cell["\<\
+Combining AFs: Most of the Sigmoid, Tanh, ReLU, and ELU-based AFs are \
+designed manually which might not be able to exploit the data complexity. \
+Combining AFs are the recent trends. The most common AF are Mixed, Gated, and \
+Hierarchical AFs, Adaptive Piecewise Linear Units, Mexican ReLU, Look-up \
+Table Unit, and Bi-Modal Derivative Sigmoidal AFs. Unlike traditional AFs \
+such as ReLU, Sigmoid, or ELU, which have fixed functional forms, adaptive \
+AFs learn their parameters from the data, allowing the network to adapt more \
+flexibly to different tasks.\
+\>", "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392701958333*^9}, {
+  3.945392776754673*^9, 3.945392805377865*^9}},
+ CellID->1581273870,ExpressionUUID->"2b5f80e5-7f79-43ef-aa1f-058e12481953"],
+
+Cell["\<\
+In this chapter, we embark on an in-depth exploration of AFs and custom \
+layers within NNs. The primary goal is to provide a comprehensive \
+understanding of how these functions influence the behavior of NNs. We will \
+achieve this through interactive simulations, detailed comparisons, and \
+practical implementations of custom layers. This chapter is structured into \
+three units, each focusing on a specific aspect of AFs and custom layers.\
+\>", "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392701958333*^9}, {
+  3.945392805387959*^9, 3.945392805408597*^9}},
+ CellID->1332207529,ExpressionUUID->"78dc84ac-7d3b-4bb7-a6c0-a63a1ca6d4da"],
+
+Cell["UNIT 9.1: Interactive Exploration of AF:", "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392708029788*^9}, {
+  3.9453927813166122`*^9, 3.9453927813414*^9}},
+ FontWeight->"Bold",
+ CellID->1883439370,ExpressionUUID->"30ab7b8d-eda6-41b0-9631-f07e4e212040"],
+
+Cell["\<\
+In this unit, we explore the behavior of AFs by creating interactive \
+Manipulate visualizations. These visualizations allow us to dynamically \
+change the parameters and observe how they affect the AFs. By adjusting \
+parameters such as slope, threshold, and others, we gain deeper insights into \
+how each AF transforms its input and impacts the overall behavior of a NN. \
+This hands-on approach helps to solidify our understanding of the role of AFs \
+in NNs. Through these interactive simulations, you will develop an intuitive \
+grasp of the mathematical underpinnings and practical implications of various \
+AFs. By experimenting with different parameter settings, you will see \
+firsthand how AFs contribute to the non-linear transformations essential for \
+NN learning.\
+\>", "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392708029788*^9}, {
+  3.9453927857841578`*^9, 3.9453928054690332`*^9}},
+ CellID->40827715,ExpressionUUID->"ebd1a7f2-e289-49ca-afe1-1f41aaf7dc2f"],
+
+Cell["UNIT 9.2: Custom Layers in NNs:", "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392708029788*^9}, {
+  3.945392786477331*^9, 3.945392786502344*^9}},
+ FontWeight->"Bold",
+ CellID->390187399,ExpressionUUID->"114d9146-8e00-496b-b62a-4e93b78bfdb7"],
+
+Cell[TextData[{
+ "This unit delves into the construction and utilization of custom layers in \
+NNs. Custom layers are fundamental components that allow for the extension \
+and customization of NN architectures to better suit specific tasks. We will \
+explore several key custom layers, including ",
+ StyleBox["FunctionLayer, ParametricRampLayer, SoftmaxLayer, NetEncoder", 
+  "CodeText"],
+ ", and ",
+ StyleBox["NetDecoder", "CodeText"],
+ ". Key topics covered in this unit include an overview of custom layers and \
+their role in NN design, a detailed exploration of ",
+ StyleBox["FunctionLayer", "CodeText"],
+ " and how it allows for the definition of arbitrary functions within a \
+network, understanding ",
+ StyleBox["ParametricRampLayer", "CodeText"],
+ " and its use for implementing piecewise linear functions, an examination of \
+",
+ StyleBox["SoftmaxLayer", "CodeText"],
+ " for transforming raw network outputs into probability distributions, and \
+insights into ",
+ StyleBox["NetEncoder", "CodeText"],
+ " and ",
+ StyleBox["NetDecoder", "CodeText"],
+ " for preprocessing input data and postprocessing network outputs, \
+respectively. By the end of this unit, you will have a solid understanding of \
+how to create and integrate custom layers into NNs, enhancing their \
+flexibility and capability to tackle a wide range of problems."
+}], "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392708029788*^9}, {
+  3.945392794365252*^9, 3.945392805560795*^9}},
+ CellID->1370673956,ExpressionUUID->"956f039f-1f98-46c3-aea4-4ca5fb761b45"],
+
+Cell["UNIT 9.3: Comparison of Some AFs:", "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392708029788*^9}, {
+  3.945392795026937*^9, 3.94539279505199*^9}},
+ FontWeight->"Bold",
+ CellID->1313734850,ExpressionUUID->"5cf3bd6b-bb28-4688-9921-1f4e983efbb3"],
+
+Cell["\<\
+This unit provides a detailed comparison of several commonly used AFs. We \
+will analyze the characteristics and performance implications of ReLU, ELU, \
+SELU, GELU, Swish, HardSwish, Mish, SoftPlus, HardTanh, HardSigmoid, Sigmoid, \
+and Tanh. Each AF will be examined in terms of its mathematical formulation, \
+gradient behavior, and suitability for different types of NN architectures. \
+Through this comprehensive comparison, you will gain a clear understanding of \
+the strengths and weaknesses of various AFs, enabling you to make informed \
+decisions when designing and optimizing NNs.\
+\>", "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392708029788*^9}, {
+  3.9453927985041733`*^9, 3.945392805612585*^9}},
+ CellID->1560341258,ExpressionUUID->"a89797cf-4ded-4486-bd40-c66f89bed031"],
+
+Cell["\<\
+By the end of this chapter, you will have a robust understanding of how AFs \
+shape the learning dynamics of NNs and how custom layers can be leveraged to \
+build more sophisticated and efficient models.\
+\>", "Text",
+ CellChangeTimes->{{3.945392687794483*^9, 3.945392708029788*^9}, 
+   3.9453928056231422`*^9},
+ CellID->889262310,ExpressionUUID->"e4d8c11f-f364-4f5b-ac16-ba515e1f7138"],
+
+Cell["Interactive Exploration of Activation Functions", "Subsection",
+ CellChangeTimes->{{3.945392883364333*^9, 3.945392892146749*^9}},
+ CellID->62198053,ExpressionUUID->"491940c7-e57e-4e68-8cf8-9db865f282f7"]
 }, Open  ]]
 },
 WindowSize->{960, 1027},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1.25 Inherited,
 FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
 StyleDefinitions->"RDS-book.nb",
 ExpressionUUID->"8861bace-5584-420b-8e0c-c51fd7c6d3a1"
@@ -179,13 +410,47 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[554, 20, 4231, 105, 104, "Text",ExpressionUUID->"67aab6c7-b186-4fbc-a04a-683b7453f682",
+Cell[554, 20, 4323, 107, 130, "Text",ExpressionUUID->"67aab6c7-b186-4fbc-a04a-683b7453f682",
  CellID->912160115],
 Cell[CellGroupData[{
-Cell[4810, 129, 485, 6, 106, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
+Cell[4902, 131, 540, 7, 133, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
  CellID->622795188],
-Cell[5298, 137, 1212, 24, 152, "Note",ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1",
- CellID->1196547533]
+Cell[5445, 140, 1982, 38, 279, "Note",ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1",
+ CellID->1196547533],
+Cell[7430, 180, 941, 14, 252, "Text",ExpressionUUID->"c659ac85-b602-4027-9a71-ff5bdd60c1a9",
+ CellID->802552758],
+Cell[8374, 196, 397, 7, 75, "Text",ExpressionUUID->"74f0a2e4-0e03-4c40-9b62-4d4fdf2952b8",
+ CellID->7860646],
+Cell[8774, 205, 834, 13, 222, "Text",ExpressionUUID->"9dc27196-795e-4158-9b8e-4e1ea164a4fd",
+ CellID->1235563182],
+Cell[9611, 220, 973, 15, 281, "Text",ExpressionUUID->"10c9f643-febf-4084-a18f-6b80151de455",
+ CellID->1588747135],
+Cell[10587, 237, 959, 14, 281, "Text",ExpressionUUID->"7742f91e-0520-4b40-bc34-13538d182d26",
+ CellID->770601618],
+Cell[11549, 253, 375, 7, 104, "Text",ExpressionUUID->"5adc58c9-a242-4529-b59c-baeadb40779d",
+ CellID->1324929611],
+Cell[11927, 262, 507, 9, 104, "Text",ExpressionUUID->"f4defc57-059e-4dc4-8a96-58fb605955be",
+ CellID->616547989],
+Cell[12437, 273, 778, 12, 252, "Text",ExpressionUUID->"2b5f80e5-7f79-43ef-aa1f-058e12481953",
+ CellID->1581273870],
+Cell[13218, 287, 660, 10, 193, "Text",ExpressionUUID->"78dc84ac-7d3b-4bb7-a6c0-a63a1ca6d4da",
+ CellID->1332207529],
+Cell[13881, 299, 268, 4, 45, "Text",ExpressionUUID->"30ab7b8d-eda6-41b0-9631-f07e4e212040",
+ CellID->1883439370],
+Cell[14152, 305, 995, 15, 311, "Text",ExpressionUUID->"ebd1a7f2-e289-49ca-afe1-1f41aaf7dc2f",
+ CellID->40827715],
+Cell[15150, 322, 258, 4, 45, "Text",ExpressionUUID->"114d9146-8e00-496b-b62a-4e93b78bfdb7",
+ CellID->390187399],
+Cell[15411, 328, 1543, 30, 399, "Text",ExpressionUUID->"956f039f-1f98-46c3-aea4-4ca5fb761b45",
+ CellID->1370673956],
+Cell[16957, 360, 260, 4, 45, "Text",ExpressionUUID->"5cf3bd6b-bb28-4688-9921-1f4e983efbb3",
+ CellID->1313734850],
+Cell[17220, 366, 809, 12, 252, "Text",ExpressionUUID->"a89797cf-4ded-4486-bd40-c66f89bed031",
+ CellID->1560341258],
+Cell[18032, 380, 396, 7, 104, "Text",ExpressionUUID->"e4d8c11f-f364-4f5b-ac16-ba515e1f7138",
+ CellID->889262310],
+Cell[18431, 389, 209, 2, 68, "Subsection",ExpressionUUID->"491940c7-e57e-4e68-8cf8-9db865f282f7",
+ CellID->62198053]
 }, Open  ]]
 }
 ]
