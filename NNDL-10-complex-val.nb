@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      8026,        201]
-NotebookOptionsPosition[      7391,        180]
-NotebookOutlinePosition[      7784,        196]
-CellTagsIndexPosition[      7741,        193]
+NotebookDataLength[      8126,        203]
+NotebookOptionsPosition[      7491,        182]
+NotebookOutlinePosition[      7884,        198]
+CellTagsIndexPosition[      7841,        195]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -128,20 +128,21 @@ contents.nb"],
 
 Cell[CellGroupData[{
 
-Cell["9 Advanced Activation Functions", "Section",
+Cell["10 Complex Valued Neural Networks", "Section",
  CellChangeTimes->{{3.943567936366756*^9, 3.9435679403338757`*^9}, {
   3.94356810611018*^9, 3.9435681138472424`*^9}, {3.9436697752713633`*^9, 
   3.943669780056386*^9}, {3.944605092244577*^9, 3.9446051027689734`*^9}, {
   3.9450355605744457`*^9, 3.9450355732021914`*^9}, {3.945141494917075*^9, 
   3.945141507386279*^9}, {3.94537384307653*^9, 3.945373849591806*^9}, {
-  3.9453925316359386`*^9, 3.945392537850959*^9}},
+  3.9453925316359386`*^9, 3.945392537850959*^9}, {3.945485110171132*^9, 
+  3.945485117982335*^9}},
  CellID->622795188,ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49"],
 
 Cell[TextData[{
  StyleBox["Remark:",
   FontWeight->"Bold"],
  "\[LineSeparator]This chapter provides a Mathematica implementation of the \
-concepts and ideas presented in Chapter 8, [1], of the book titled ",
+concepts and ideas presented in Chapter 9, [1], of the book titled ",
  ButtonBox["Artificial Neural Network and Deep Learning: Fundamentals and \
 Theory",
   BaseStyle->"Hyperlink",
@@ -174,7 +175,8 @@ Non-Standard_Ensemble"],
   3.9435754000406303`*^9, 3.943575400046158*^9}, {3.944605112751877*^9, 
   3.944605131151554*^9}, {3.94503559681851*^9, 3.945035597233686*^9}, {
   3.945141511691704*^9, 3.945141512098846*^9}, {3.945373853537513*^9, 
-  3.945373853958205*^9}, {3.945392541089655*^9, 3.945392584177949*^9}},
+  3.945373853958205*^9}, {3.945392541089655*^9, 3.945392584177949*^9}, {
+  3.945485124133856*^9, 3.945485124508584*^9}},
  CellID->1196547533,ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1"]
 }, Open  ]]
 },
@@ -198,9 +200,9 @@ Notebook[{
 Cell[554, 20, 4271, 106, 104, "Text",ExpressionUUID->"67aab6c7-b186-4fbc-a04a-683b7453f682",
  CellID->912160115],
 Cell[CellGroupData[{
-Cell[4850, 130, 540, 7, 106, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
+Cell[4850, 130, 591, 8, 106, "Section",ExpressionUUID->"4fba7fed-0087-40ae-a263-55e5b8fe4d49",
  CellID->622795188],
-Cell[5393, 139, 1982, 38, 223, "Note",ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1",
+Cell[5444, 140, 2031, 39, 223, "Note",ExpressionUUID->"2c93b86d-f330-4fb3-b295-cb7eba6efbe1",
  CellID->1196547533]
 }, Open  ]]
 }
